@@ -1,0 +1,151 @@
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1130px) {
+  /* BANNER */
+  .innerBox {
+    height: 89%;
+  }
+
+  /* ARTICLES */
+  .artBox {
+    width: 30%;
+  }
+}
+
+
+@media only screen and (max-width: 1050px) {
+  /* ARTICLES */
+  .artBox {
+    width: 32%;
+    height: 14.5em;
+  }
+}
+
+
+@media only screen and (max-width: 915px) {
+  /* HEADER */
+  header {
+    margin-bottom: 1em;
+  }
+  .headerBox {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .nav ul li {
+    padding: 0 45px;
+  }
+
+  /* BANNER */
+  .innerBox {
+    height: 92%;
+  }
+
+  /* ARTICLES */
+  .artBox {
+    width: 31%;
+    height: 13em;
+  }
+  .artBox h4 {
+    width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  /* ARTICLES */
+  #articles {
+    flex-direction: column;
+    align-items: center;
+  }
+  .artBox {
+    width: 55%;
+    height: 16em;
+    margin-bottom: 1.5em;
+  }
+  .artBox:last-child {
+    margin: 0;
+  }
+  .artBox h4 {
+    padding-bottom: 3em;
+  }
+
+  /* DIVIDER */
+  #divider {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+  }
+  .leftText {
+    margin-bottom: 1em;
+  }
+  .rightText {
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footerBox {
+    padding: 2em 0 1em 0;
+  }
+  .conditions {
+    margin-top: 2em;
+  }
+}
+
+
+@media only screen and (max-width: 701px) {
+  /* UNIVERSAL STYLES */
+  html {
+    font-size: 14px;
+  }
+
+  /* HEADER */
+  .nav ul li {
+    display: list-item;
+    padding: 0 0 1.25em 0;
+    text-align: center;
+  }
+
+  /* BANNER */
+  .outerBox {
+    height: 44em;
+  }
+  .innerBox {
+    height: 93%;
+  }
+  .innerBox .textContent h2 {
+    font-size: 5.85em;
+  }
+  .innerBox .textContent h3 {
+    font-size: 2.85em;
+  }
+  .innerBox .textContent p {
+    font-size: 1.35em;
+  }
+
+  /* ARTICLES */
+  #articles {
+    width: 90%;
+  }
+  .artBox {
+    width: 70%;
+    height: 18em;
+  }
+
+  /* FOOTER */
+  .footerBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .allRights,
+  .questions {
+    margin: 0 0 1.5em 0;
+    padding-left: 0;
+  }
+  .questions p:last-child {
+    padding-bottom: 0;
+  }
+  .conditions {
+    margin-top: 0;
+  }
+}
