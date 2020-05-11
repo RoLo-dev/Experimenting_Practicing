@@ -1,0 +1,245 @@
+/* Colors */
+:root {
+  --color-blue: #49B6CF;
+  --color-gray: #7E8085;
+  --color-lt-gray: #E8E9EB;
+}
+
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+html {
+  font-size: 18px;
+}
+.wrapper_head {
+  width: 95%;
+  margin: 0 auto;
+}
+.wrapper_body {
+  width: 70%;
+  margin: 0 auto;
+}
+h2 {
+  color: var(--color-blue);
+  margin: 0 0 24px 0;
+}
+.button {
+  border: 0;
+  color: #fff;
+  font-size: .95em;
+  border-radius: 12px;
+  padding: 20px 70px;
+  background-color: var(--color-blue);
+}
+.pic {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.author {
+  margin: 0 0 10px 0;
+}
+
+
+/* Header */
+header {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.main_head {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.main_head .main_nav ul {
+  list-style: none;
+}
+.main_head .main_nav ul li {
+  padding-right: 12px;
+  display: inline-block;
+}
+.main_head .main_nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+.main_head .main_nav ul li a:hover {
+  color: var(--color-blue);
+  transition: color .25s ease-in-out;
+}
+
+
+/* Banner */
+.bannerWrap, #slider, .slideContent {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.bannerWrap {
+  position: relative;
+}
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slide1 {
+  background-image: url('../images/jumbotron-bike.jpg');
+}
+.slide2 {
+  background-image: url('../images/jumbotron-beer.jpg');
+}
+.slide3 {
+  background-image: url('../images/jumbotron-flowers.jpg');
+}
+.slide4 {
+  background-image: url('../images/jumbotron-duffel.jpg');
+}
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.slideContent .slideTitle {
+  font-family: 'Monoton', sans-serif;
+  font-weight: 400;
+  font-size: 6em;
+  color: #fff;
+}
+.slideContent .slideDescrip {
+  color: #fff;
+  font-size: 1.25em;
+  width: 95%;
+}
+.arrow {
+  top: 50%;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  margin-top: -32px;
+  position: absolute;
+  border-style: solid;
+}
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent var(--color-blue) transparent transparent;
+  left: 0;
+  margin-left: 20px;
+}
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent var(--color-blue);
+  right: 0;
+  margin-right: 20px;
+}
+.buttonWrap {
+  top: 75%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: absolute;
+}
+.buttonWrap button:hover {
+  color: var(--color-gray);
+  background-color: var(--color-lt-gray);
+  transition: background-color .25s ease-in-out,
+  color .25s ease-in-out;
+} 
+
+
+/* Featured Project */
+#featuredPro {
+  margin: 36px 0 0 0;
+}
+.featuredContent {
+  display: flex;
+  justify-content: space-between;
+}
+.featuredContent .fpImage {
+  width: 40%;
+}
+.featuredContent .defrost {
+  width: 30%;
+}
+.featuredContent .defrost h4 {
+  margin: 0 0 10px 0;
+}
+.featuredContent .defrost p {
+  font-weight: 200;
+}
+.featuredContent .product {
+  width: 25%;
+}
+.featuredContent .product h4 {
+  color: var(--color-blue);
+  margin: 0 0 10px 0;
+}
+.featuredContent .product ul {
+  list-style: none;
+}
+.featuredContent .product ul li {
+  font-weight: 200;
+}
+
+
+/* Projects */
+#projects {
+  margin: 32px 0;
+}
+.projectContent {
+  display: flex;
+  justify-content: space-between;
+}
+.projectContent .tights,
+.projectContent .smartHome,
+.projectContent .streetLife {
+  width: 31%;
+}
+.projectContent .tights h4,
+.projectContent .smartHome h4,
+.projectContent .streetLife h4 {
+  margin: 20px 0 10px 0;
+}
+.projectContent .tights p,
+.projectContent .smartHome p,
+.projectContent .streetLife p {
+  font-weight: 200;
+}
+
+/* Footer */
+#needIdea {
+  background-color: var(--color-lt-gray);
+}
+.ideaContainer {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ideaContent {
+  text-align: center;
+  margin: auto;
+}
+.ideaContent h2 {
+  color: black;
+  font-size: 2.5em;
+}
+.ideaContent p {
+  font-weight: 200;
+}
+.ideaContent button {
+  margin: 50px 0 0 0;
+}
+.ideaContent button:hover {
+  background-color: var(--color-gray);
+  transition: background-color .25s ease-in-out;
+}
+

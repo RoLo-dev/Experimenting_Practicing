@@ -1,0 +1,201 @@
+/* Colors */
+:root {
+  --color-blue: #49B6CF;
+  --color-gray: #7E8085;
+  --color-lt-gray: #E8E9EB;
+}
+
+@media only screen and (max-width: 991px) {
+  /* Universal Styles */
+  html {
+    font-size: 16px;
+  }
+  .button {
+    padding: 15px 60px;
+  }
+  .wrapper_body {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Banner */
+  .slideContent .slideTitle {
+    font-weight: 400;
+    font-size: 5.5em;
+  }
+  .slideContent .slideDescrip {
+    font-size: 1.18em;
+    width: 70%;
+  }
+  .arrow {
+    top: 50%;
+    margin-top: -32px;
+  }
+  #arrow-left {
+    border-width: 25px 35px 25px 0;
+    margin-left: 20px;
+  }
+  #arrow-right {
+    border-width: 25px 0 25px 35px;
+    margin-right: 30px;
+  }
+  .buttonWrap {
+    top: 80%;
+  }
+
+  /* Footer */
+  .ideaContent h2 {
+    font-size: 2.25em;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 841px) {
+  /* Banner */
+  .slideContent .slideTitle {
+    width: 55%;
+    font-weight: 400;
+    font-size: 5.5em;
+  }
+  .slideContent .slideDescrip {
+    font-size: 1.18em;
+  }
+  #arrow-right {
+    margin-right: 18px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 770px) {
+  /* Featured Project */
+  .featuredContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .featuredContent .fpImage {
+    width: 57%;
+  }
+  .featuredContent .defrost {
+    width: 40%;
+  }
+  .featuredContent .product {
+    width: 100%;
+  }
+  .featuredContent .product ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .featuredContent .product ul li {
+    padding-right: 1em;
+    padding-bottom: 2px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 625px) {
+  /* Universal Styles */
+  .wrapper_body {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .main_head {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_nav,
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_nav {
+    padding-bottom: 20px;
+    font-size: 1.2em;
+  }
+  .main_nav ul {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo img {
+    width: 70%;
+  }
+
+  /* Banner */
+  .bannerWrap, #slider, .slideContent {
+    width: 100%;
+    height: 600px;
+    overflow-x: hidden;
+  }
+  .slideContent .slideTitle {
+    width: 70%;
+    font-weight: 400;
+    font-size: 4em;
+  }
+  .slideContent .slideDescrip {
+    font-size: 1.1em;
+  }
+  .arrow {
+    display: none;
+  }
+  /* #arrow-left {
+    border-width: 38px 32px 38px 0;
+    margin-left: 15px;
+  }
+  #arrow-right {
+    border-width: 38px 0 38px 32px;
+    margin-right: 15px;
+  } */
+  .buttonWrap {
+    top: 85%;
+  }
+
+  /* Featured Project */
+  .featuredContent .fpImage {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .featuredContent .defrost {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  /* Projects */
+  .projectContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .projectContent .tights,
+  .projectContent .smartHome,
+  .projectContent .streetLife {
+    width: 100%;
+  }
+  .projectContent .tights,
+  .projectContent .smartHome {
+    padding-bottom: 30px;
+  }
+
+  /* Footer */
+  .ideaContainer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ideaContent h2 {
+    font-size: 2em;
+  }
+}

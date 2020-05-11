@@ -1,0 +1,195 @@
+@media only screen and (max-width: 1250px) {
+  /* Header and Footer logo's */
+  .logo {
+    width: 45%;
+  }
+}
+
+
+@media only screen and (max-width: 1100px) {
+  /* Universal styles */
+  html {
+    font-size: 16px;
+  }
+  .wrapper {
+    width: 75%;
+  }
+
+  /* Header */
+  .mainHead {
+    display: flex;
+    padding: 1.15em 0;
+    flex-direction: column;
+  }
+  .logo {
+    width: 55%;
+    margin-bottom: 1.5em;
+  }
+  .desktop-nav ul li {
+    padding: 0 2em;
+  }
+
+  /* Banner */
+  .pics {
+    height: 42em;
+  }
+  .bannerPics .banTxt {
+    width: 45%;
+  }
+  .bannerPics .banTxt h2 {
+    font-size: 2.2em;
+  }
+  .bannerPics .banTxt p {
+    font-size: 1.1em;
+  }
+  
+  /* About Us */
+  #about figure img {
+    width: 47%;
+  }
+}
+
+
+
+@media only screen and (max-width: 870px) {
+  /* Universal styles */
+  .wrapper {
+    width: 90%;
+  }
+
+  /* Banner */
+  .pics {
+    height: 35em;
+  }
+  .bannerPics .banTxt {
+    width: 60%;
+  }
+  .bannerPics .banTxt h2 {
+    font-size: 1.9em;
+  }
+  .bannerPics .banTxt p {
+    font-size: 1em;
+  }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+  /* Universal styles */
+  .flexStyle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Services */
+  .printBox {
+    margin-bottom: 2em;
+  }
+  .last {
+    margin-bottom: 0;
+  }
+  .printBox i {
+    font-size: 3.5em;
+  }
+  .printBox .syringe {
+    padding-left: 1em;
+  }
+  .printBox .keyboard {
+    padding-left: 1.15em;
+  }
+  .printBox .headphones {
+    padding-left: 1.5em;
+  }
+
+  /* Equipment */
+  #equipment .flexStyle .lists {
+    line-height: 1.65em;
+    padding-left: 1em;
+    width: 70%;
+  }
+
+  /* Contact Us */
+  #contact .contactBox {
+    line-height: 1.45em;
+    padding-left: 5.75em;
+    width: 70%;
+  }
+  #contact .techna {
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  #bsnsInfo .bsnsContact {
+    line-height: 1.45em;
+    margin-top: 1.5em;
+  }
+  #copyright div {
+    margin-bottom: 10px;
+  }
+  #copyright div:last-child {
+    margin-bottom: 0;
+  }
+  
+}
+
+@media only screen and (max-width: 650px) {
+  /* Header */
+  .logo {
+    max-width: 85%;
+    min-width: 83%;
+    margin-bottom: 2px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .open {
+    display: block;
+    cursor: pointer;
+    color: #012639; 
+    font-size: 3.35em;
+    text-align: center;
+  }
+  .mobile-nav {
+    width: 0;
+    z-index: 5;
+    height: 53vh;
+    display: block;
+    position: fixed;
+    transition: 0.5s;
+    overflow-x: hidden;
+    background-color: rgba(255, 255 , 255, 0.95);
+  }
+  .mobile-nav a {
+    display: block;
+    padding: 1em 0;
+    color: #012639;
+    transition: 0.3s;
+    font-size: 1.75em;
+    text-align: center;
+    text-decoration: none;
+  }
+  .mobile-nav a:first-child {
+    font-size: 4.15em;
+    padding: .25em 0;
+  }
+  .mobile-nav a:not(:first-child):hover {
+    color: #aaaaaa;
+  }
+
+  /* Banner */
+  .banner {
+    display: none;
+  }
+
+  /* About Us */
+  #about figure img {
+    max-width: 64%;
+    min-width: 64%;
+  }
+
+  /* Contact Us */
+  #contact .contactBox {
+    padding-left: 1em;
+  }
+}
