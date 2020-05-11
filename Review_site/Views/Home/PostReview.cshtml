@@ -1,0 +1,30 @@
+@model Review
+
+<header>
+    <div class="wrapper main-header">
+        <div class="title">
+            <a asp-action="Index" asp-controller="Home">
+                <h1>Review</h1>
+            </a>
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li>
+                    <a asp-action="Logout" asp-controller="Home">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="form-container">
+    <form asp-action="NewReview" asp-controller="Home" method="POST">
+        <label asp-for="ReviewTitle">Title:</label>
+        <input asp-for="ReviewTitle">
+
+        <label asp-for="Description">Your review:</label>
+        <textarea asp-for="Description"></textarea>
+
+        <input type="submit" class="submit-btn" value="Post Review">
+    </form>
+</section>

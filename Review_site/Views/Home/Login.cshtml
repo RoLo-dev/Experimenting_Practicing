@@ -1,0 +1,31 @@
+@model Login
+
+<header>
+    <div class="wrapper main-header">
+        <div class="title">
+            <a asp-action="Index" asp-controller="Home">
+                <h1>Review</h1>
+            </a>
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li>
+                    <a asp-action="Register" asp-controller="Home">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="form-container">
+    <form asp-action="Login" asp-controller="Home" method="POST">
+        <label asp-for="LoginEmail">Email:</label>
+        <input asp-for="LoginEmail">
+
+        <label asp-for="LoginPassword">Password:</label>
+        <input asp-for="LoginPassword">
+
+        <input type="submit" class="submit-btn" value="Login">
+        <a class="form-link" asp-action="Register" asp-controller="Home">Don't have an account?</a>
+    </form>
+</section>

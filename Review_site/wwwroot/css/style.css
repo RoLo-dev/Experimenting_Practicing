@@ -1,0 +1,204 @@
+/* UNIVERSAL STYLES */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+button{
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+p{
+    line-height: 1.25;
+}
+ul li{
+    list-style: none;
+}
+/* FORMS */
+.form-container{
+    padding-top: 50px;
+    margin-top: 12rem;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    margin-bottom: 3px;
+}
+form input{
+    height: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 7px;
+}
+form textarea{
+    height: 7rem;
+    padding: 7px;
+    margin-bottom: 1rem;
+}
+form input,
+form textarea{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    outline: 0;
+    border: 1.5px solid #000;
+}
+form .submit-btn{
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in;
+}
+form .submit-btn:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 9px rgba(0,0,0,0.5);
+    transition: all 0.2s ease-in;
+}
+form .form-link{
+    color: rgb(51, 116, 238);
+    text-decoration: underline;
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+header{
+    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header .title a{
+    text-decoration: none;
+}
+.main-header .title h1{
+    color: #000;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+.navlinks ul li{
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+}
+#home ul li a{
+    color: #fff;
+}
+#home ul li a:hover{
+    color: coral;
+}
+.navlinks ul li a{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+}
+.navlinks ul li a:hover{
+    color: coral;
+    transition: color 0.3s ease-in;
+}
+.navlinks #register-link{
+    background-color: #fff;
+    padding: 4px 13px;
+    color: #000;
+    border: 2px solid #fff;
+    transition: all 0.4s ease-in;
+}
+.navlinks #register-link:hover{
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+
+/* BANNER */
+#banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+#banner .col{
+    width: 50%;
+    height: auto;
+}
+#banner .background-image{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#banner .banner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+#banner .banner-text h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#banner .banner-text p{
+    font-size: 1.25rem;
+    width: 90%;
+}
+#banner .banner-text .btn-container{
+    display: flex;
+    margin-top: 1rem;
+}
+.banner-text .btn-container .banner-btn{
+    padding: 7px 35px;
+    font-size: 1.1rem;
+    border: 0;
+    outline: 0;
+    background-color: #000;
+    color: #fff;
+    margin-right: 1rem;
+    transition: all 0.5s ease-in;
+}
+.banner-text .btn-container .banner-btn:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 9px rgba(0,0,0,0.5);
+    transition: all 0.2s ease-in;
+}
+
+/* DASHBOARD */
+#dashboard{
+    background-color: #ddd;
+    padding: 3rem 0;
+}
+table{
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+table th{
+    padding: 1.5rem 0;
+    font-size: 1.15rem;
+}
