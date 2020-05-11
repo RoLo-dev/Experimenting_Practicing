@@ -1,0 +1,259 @@
+/* CSS VARIABLES */
+
+:root {
+  --color-very-lt-gray: #F1F1F1;
+  --color-lt-gray: #B3B3B5;
+  --color-md-gray: #838384;
+  --color-dk-gray: #313132;
+}
+
+
+@media only screen and (max-width: 1350px) {
+  
+  /* --- Start Learning --- */
+  .startLearning .courses {
+    grid-template: repeat(2, 370px) / repeat(3, 1fr);
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  html {
+    font-size: 16px;
+  }
+
+
+  /* --- Start Learning --- */
+  .startLearning .courses {
+    grid-template: repeat(2, 300px) / repeat(3, 1fr);
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  /* --- Intro --- */
+  .introBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    width: 100%;
+  }
+  .introContent {
+    width: 100%;
+    padding: 24px 0 0 0;
+  }
+  .introContent h1 {
+    font-size: 2.3em;
+  }
+  .introContent h4 {
+    font-size: 1.1em;
+  }
+  .introContent button {
+    font-size: 1em;
+    padding: .75em 0;
+  }
+
+
+  /* --- Practicing --- */
+  .keepPracticing {
+    flex-direction: column;
+  }
+  .keepPracticing .imgTxt {
+    width: 100%;
+    padding-bottom: 36px;
+  }
+  .keepPracticing .infoLinks {
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .keepPracticing .infoLinks .orientation,
+  .keepPracticing .infoLinks .campus,
+  .keepPracticing .infoLinks .guest {
+    padding: 0;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-md-gray);
+  }
+
+
+  /* --- Start Learning --- */
+  .startLearning .courses {
+    width: 85%;
+    grid-template: repeat(3, 350px) / repeat(2, 1fr);
+  }
+
+
+  /* --- Thesis Exhibit --- */
+  .exhibit {
+    flex-direction: column;
+  }
+  .exhibit .clipTxt {
+    width: 100%;
+    padding-bottom: 36px;
+  }
+  .exhibit .thesisLinks {
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .exhibit .thesisLinks .fisma,
+  .exhibit .thesisLinks .nowAndthen {
+    padding: 0;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-lt-gray);
+  }
+
+}
+
+@media only screen and (max-width: 568px) {
+  /* --- Universal Styles --- */
+  .wrapper {
+    width: 100%;
+  }
+
+
+  /* --- Header --- */
+  .mainHeader {
+    display: none;
+  }
+  .mobile-header {
+    width: 100%;
+    padding: 0;
+    display: inherit;
+    visibility: visible;
+  }
+  .mobile-header ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mobile-header ul li {
+    display: inline-block;
+  }
+  .mobile-header ul li a img {
+    width: 2.75em;
+  }
+
+
+  /* --- Intro --- */
+  .introBanner {
+    padding: 0 0 36px 0;
+  }
+  .introContent {
+    width: 90%;
+  }
+  .introContent h1 {
+    font-size: 2.5em;
+  }
+  .introContent h4 {
+    font-size: 1.1em;
+  }
+
+
+  /* --- Practicing --- */
+  .keepPracticing {
+    padding: 0 0 36px 0;
+  }
+  .keepPracticing .imgTxt h3 {
+    font-size: 1.75em;
+  }
+  .keepPracticing .imgTxt h3,
+  .keepPracticing .imgTxt p {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .keepPracticing .infoLinks .orientation,
+  .keepPracticing .infoLinks .campus,
+  .keepPracticing .infoLinks .guest {
+    border: 0;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .infoLinks .linkImg img {
+    display: none;
+  }
+  .infoLinks .mobile-linkImg img {
+    display: inherit;
+    visibility: visible;
+  }
+  .infoLinks .mobile-linkImg {
+    width: 100%;
+  }
+  .infoLinks .linkTxt {
+    width: 90%;
+    padding: 20px 0 0 0;
+  }
+  .infoLinks .linkTxt h4 {
+    font-size: 1.35em;
+  }
+  .infoLinks .linkTxt p {
+    font-size: 1.1em;
+  }
+  
+    
+  /* --- Start Learning --- */
+  .startLearning .courses {
+    width: 90%;
+    grid-template: repeat(6, 425px) / 1fr;
+  }
+  .startLearning .courses .box .boxTxt h4 {
+    font-size: 1.35em;
+  }
+  .startLearning .courses .box .boxTxt p {
+    font-size: 1.1em;
+  }
+
+
+  /* --- Thesis Exhibit --- */
+  .exhibit .clipTxt {
+    padding: 0;
+  }
+  .exhibit .clipTxt .exhibitTxt {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .exhibit .clipTxt .exhibitTxt h3 {
+    font-size: 1.75em;
+  }
+  .exhibit .thesisLinks {
+    display: none;
+  }
+
+
+  /* --- Footer --- */
+  .mainFoot {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .mainFoot .copy {
+    padding-bottom: 16px;
+  }
+  .mainFoot .terms ul {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+   /* --- Start Learning --- */
+   .startLearning .courses {
+    width: 90%;
+    grid-template: repeat(6, 405px) / 1fr;
+  }
+}
