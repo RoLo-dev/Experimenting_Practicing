@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using reviewPage.Models;
 
 namespace reviewPage.Controllers
@@ -38,6 +39,19 @@ namespace reviewPage.Controllers
         {
             HttpContext.Session.Clear();
             return View("Index");
+        }
+
+        [HttpPost("/review/register")]
+        public IActionResult NewUser(User newUser)
+        {
+            if(ModelState.IsValid)
+            {
+                DbContext.User.add(newUser);
+                DbContext.SaveChanges();
+                return RedirectToAction("Index");
+            } else{
+                return View("Register");
+            }
         }
 
 
