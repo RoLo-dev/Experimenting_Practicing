@@ -12155,11 +12155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rolandolopantzi/Documents/MyWork/Experiments/reviewPage/reviewPage.csproj",
+      "projectUniqueName": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/reviewPage.csproj",
       "projectName": "reviewPage",
-      "projectPath": "/Users/rolandolopantzi/Documents/MyWork/Experiments/reviewPage/reviewPage.csproj",
+      "projectPath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/reviewPage.csproj",
       "packagesPath": "/Users/rolandolopantzi/.nuget/packages/",
-      "outputPath": "/Users/rolandolopantzi/Documents/MyWork/Experiments/reviewPage/obj/",
+      "outputPath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
