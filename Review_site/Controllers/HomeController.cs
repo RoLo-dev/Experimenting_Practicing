@@ -48,6 +48,12 @@ namespace reviewPage.Controllers
             return View();
         }
 
+        [HttpGet("/review/dashboard")]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         [HttpGet("review/logout")]
         public IActionResult Logout()
         {
@@ -72,8 +78,37 @@ namespace reviewPage.Controllers
                 dbContext.SaveChanges();
                 UserSession = newUser.UserID;
                 return RedirectToAction("Dashboard");
-            } else{
+            } 
+            else
+            {
                 return View("Register");
+            }
+        }
+
+        [HttpPost("/review/login")]
+        public IActionResult UserReturns(Login currentUser)
+        {
+            if(ModelState.IsValid)
+            {
+                var uid = dbContext.Users.FirstOrDefault(i => i.Email == currentUser.LoginEmail);
+                if(uid == null)
+                {
+                    ModelState.AddModelError("LoginEmail", "Invalid Credentials");
+                    return View("Login");
+                }
+                var hasher = new PasswordHasher<Login>();
+                var result = hasher.VerifyHashedPassword(currentUser, uid.Password, currentUser.LoginPassword);
+                if(result == 0)
+                {
+                    ModelState.AddModelError("LoginPassword", "Invalid Credentials");
+                    return View("Login");
+                }
+                UserSession = uid.UserID;
+                return RedirectToAction("Dashboard");
+            }
+            else
+            {
+                return View("Login");
             }
         }
 

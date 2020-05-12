@@ -190,8 +190,17 @@ header{
 
 /* DASHBOARD */
 #dashboard{
-    background-color: #ddd;
+    height: 100vh;
+    background-color: rgb(175, 175, 175);
     padding: 3rem 0;
+}
+.dashBody{
+    margin-top: 7rem;
+}
+.dashBody h4{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 7px;
 }
 table{
     width: 100%;
