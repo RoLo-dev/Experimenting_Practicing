@@ -22,8 +22,8 @@ namespace reviewPage.Controllers
         }
         private int? UserSession
         {
-            get { return HttpContext.Session.GetInt32("UserId"); }
-            set{ HttpContext.Session.SetInt32("UserId", (int)value); }
+            get { return HttpContext.Session.GetInt32("UserID"); }
+            set{ HttpContext.Session.SetInt32("UserID", (int)value); }
         }
         public IActionResult Index()
         {
@@ -42,6 +42,13 @@ namespace reviewPage.Controllers
             return View();
         }
 
+        [HttpGet("review/logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return View("Index");
+        }
+
         [HttpGet("/review/new-review")]
         public IActionResult PostReview()
         {
@@ -49,16 +56,18 @@ namespace reviewPage.Controllers
         }
 
         [HttpGet("/review/dashboard")]
-        public IActionResult Dashboard()
+        public IActionResult Dashboard(int UserId)
         {
-            return View();
-        }
-
-        [HttpGet("review/logout")]
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return View("Index");
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+            User UserDetails = dbContext.Users.FirstOrDefault(i => i.UserID == UserId);
+            ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
+            return View("Dashboard");
+            }
         }
 
         [HttpPost("/review/register")]
@@ -111,6 +120,23 @@ namespace reviewPage.Controllers
                 return View("Login");
             }
         }
+
+        [HttpPost("/review/new-review")]
+        public IActionResult NewReview(Review NewReview)
+        {
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                if(ModelState.IsValid)
+                {
+                    dbContext.Reviews.Add(NewReview.Creator);
+                }
+            }
+        }
+
 
 
 

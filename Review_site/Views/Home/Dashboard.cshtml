@@ -1,3 +1,6 @@
+@model User
+@using Microsoft.AspNetCore.Http
+
 <header>
     <div class="wrapper main-header">
         <div class="title">
@@ -20,7 +23,7 @@
 
 <section id="dashboard">
     <div class="wrapper dashBody">
-        <h4>Reviews</h4>
+        <h4>Hello @ViewBag.CurrentUser.FirstName</h4>
         <table>
             <tr>
                 <th>Review Title</th>

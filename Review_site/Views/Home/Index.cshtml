@@ -1,4 +1,6 @@
-﻿<header>
+﻿@using Microsoft.AspNetCore.Http
+
+<header>
     <div class="wrapper main-header">
         <div class="title">
             <a asp-action="Index" asp-controller="Home">
@@ -10,12 +12,21 @@
                 <li>
                     <a asp-action="Dashboard" asp-controller="Home">Dashboard</a>
                 </li>
-                <li>
-                    <a asp-action="Login" asp-controller="Home">Login</a>
-                </li>
-                <li>
-                    <a id="register-link" asp-action="Register" asp-controller="Home">Register</a>
-                </li>
+                @if(Context.Session.GetInt32("UserID") == null)
+                {
+                    <li>
+                        <a asp-action="Login" asp-controller="Home">Login</a>
+                    </li>
+                    <li>
+                        <a id="register-link" asp-action="Register" asp-controller="Home">Register</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a asp-action="Logout" asp-controller="Home">Logout</a>
+                    </li>
+                }
             </ul>
         </div>
     </div>
