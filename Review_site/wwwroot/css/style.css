@@ -204,10 +204,19 @@ header{
 }
 table{
     width: 100%;
+    overflow-y: scroll;
+    height: 500px;
     background: #fff;
     text-align: center;
 }
+table tr:first-child{
+    height: 70px;
+}
+table tr{
+    
+}
 table th{
-    padding: 1.5rem 0;
+    /* padding: 1.5rem 0; */
+    background-color: aquamarine;
     font-size: 1.15rem;
 }

@@ -64,9 +64,12 @@ namespace reviewPage.Controllers
             }
             else
             {
-            User UserDetails = dbContext.Users.FirstOrDefault(i => i.UserID == UserId);
-            ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
-            return View("Dashboard");
+                User CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserId);
+                ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
+                List<Review> AllReviews = dbContext.Reviews
+                .OrderByDescending(i => i.CreatedAt)
+                .ToList();
+                return View(AllReviews);
             }
         }
 
@@ -132,7 +135,15 @@ namespace reviewPage.Controllers
             {
                 if(ModelState.IsValid)
                 {
-                    dbContext.Reviews.Add(NewReview.Creator);
+                    User uid = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
+                    NewReview.CreatorID = uid.UserID;
+                    dbContext.Reviews.Add(NewReview);
+                    dbContext.SaveChanges();
+                    return RedirectToAction("Dashboard");
+                }
+                else
+                {
+                    return View("PostReview");
                 }
             }
         }
