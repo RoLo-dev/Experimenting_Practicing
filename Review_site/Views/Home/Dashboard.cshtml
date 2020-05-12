@@ -1,0 +1,41 @@
+<header>
+    <div class="wrapper main-header">
+        <div class="title">
+            <a asp-action="Index" asp-controller="Home">
+                <h1>Review</h1>
+            </a>
+        </div>
+        <div id="home" class="navlinks">
+            <ul>
+                <li>
+                    <a asp-action="PostReview" asp-controller="Home">Post a Review</a>
+                </li>
+                <li>
+                    <a asp-action="Logout" asp-controller="Home">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section id="dashboard">
+    <div class="wrapper">
+        <h2>Reviews</h2>
+        <table>
+            <tr>
+                <th>Review Title</th>
+                <th>Author</th>
+                <th>Date Created</th>
+                <th>View</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="">View</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

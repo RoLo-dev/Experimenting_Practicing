@@ -71,7 +71,7 @@ namespace reviewPage.Controllers
                 dbContext.Add(newUser);
                 dbContext.SaveChanges();
                 UserSession = newUser.UserID;
-                return RedirectToAction("Index");
+                return RedirectToAction("Dashboard");
             } else{
                 return View("Register");
             }
