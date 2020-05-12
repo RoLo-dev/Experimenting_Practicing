@@ -191,11 +191,16 @@ header{
 /* DASHBOARD */
 #dashboard{
     height: 100vh;
-    background-color: rgb(175, 175, 175);
+    /* background-color: rgb(175, 175, 175); */
     padding: 3rem 0;
+}
+#dash .navlinks{
+    color: #000;
 }
 .dashBody{
     margin-top: 7rem;
+    overflow-y: scroll;
+    height: 600px;
 }
 .dashBody h4{
     font-size: 1.5rem;
@@ -204,19 +209,17 @@ header{
 }
 table{
     width: 100%;
-    overflow-y: scroll;
-    height: 500px;
+    height: auto;
     background: #fff;
     text-align: center;
 }
-table tr:first-child{
-    height: 70px;
-}
-table tr{
-    
-}
 table th{
-    /* padding: 1.5rem 0; */
-    background-color: aquamarine;
+    padding: 1.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: cornflowerblue;
     font-size: 1.15rem;
+}
+table td{
+    padding: 0.5rem 0;
 }
