@@ -33,7 +33,9 @@
             @foreach (var review in Model)
             {
                 <tr>
-                    <td><a class="reviewLink">@review.ReviewTitle</a></td>
+                    <td>
+                        <a class="reviewLink" asp-action="ViewReview" asp-controller="Home" asp-route-ReviewID="@review.Creator">@review.ReviewTitle</a>
+                    </td>
                     <td>@review.Creator.FirstName</td>
                     <td>@review.CreatedAt.ToString("MM/dd/yyyy")</td>
                 </tr>
