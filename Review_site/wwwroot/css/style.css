@@ -36,6 +36,9 @@ ul li{
     justify-content: center;
     align-items: center;
 }
+.error{
+    color: firebrick;
+}
 form{
     width: 40%;
     display: flex;

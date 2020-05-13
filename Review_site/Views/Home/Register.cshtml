@@ -19,19 +19,34 @@
 
 <section class="form-container">
     <form asp-action="NewUser" asp-controller="Home" method="POST">
-        <label asp-for="FirstName">First name:</label>
+        <label asp-for="FirstName">
+            First name: 
+            <span asp-validation-for="FirstName" class="error"></span>
+        </label>
         <input asp-for="FirstName">
 
-        <label asp-for="LastName">Last name:</label>
+        <label asp-for="LastName">
+            Last name: 
+            <span asp-validation-for="LastName"></span>
+        </label>
         <input asp-for="LastName">
 
-        <label asp-for="Email">Email:</label>
+        <label asp-for="Email">
+            Email: 
+            <span asp-validation-for="Email"></span>
+        </label>
         <input asp-for="Email">
 
-        <label asp-for="Password">Password:</label>
+        <label asp-for="Password">
+            Password: 
+            <span asp-validation-for="Password"></span>
+        </label>
         <input asp-for="Password">
 
-        <label asp-for="ConfirmPW">Confirm password:</label>
+        <label asp-for="ConfirmPW">
+            Confirm password: 
+            <span asp-validation-for="ConfirmPW"></span>
+        </label>
         <input asp-for="ConfirmPW">
 
         <input type="submit" class="submit-btn" value="Register">

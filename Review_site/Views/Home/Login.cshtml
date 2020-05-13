@@ -19,10 +19,16 @@
 
 <section class="form-container">
     <form asp-action="Login" asp-controller="Home" method="POST">
-        <label asp-for="LoginEmail">Email:</label>
+        <label asp-for="LoginEmail">
+            Email: 
+            <span asp-validation-for="LoginEmail"></span>
+        </label>
         <input asp-for="LoginEmail">
 
-        <label asp-for="LoginPassword">Password:</label>
+        <label asp-for="LoginPassword">
+            Password:
+            <span asp-validation-for="LoginPassword"></span>
+        </label>
         <input asp-for="LoginPassword">
 
         <input type="submit" class="submit-btn" value="Login">
