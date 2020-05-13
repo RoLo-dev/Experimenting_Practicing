@@ -65,3 +65,4 @@
 /Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/obj/Debug/netcoreapp2.2/reviewPage.pdb
 /Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/obj/Debug/netcoreapp2.2/reviewPage.csproj.CopyComplete
 /Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/obj/Debug/netcoreapp2.2/Razor/Views/Home/Dashboard.g.cshtml.cs
+/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/obj/Debug/netcoreapp2.2/Razor/Views/Home/ViewReview.g.cshtml.cs

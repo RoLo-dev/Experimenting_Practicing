@@ -55,6 +55,12 @@ namespace reviewPage.Controllers
             return View();
         }
 
+        [HttpGet("/review/view-review")]
+        public IActionResult ViewReview()
+        {
+            return View("ViewReview");
+        }
+
         [HttpGet("/review/dashboard")]
         public IActionResult Dashboard(int UserId)
         {

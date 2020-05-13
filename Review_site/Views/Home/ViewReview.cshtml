@@ -1,0 +1,42 @@
+@model Review
+
+<header>
+    <div class="wrapper main-header">
+        <div class="title">
+            <a asp-action="Index" asp-controller="Home">
+                <h1>Review</h1>
+            </a>
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li>
+                    <a asp-action="Dashboard" asp-controller="Home">Dashboard</a>
+                </li>
+                <li>
+                    <a asp-action="Logout" asp-controller="Home">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section id="viewReview">
+    <div class="wrapper dashBody">
+        <h3>Review Title</h3>
+        <p></p>
+        <h3>Author</h3>
+        <p></p>
+        <h3>Review</h3>
+        <p></p>
+
+        <div class="viewBtnContainer">
+            <button>Go Back</button>
+            @* @if() *@
+            {
+                <button>Edit</button>
+                <button>Cancel</button>
+            }
+        </div>
+
+    </div>
+</section>

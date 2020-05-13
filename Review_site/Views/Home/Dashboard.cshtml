@@ -8,7 +8,7 @@
                 <h1>Review</h1>
             </a>
         </div>
-        <div id="dash" class="navlinks">
+        <div class="navlinks">
             <ul>
                 <li>
                     <a asp-action="PostReview" asp-controller="Home">Post a Review</a>
@@ -29,17 +29,13 @@
                 <th>Review Title</th>
                 <th>Author</th>
                 <th>Date Created</th>
-                <th>View</th>
             </tr>
             @foreach (var review in Model)
             {
                 <tr>
-                    <td>@review.ReviewTitle</td>
+                    <td><a class="reviewLink">@review.ReviewTitle</a></td>
                     <td>@review.Creator.FirstName</td>
                     <td>@review.CreatedAt.ToString("MM/dd/yyyy")</td>
-                    <td>
-                        <a href="">View</a>
-                    </td>
                 </tr>
             }
         </table>

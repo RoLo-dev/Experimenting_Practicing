@@ -2986,6 +2986,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/Views/Home/ViewReview.cshtml",
+      "TargetPath": "Views\\Home\\ViewReview.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
