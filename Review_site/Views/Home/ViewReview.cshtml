@@ -23,19 +23,19 @@
 <section id="viewReview">
     <div class="wrapper dashBody">
         <h3>Review Title</h3>
-        <p></p>
+        <p>@Model.ReviewTitle</p>
         <h3>Author</h3>
-        <p></p>
+        <p>@Model.Creator.Email</p>
         <h3>Review</h3>
-        <p></p>
+        <p>@Model.Description</p>
 
         <div class="viewBtnContainer">
             <button>Go Back</button>
             @* @if() *@
-            {
+            @* { *@
                 <button>Edit</button>
                 <button>Cancel</button>
-            }
+            @* } *@
         </div>
 
     </div>

@@ -63,6 +63,7 @@ namespace reviewPage.Controllers
                 return View("Login");
             }
             Review selectedReview = dbContext.Reviews.Single(i => i.ReviewID == reviewId);
+            User CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
             return View(selectedReview);
         }
 
