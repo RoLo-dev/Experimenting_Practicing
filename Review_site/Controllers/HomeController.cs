@@ -55,10 +55,15 @@ namespace reviewPage.Controllers
             return View();
         }
 
-        [HttpGet("/review/view-review")]
-        public IActionResult ViewReview()
+        [HttpGet("/review/view-review/{reviewId}")]
+        public IActionResult ViewReview(int reviewId)
         {
-            return View("ViewReview");
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            Review selectedReview = dbContext.Reviews.Single(i => i.ReviewID == reviewId);
+            return View(selectedReview);
         }
 
         [HttpGet("/review/dashboard")]
