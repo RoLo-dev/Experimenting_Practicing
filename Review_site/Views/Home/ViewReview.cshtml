@@ -1,4 +1,4 @@
-@model Review
+@model List<Review>
 @using Microsoft.AspNetCore.Http
 
 <header>
@@ -23,21 +23,22 @@
 
 <section id="viewReview">
     <div class="wrapper dashBody">
-        <h3>Review Title</h3>
-        <p>@Model.ReviewTitle</p>
-        <h3>Author</h3>
-        <p>@Model.Creator.FirstName</p>
-        <h3>Review</h3>
-        <p>@Model.Description</p>
+        @foreach (var review in Model)
+        {
+            <h3>Review Title</h3>
+            <p>@review.ReviewTitle</p>
+            <h3>Author</h3>
+            <p>@review.Creator.FirstName</p>
+            <h3>Review</h3>
+            <p>@review.Description</p>
 
-        <div class="viewBtnContainer">
-            <button>Go Back</button>
-            @if(Context.Session.GetInt32("UserID") == @Model.CreatorID)
-            {
-                <button>Edit</button>
-                <button>Cancel</button>
-            }
-        </div>
-
+            <div class="viewBtnContainer">
+                <a asp-action="Dashboard" asp-controller="Home">Go back</a>
+                @if(Context.Session.GetInt32("UserID") == @review.CreatorID)
+                {
+                    <button id="editBtn">Edit</button>
+                }
+            </div>
+        }
     </div>
 </section>
