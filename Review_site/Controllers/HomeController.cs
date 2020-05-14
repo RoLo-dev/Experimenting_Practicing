@@ -80,6 +80,7 @@ namespace reviewPage.Controllers
                 ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
                 List<Review> AllReviews = dbContext.Reviews
                 .OrderByDescending(i => i.CreatedAt)
+                .Include(i => i.Creator)
                 .ToList();
                 return View(AllReviews);
             }
@@ -151,7 +152,7 @@ namespace reviewPage.Controllers
                     NewReview.CreatorID = uid.UserID;
                     dbContext.Reviews.Add(NewReview);
                     dbContext.SaveChanges();
-                    return RedirectToAction("Dashboard");
+                    return RedirectToAction("Dashboard", new { userFromDb = uid.UserID });
                 }
                 else
                 {
