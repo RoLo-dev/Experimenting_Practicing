@@ -250,6 +250,21 @@ table tr:nth-child(even){
 #viewReview p{
     margin-bottom: 1rem;
 }
+.viewBtnContainer{
+    margin-top: 2rem;
+}
+.viewBtnContainer a{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 7px 1.5rem;
+    transition: all 0.4s ease-in;
+}
+.viewBtnContainer a:hover{
+    cursor: pointer;
+    box-shadow: 3px 4px 7px rgba(0,0,0,0.5);
+    transition: all 0.2s ease-in;
+}
 
 /* EDIT REVIEW */
 #editReview{
