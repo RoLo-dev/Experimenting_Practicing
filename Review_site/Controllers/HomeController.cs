@@ -70,7 +70,37 @@ namespace reviewPage.Controllers
             return View(selectedReview);
         }
 
-        
+        [HttpGet("/review/dashboard")]
+        public IActionResult Dashboard(int UserId)
+        {
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                User CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserId);
+                ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
+                List<Review> AllReviews = dbContext.Reviews
+                .OrderByDescending(i => i.CreatedAt)
+                .Include(i => i.Creator)
+                .ToList();
+                return View(AllReviews);
+            }
+        }
+
+        [HttpGet("/review/edit-review/{reviewId}")]
+        public IActionResult ReviewToEdit(int reviewId)
+        {
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            Review reviewToEdit = dbContext.Reviews.Single(i => i.ReviewID == reviewId);
+            return View("EditReview", reviewToEdit);
+        }
+
+        [HttpPost("/review/edit-review/{reviewId}")]
         public IActionResult EditReview(Review selectedReview, int reviewId)
         {
             if(UserSession == null)
@@ -88,25 +118,6 @@ namespace reviewPage.Controllers
             else
             {
                 return View("EditReview", selectedReview);
-            }
-        }
-
-        [HttpGet("/review/dashboard")]
-        public IActionResult Dashboard(int UserId)
-        {
-            if(UserSession == null)
-            {
-                return View("Login");
-            }
-            else
-            {
-                User CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserId);
-                ViewBag.CurrentUser = dbContext.Users.FirstOrDefault(i => i.UserID == UserSession);
-                List<Review> AllReviews = dbContext.Reviews
-                .OrderByDescending(i => i.CreatedAt)
-                .Include(i => i.Creator)
-                .ToList();
-                return View(AllReviews);
             }
         }
 

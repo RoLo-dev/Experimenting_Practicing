@@ -250,3 +250,9 @@ table tr:nth-child(even){
 #viewReview p{
     margin-bottom: 1rem;
 }
+
+/* EDIT REVIEW */
+#editReview{
+    height: 100vh;
+    padding: 3rem 0;
+}

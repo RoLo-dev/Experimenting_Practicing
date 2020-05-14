@@ -1,20 +1,42 @@
 @model Review
 
-<div class="wrapper">
-    <form asp-action="" asp-controller="Home" method="POST">
-        <label asp-for="ReviewTitle">
-            Title: 
-            <span asp-validation-for="ReviewTitle"></span>
-        </label>
-        <input asp-for="ReviewTitle" value="@Model.ReviewTitle">
+<header>
+    <div class="wrapper main-header">
+        <div class="title">
+            <a asp-action="Index" asp-controller="Home">
+                <h1>Review</h1>
+            </a>
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li>
+                    <a asp-action="Dashboard" asp-controller="Home">Dashboard</a>
+                </li>
+                <li>
+                    <a asp-action="Logout" asp-controller="Home">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
 
-        <label asp-for="Description">
-            Your review: 
-            <span asp-validation-for="Description"></span>
-        </label>
-        <textarea asp-for="Description" value="@Model.Description"></textarea>
+<section id="editReview">
+    <div class="wrapper">
+        <form asp-action="EditReview" asp-controller="Home" method="POST">
+            <label asp-for="ReviewTitle">
+                Title: 
+                <span asp-validation-for="ReviewTitle"></span>
+            </label>
+            <input asp-for="ReviewTitle" value="@Model.ReviewTitle">
 
-        <input type="submit" class="submit-btn" value="Update">
-        <a id="cancel" class="form-link" asp-action="Dashboard" asp-controller="Home">Cancel</a>
-    </form>
-</div>
+            <label asp-for="Description">
+                Your review: 
+                <span asp-validation-for="Description"></span>
+            </label>
+            <textarea asp-for="Description" value="@Model.Description"></textarea>
+
+            <input type="submit" class="submit-btn" value="Update">
+            <a id="cancel" class="form-link" asp-action="Dashboard" asp-controller="Home">Cancel</a>
+        </form>
+    </div>
+</section>
