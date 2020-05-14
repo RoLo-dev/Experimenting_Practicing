@@ -19,10 +19,16 @@
 
 <section class="form-container">
     <form asp-action="NewReview" asp-controller="Home" method="POST">
-        <label asp-for="ReviewTitle">Title:</label>
+        <label asp-for="ReviewTitle">
+            Title: 
+            <span asp-validation-for="ReviewTitle"></span>
+        </label>
         <input asp-for="ReviewTitle">
 
-        <label asp-for="Description">Your review:</label>
+        <label asp-for="Description">
+            Your review: 
+            <span asp-validation-for="Description"></span>
+        </label>
         <textarea asp-for="Description"></textarea>
 
         <input type="submit" class="submit-btn" value="Post Review">

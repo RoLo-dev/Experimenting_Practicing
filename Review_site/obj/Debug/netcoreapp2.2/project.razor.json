@@ -2976,6 +2976,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/Views/Home/EditPartial.cshtml",
+      "TargetPath": "Views\\Home\\EditPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/rolandolopantzi/Documents/GitHub/Experimenting_Practicing/Review_site/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
