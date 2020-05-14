@@ -113,7 +113,7 @@ namespace reviewPage.Controllers
                 reviewToEdit.ReviewTitle = selectedReview.ReviewTitle;
                 reviewToEdit.Description = selectedReview.Description;
                 dbContext.SaveChanges();
-                return RedirectToAction("ViewReview", "Review", new{reviewId});
+                return RedirectToAction("ViewReview", new{reviewId});
             }
             else
             {
@@ -195,13 +195,6 @@ namespace reviewPage.Controllers
                 }
             }
         }
-
-
-
-
-
-
-
 
 
         public IActionResult Privacy()
