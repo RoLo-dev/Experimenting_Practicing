@@ -21,7 +21,7 @@
 </header>
 
 <section id="editReview">
-    <div class="wrapper">
+    <div class="wrapper dashBody">
         <form asp-action="EditReview" asp-controller="Home" method="POST">
             <label asp-for="ReviewTitle">
                 Title: 
@@ -36,7 +36,7 @@
             <textarea asp-for="Description" value="@Model.Description"></textarea>
 
             <input type="submit" class="submit-btn" value="Update">
-            <a id="cancel" class="form-link" asp-action="Dashboard" asp-controller="Home">Cancel</a>
+            <a id="cancel" class="form-link" asp-action="ViewReview" asp-controller="Home" asp-route-reviewId="@Model.ReviewID">Cancel</a>
         </form>
     </div>
 </section>
