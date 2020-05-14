@@ -70,6 +70,27 @@ namespace reviewPage.Controllers
             return View(selectedReview);
         }
 
+        
+        public IActionResult EditReview(Review selectedReview, int reviewId)
+        {
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            if(ModelState.IsValid)
+            {
+                Review reviewToEdit = dbContext.Reviews.FirstOrDefault(i => i.ReviewID == reviewId);
+                reviewToEdit.ReviewTitle = selectedReview.ReviewTitle;
+                reviewToEdit.Description = selectedReview.Description;
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewReview", "Review", new{reviewId});
+            }
+            else
+            {
+                return View("EditReview", selectedReview);
+            }
+        }
+
         [HttpGet("/review/dashboard")]
         public IActionResult Dashboard(int UserId)
         {

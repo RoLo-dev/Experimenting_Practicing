@@ -36,12 +36,9 @@
                 <a asp-action="Dashboard" asp-controller="Home">Go back</a>
                 @if(Context.Session.GetInt32("UserID") == @review.CreatorID)
                 {
-                    <button id="editBtn">Edit</button>
+                    <a asp-action="EditReview" asp-controller="Home">Edit</a>
                 }
             </div>
         }
     </div>
-</section>
-<section>
-    <partial name="EditPartial" />
 </section>
