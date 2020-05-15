@@ -121,6 +121,19 @@ namespace reviewPage.Controllers
             }
         }
 
+        [HttpPost("/review/delete-review/{reviewId}")]
+        public IActionResult DeleteReview(int reviewId)
+        {
+            if(UserSession == null)
+            {
+                return View("Login");
+            }
+            Review reviewToDelete = dbContext.Reviews.Single(i => i.ReviewID == reviewId);
+            dbContext.Reviews.Remove(reviewToDelete);
+            dbContext.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
         [HttpPost("/review/register")]
         public IActionResult NewUser(User newUser)
         {
