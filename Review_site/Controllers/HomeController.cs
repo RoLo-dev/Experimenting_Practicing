@@ -128,10 +128,10 @@ namespace reviewPage.Controllers
             {
                 return View("Login");
             }
-            Review reviewToDelete = dbContext.Reviews.Single(i => i.ReviewID == reviewId);
+            Review reviewToDelete = dbContext.Reviews.Include(i => i.Creator).FirstOrDefault(i => i.ReviewID == reviewId);
             dbContext.Reviews.Remove(reviewToDelete);
             dbContext.SaveChanges();
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("Dashboard", new{ uid = reviewToDelete.Creator.UserID });
         }
 
         [HttpPost("/review/register")]

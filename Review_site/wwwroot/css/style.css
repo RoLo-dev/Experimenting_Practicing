@@ -265,6 +265,9 @@ table tr:nth-child(even){
     box-shadow: 3px 4px 7px rgba(0,0,0,0.5);
     transition: all 0.2s ease-in;
 }
+#deleteBtn{
+    background-color: firebrick;
+}
 
 /* EDIT REVIEW */
 #editReview{

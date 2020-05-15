@@ -37,7 +37,7 @@
                 @if(Context.Session.GetInt32("UserID") == @review.CreatorID)
                 {
                     <a asp-action="EditReview" asp-controller="Home" asp-route-reviewId="@review.ReviewID">Edit</a>
-                    <a href="">Delete</a>
+                    <a id="deleteBtn" asp-action="DeleteReview" asp-controller="Home" asp-route-reviewId="@review.ReviewID">Delete</a>
                 }
             </div>
         }
