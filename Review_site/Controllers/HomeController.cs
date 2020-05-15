@@ -2,11 +2,9 @@
 using System.IO;
 using System.Linq;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using reviewPage.Models;
@@ -15,6 +13,18 @@ namespace reviewPage.Controllers
 {
     public class HomeController : Controller
     {
+        public class MessageBox
+        {
+            string message = "Do you want to close this window?";
+            string title = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes) {
+                this.Close();
+            } else {
+                // Do something
+            }
+        }
         private Context dbContext;
         public HomeController(Context context)
         {
@@ -128,6 +138,7 @@ namespace reviewPage.Controllers
             {
                 return RedirectToAction("Login");
             }
+
             Review reviewToDelete = dbContext.Reviews.Include(i => i.Creator).FirstOrDefault(i => i.ReviewID == reviewId);
             dbContext.Reviews.Remove(reviewToDelete);
             dbContext.SaveChanges();
