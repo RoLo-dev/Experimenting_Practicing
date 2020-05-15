@@ -13,18 +13,6 @@ namespace reviewPage.Controllers
 {
     public class HomeController : Controller
     {
-        public class MessageBox
-        {
-            string message = "Do you want to close this window?";
-            string title = "Close Window";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes) {
-                this.Close();
-            } else {
-                // Do something
-            }
-        }
         private Context dbContext;
         public HomeController(Context context)
         {
