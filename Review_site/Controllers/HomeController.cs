@@ -121,12 +121,12 @@ namespace reviewPage.Controllers
             }
         }
 
-        [HttpPost("/review/delete-review/{reviewId}")]
+        [HttpGet("/review/delete-review/{reviewId}")]
         public IActionResult DeleteReview(int reviewId)
         {
             if(UserSession == null)
             {
-                return View("Login");
+                return RedirectToAction("Login");
             }
             Review reviewToDelete = dbContext.Reviews.Include(i => i.Creator).FirstOrDefault(i => i.ReviewID == reviewId);
             dbContext.Reviews.Remove(reviewToDelete);
