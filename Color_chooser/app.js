@@ -13,7 +13,17 @@ const colorDivs = document.querySelectorAll('.color');
 const generateBtn = document.querySelectorAll('.generate');
 const sliders = document.querySelectorAll('input[type="range"]');
 const currentHexes = document.querySelectorAll(".color h2");
+const controls = document.querySelectorAll(".controls");
 let initialColors;
+
+// This will only appear on hover
+function mouseHover(controls) {
+    if(controls.style.visibility === 'hidden') {
+        controls.style.visibility = 'visible';
+    } else {
+        controls.style.visibility = 'hidden';
+    }
+}
 
 // This takes care of generating colors
 function randomHex() {
@@ -58,6 +68,6 @@ function colorizeSliders(color, hue, brightness, saturation) {
     const scaleSaturation = chroma.scale([noSaturation, color, fullSaturation]);
 
     // Update input colors
-    saturation.style.backgroundImage = `linear-gradient(to-right, ${scaleSaturation(0)}, ${scaleSaturation(1)})`;
+    saturation.style.backgroundImage = `linear-gradient(to right, ${scaleSaturation(0)}, ${scaleSaturation(1)})`;
 }
 randomColors();
