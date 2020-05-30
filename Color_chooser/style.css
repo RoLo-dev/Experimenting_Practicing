@@ -39,17 +39,32 @@ path, i, svg{
     bottom: 0%;
     background: rgba(0, 0, 0, 0.65);
     /* background: rgb(255, 255, 255); */
+    /* transform: translateY(100px); */
     /* opacity: 0; */
     border-radius: 10px;
     padding: 1rem;
     width: 80%;
-    transform: translateY(100px);
     transition: all 0.5s ease-in-out;
 }
 .sliders.active{
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
+}
+.sliders button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.7rem;
+    font-size: 1.35rem;
+    background: none;
+    color: rgb(73, 73, 73);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.sliders button:active{
+    transform: scale(0.95);
 }
 .controls{
     display: flex;
@@ -60,4 +75,18 @@ path, i, svg{
     align-items: center;
     justify-content: space-evenly;
     height: 20vh;
+}
+.panel button{
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+    padding: 0.25rem 2.5rem;
+    background: rgb(31, 33, 64);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: 0;
+    border: 0;
+}
+.panel-styles{
+    text-align: center;
 }
