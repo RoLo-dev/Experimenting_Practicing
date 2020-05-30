@@ -37,10 +37,10 @@ path, i, svg{
     flex-direction: column;
     position: absolute;
     bottom: 0%;
-    background: rgba(0, 0, 0, 0.65);
-    /* background: rgb(255, 255, 255); */
-    /* transform: translateY(100px); */
-    /* opacity: 0; */
+    /* background: rgba(0, 0, 0, 0.65); */
+    background: rgb(255, 255, 255);
+    transform: translateY(100px);
+    opacity: 0;
     border-radius: 10px;
     padding: 1rem;
     width: 80%;
@@ -79,8 +79,9 @@ path, i, svg{
 .panel button{
     font-size: 1.2rem;
     margin-bottom: 7px;
-    padding: 0.25rem 2.5rem;
-    background: rgb(31, 33, 64);
+    padding: 0.45rem 3rem;
+    /* background: rgb(31, 33, 64); */
+    background: #000;
     color: #fff;
     cursor: pointer;
     border-radius: 30px;
@@ -89,4 +90,15 @@ path, i, svg{
 }
 .panel-styles{
     text-align: center;
+}
+.adjust{
+    margin-bottom: 3.5rem;
+}
+.adjust,
+.lock{
+    font-size: 1.75rem;
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
 }
