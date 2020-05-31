@@ -90,6 +90,18 @@ function hslControls(e) {
     e.target.getAttribute('data-hue');
 
     let sliders = e.target.parentElement.querySelectorAll('input[type="range"]');
+    const hue = sliders[0];
+    const brightness = sliders[1];
+    const saturation = sliders[2];
+
+    const bgColor = colorDivs[index].querySelector("h2").innerText;
+
+    let color = chroma(bgColor)
+        .set("hsl.s", saturation.value)
+        .set("hsl.l", brightness.value)
+        .set("hsl.h", hue.value);
+
+    colorDivs[index].style.backgroundColor = color;
 }
 
 randomColors();
