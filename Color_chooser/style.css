@@ -28,6 +28,10 @@ path, i, svg{
     position: relative;
     overflow: hidden;
 }
+.color:hover .show{
+    visibility: visible;
+    transition: all 0.3s ease-out;
+}
 .color h2{
     font-weight: 600;
     font-size: 2rem;
@@ -77,9 +81,10 @@ input[type="range"]{
     cursor: pointer;
 }
 .controls{
-    /* visibility: hidden; */
+    visibility: hidden;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease-out;
 }
 .panel{
     display: flex;
@@ -107,7 +112,7 @@ input[type="range"]{
 }
 .adjust,
 .lock{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     border: 0;
     outline: 0;
     background: none;
