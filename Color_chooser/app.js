@@ -16,18 +16,14 @@ const currentHexes = document.querySelectorAll(".color h2");
 const controls = document.querySelectorAll(".controls");
 let initialColors;
 
-// This will only appear on hover
-function mouseHover(controls) {
-    if(controls.style.visibility === 'hidden') {
-        controls.style.visibility = 'visible';
-    } else {
-        controls.style.visibility = 'hidden';
-    }
-}
-
 // Event listeners
 sliders.forEach(slider => {
     slider.addEventListener('input', hslControls);
+})
+colorDivs.forEach((div, index) => {
+    div.addEventListener('change', () => {
+        updateTextUI(index);
+    })
 })
 
 // This takes care of generating colors
@@ -102,6 +98,14 @@ function hslControls(e) {
         .set("hsl.h", hue.value);
 
     colorDivs[index].style.backgroundColor = color;
+}
+
+function updateTextUI(index) {
+    const activeDiv = colorDivs[index];
+    const color = chroma(activeDiv.style.backgroundColor);
+    const textHex = activeDiv.querySelector("h2");
+    const icons = activeDiv.querySelectorAll(".controls button");
+    textHex.innerText = color.hex();
 }
 
 randomColors();

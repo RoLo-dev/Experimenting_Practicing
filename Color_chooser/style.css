@@ -30,7 +30,6 @@ path, i, svg{
 }
 .color:hover .show{
     visibility: visible;
-    transition: all 0.3s ease-out;
 }
 .color h2{
     font-weight: 600;
@@ -84,7 +83,6 @@ input[type="range"]{
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease-out;
 }
 .panel{
     display: flex;
