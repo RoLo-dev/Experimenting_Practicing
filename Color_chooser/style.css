@@ -47,7 +47,7 @@ path, i, svg{
     /* transform: translateY(100px);
     opacity: 0; */
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 1rem;
     width: 80%;
     transition: all 0.5s ease-in-out;
 }
@@ -58,18 +58,22 @@ path, i, svg{
 }
 .sliders button{
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 0.7rem;
-    font-size: 1.35rem;
+    top: 4px;
+    right: 4px;
+    padding: 0.1rem 1rem;
+    font-size: 1.65rem;
     background: none;
-    color: rgb(73, 73, 73);
+    color: #000;
     outline: 0;
     border: 0;
     cursor: pointer;
 }
 .sliders button:active{
     transform: scale(0.95);
+}
+.sliders span{
+    color: #000;
+    margin-bottom: 4px;
 }
 /* Customizing sliders */
 input[type="range"]{
@@ -91,7 +95,9 @@ input[type="range"]{
     height: 20vh;
 }
 .panel button{
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
     margin-bottom: 7px;
     padding: 0.45rem 3rem;
     /* background: rgb(31, 33, 64); */
@@ -101,6 +107,10 @@ input[type="range"]{
     border-radius: 30px;
     outline: 0;
     border: 0;
+}
+.panel button span{
+    font-size: 1.75rem;
+    margin-right: 7px;
 }
 .panel-styles{
     text-align: center;

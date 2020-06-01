@@ -35,13 +35,15 @@ function randomHex() {
 function randomColors() {
     colorDivs.forEach((div, index) => {
         const hexText = div.children[0];
+        const sliderIcon = div.children[1].children[0];
+        const lockIcon = div.children[1].children[1];
         const randomColor = randomHex();
 
         // Applying the generated hex as the background color
         div.style.backgroundColor = randomColor;
         hexText.innerText = randomColor;
         // Checking for contrast
-        checkTextContrast(randomColor, hexText);
+        checkTextContrast(randomColor, hexText, sliderIcon, lockIcon);
         // Initialize color sliders
         const color =  chroma(randomColor);
         const sliders = div.querySelectorAll('.sliders input');
@@ -53,12 +55,16 @@ function randomColors() {
     });
 }
 
-function checkTextContrast(color, text) {
+function checkTextContrast(color, text, button, button2) {
     const luminance = chroma(color).luminance();
     if(luminance > 0.5) {
         text.style.color = "black";
+        button.style.color = "black";
+        button2.style.color = "black";
     } else {
         text.style.color = "white";
+        button.style.color = "white";
+        button2.style.color = "white";
     }
 }
 
