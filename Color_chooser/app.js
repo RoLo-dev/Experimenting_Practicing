@@ -9,6 +9,7 @@
 // }
 // console.log(randomHex());
 
+const body = document.getElementById("body");
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -22,6 +23,8 @@ let initialColors;
 
 // Event listeners
 generateBtn.addEventListener('click', randomColors);
+body.addEventListener('keydown', spacebar);
+
 sliders.forEach(slider => {
     slider.addEventListener('input', hslControls);
 })
@@ -45,6 +48,12 @@ closeAdjustments.forEach((button, index) => {
         closeAdjustmentPanel(index);
     })
 })
+
+function spacebar(event){
+    if(event.keyCode === 32){
+        randomColors();
+    }
+}
 
 // This takes care of generating colors
 function randomHex() {
