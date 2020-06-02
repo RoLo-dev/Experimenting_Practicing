@@ -160,7 +160,11 @@ function copyToClipboard(hex) {
     document.execCommand("copy");
     document.body.removeChild(el);
     popup.classList.add("active");
-    popupBox.classList.add("active")
+        popupBox.classList.add("active");
+    setTimeout(() => {
+        popup.classList.remove("active");
+        popupBox.classList.remove("active");
+    }, 1000)
 }
 
 randomColors();
