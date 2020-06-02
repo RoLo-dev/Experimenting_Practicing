@@ -49,6 +49,7 @@ closeAdjustments.forEach((button, index) => {
     })
 })
 
+// This allows the spacebar to generate new colors
 function spacebar(event){
     if(event.keyCode === 32){
         randomColors();
