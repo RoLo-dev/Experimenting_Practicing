@@ -10,7 +10,7 @@
 // console.log(randomHex());
 
 const colorDivs = document.querySelectorAll(".color");
-const generateBtn = document.querySelectorAll(".generate");
+const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
 const currentHexes = document.querySelectorAll(".color h2");
 const controls = document.querySelectorAll(".controls");
@@ -21,6 +21,7 @@ const sliderContainers = document.querySelectorAll(".sliders");
 let initialColors;
 
 // Event listeners
+generateBtn.addEventListener('click', randomColors);
 sliders.forEach(slider => {
     slider.addEventListener('input', hslControls);
 })
@@ -34,6 +35,16 @@ currentHexes.forEach(hex => {
         copyToClipboard(hex);
     })
 })
+adjustBtn.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        openAdjustmentPanel(index);
+    });
+})
+closeAdjustments.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        closeAdjustmentPanel(index);
+    })
+})
 
 // This takes care of generating colors
 function randomHex() {
@@ -45,7 +56,7 @@ function randomColors() {
     initialColors = [];
     colorDivs.forEach((div, index) => {
         const hexText = div.children[0];
-        const icons = div.querySelectorAll(".controls button");
+        const controlIcons = div.querySelectorAll(".controls button");
         const randomColor = randomHex();
         // Add it to the Array
         initialColors.push(chroma(randomColor).hex());
@@ -54,7 +65,7 @@ function randomColors() {
         div.style.backgroundColor = randomColor;
         hexText.innerText = randomColor;
         // Checking for contrast
-        checkTextContrast(randomColor, hexText, icons);
+        checkTextContrast(randomColor, hexText, controlIcons);
         // Initialize color sliders
         const color =  chroma(randomColor);
         const sliders = div.querySelectorAll('.sliders input');
@@ -127,10 +138,10 @@ function updateTextUI(index) {
     const activeDiv = colorDivs[index];
     const color = chroma(activeDiv.style.backgroundColor);
     const textHex = activeDiv.querySelector("h2");
-    const icons = activeDiv.querySelectorAll(".controls button");
+    const controlIcons = activeDiv.querySelectorAll(".controls button");
     textHex.innerText = color.hex();
     // Check contrast
-    checkTextContrast(color, textHex, icons);
+    checkTextContrast(color, textHex, controlIcons);
 }
 
 function resetInputs() {
@@ -168,6 +179,14 @@ function copyToClipboard(hex) {
         popup.classList.remove("active");
         popupBox.classList.remove("active");
     }, 1000)
+}
+
+// These functions take care of the slider container
+function openAdjustmentPanel(index) {
+    sliderContainers[index].classList.toggle("active");
+}
+function closeAdjustmentPanel(index) {
+    sliderContainers[index].classList.remove("active");
 }
 
 randomColors();
