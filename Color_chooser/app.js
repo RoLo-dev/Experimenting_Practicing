@@ -9,12 +9,15 @@
 // }
 // console.log(randomHex());
 
-const colorDivs = document.querySelectorAll('.color');
-const generateBtn = document.querySelectorAll('.generate');
+const colorDivs = document.querySelectorAll(".color");
+const generateBtn = document.querySelectorAll(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
 const currentHexes = document.querySelectorAll(".color h2");
 const controls = document.querySelectorAll(".controls");
 const popup = document.querySelector(".copy-container");
+const adjustBtn = document.querySelectorAll(".adjust");
+const closeAdjustments = document.querySelectorAll(".close-adjustment");
+const sliderContainers = document.querySelectorAll(".sliders");
 let initialColors;
 
 // Event listeners

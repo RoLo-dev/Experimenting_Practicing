@@ -44,8 +44,8 @@ path, i, svg{
     bottom: 2%;
     /* background: rgba(0, 0, 0, 0.65); */
     background: rgb(255, 255, 255);
-    /* transform: translateY(100px);
-    opacity: 0; */
+    transform: translateY(100px);
+    opacity: 0;
     border-radius: 10px;
     padding: 2rem 1rem;
     width: 80%;
@@ -88,6 +88,16 @@ input[type="range"]{
     display: flex;
     flex-direction: column;
 }
+.adjust{
+    margin-bottom: 1rem;
+}
+.controls button{
+    font-size: 1.5rem;
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+}
 .panel{
     display: flex;
     align-items: center;
@@ -100,7 +110,6 @@ input[type="range"]{
     font-size: 1rem;
     margin-bottom: 7px;
     padding: 0.45rem 3rem;
-    /* background: rgb(31, 33, 64); */
     background: #000;
     color: #fff;
     cursor: pointer;
@@ -114,17 +123,6 @@ input[type="range"]{
 }
 .panel-styles{
     text-align: center;
-}
-.adjust{
-    margin-bottom: 3.5rem;
-}
-.adjust,
-.lock{
-    font-size: 1.5rem;
-    border: 0;
-    outline: 0;
-    background: none;
-    cursor: pointer;
 }
 
 /* Styling the copy clipboard */
@@ -150,13 +148,14 @@ input[type="range"]{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 2.5rem;
-    border-radius: 10px;
-    transform: translateY(1rem);
-    transition: transform 0.6s ease-in;
+    padding: 0.75rem 2rem;
+    border-radius: 7px;
+    transform: translateY(-2rem);
+    transition: transform 0.2s ease-in;
 }
 .copy-popup.active{
-    transform: translateY(0rem);;
+    transform: translateY(0rem);
+    transition: transform 0.4s ease-in;
 }
 .copy-popup span{
     margin-top: 10px;
