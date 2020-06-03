@@ -19,6 +19,7 @@ const popup = document.querySelector(".copy-container");
 const adjustBtn = document.querySelectorAll(".adjust");
 const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
+const lockBtn = document.querySelectorAll(".lock");
 let initialColors;
 
 // Event listeners
@@ -48,10 +49,26 @@ closeAdjustments.forEach((button, index) => {
         closeAdjustmentPanel(index);
     })
 })
+lockBtn.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        lockColor(index);
+    })
+})
+
+// This toggles the lock icons
+function lockColor(index) {
+    colorDivs[index].classList.toggle("locked");
+    if(lockBtn[index].children[0].innerText === "lock_open") {
+        lockBtn[index].children[0].innerText = "lock";
+    } else {
+        lockBtn[index].children[0].innerText = "lock_open";
+    }
+}
 
 // This allows the spacebar to generate new colors
 function spacebar(event){
     if(event.keyCode === 32){
+        event.preventDefault();
         randomColors();
     }
 }
@@ -69,7 +86,12 @@ function randomColors() {
         const controlIcons = div.querySelectorAll(".controls button");
         const randomColor = randomHex();
         // Add it to the Array
-        initialColors.push(chroma(randomColor).hex());
+        if(div.classList.contains("locked")) {
+            initialColors.push(hexText.innerText);
+            return
+        } else {
+            initialColors.push(chroma(randomColor).hex());
+        }
 
         // Applying the generated hex as the background color
         div.style.backgroundColor = randomColor;
