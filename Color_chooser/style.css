@@ -140,7 +140,9 @@ input[type="range"]{
     opacity: 0;
     pointer-events: none;
 }
-.copy-container.active{
+.copy-container.active,
+.save-container.active,
+.library-container.active{
     opacity: 1;
     pointer-events: all;
 }
@@ -156,7 +158,9 @@ input[type="range"]{
     transform: translateY(-2rem);
     transition: transform 0.2s ease-in;
 }
-.copy-popup.active{
+.copy-popup.active,
+.save-popup.active,
+.library-popup.active{
     transform: translateY(0rem);
     transition: transform 0.4s ease-in;
 }
