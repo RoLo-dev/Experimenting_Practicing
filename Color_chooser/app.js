@@ -226,9 +226,11 @@ const submitSave = document.querySelector(".submit-save");
 const closeSave = document.querySelector(".close-save");
 const saveContainer = document.querySelector(".save-container");
 const saveInput = document.querySelector(".save-container input");
+const libraryBtn = document.querySelector();
 
 saveBtn.addEventListener('click', openPalette);
-closeSave.addEventListener('click', closePalette)
+closeSave.addEventListener('click', closePalette);
+submitSave.addEventListener('click', savePalette);
 
 function openPalette(e) {
     const popup = saveContainer.children[0];
@@ -251,7 +253,13 @@ function savePalette(e) {
     // Generate object
     let paletteNumber = savedPalettes.length;
     const paletteObj = { name:name, colors, number: paletteNumber };
-    savedPalettes.push()
+    savedPalettes.push(paletteObj);
+    // Saving it to localStorage
+    saveToLocal(paletteObj);
+    saveInput.value = "";
+}
+function saveToLocal(paletteObj) {
+
 }
 
 randomColors();

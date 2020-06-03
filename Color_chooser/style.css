@@ -177,15 +177,15 @@ input[type="range"]{
     margin-top: 10px;
     font-size: 2.5rem;
 }
-.save-popup h4,
+.save-popup h3,
 .save-popup input{
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 .save-popup input{
     outline: 0;
     border: 2px solid #000;
-    height: 1.75rem;
-    width: 12rem;
+    height: 2rem;
+    width: 14rem;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     padding: 0 5px;
@@ -193,7 +193,7 @@ input[type="range"]{
 .save-popup button{
     outline: 0;
     border: 0;
-    padding: 5px 3rem;
+    padding: 10px 3rem;
     background: #000;
     color: #fff;
     border-radius: 30px;
