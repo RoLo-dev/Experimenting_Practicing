@@ -21,6 +21,7 @@ const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
 const lockBtn = document.querySelectorAll(".lock");
 let initialColors;
+let savedPalettes = [];
 
 // Event listeners
 generateBtn.addEventListener('click', randomColors);
@@ -55,7 +56,7 @@ lockBtn.forEach((button, index) => {
     })
 })
 
-// This toggles the lock icons
+// This toggles the lock icon from locked to unlocked
 function lockColor(index) {
     colorDivs[index].classList.toggle("locked");
     if(lockBtn[index].children[0].innerText === "lock_open") {
@@ -65,7 +66,7 @@ function lockColor(index) {
     }
 }
 
-// This allows the spacebar to generate new colors
+// This allows the spacebar key to generate new colors
 function spacebar(event){
     if(event.keyCode === 32){
         event.preventDefault();
@@ -85,14 +86,13 @@ function randomColors() {
         const hexText = div.children[0];
         const controlIcons = div.querySelectorAll(".controls button");
         const randomColor = randomHex();
-        // Add it to the Array
+        // Add it to the Array so it can be stored when color is locked
         if(div.classList.contains("locked")) {
             initialColors.push(hexText.innerText);
             return
         } else {
             initialColors.push(chroma(randomColor).hex());
         }
-
         // Applying the generated hex as the background color
         div.style.backgroundColor = randomColor;
         hexText.innerText = randomColor;
@@ -142,7 +142,6 @@ function colorizeSliders(color, hue, brightness, saturation) {
 
     hue.style.backgroundImage = `linear-gradient(to right, rgb(204,75,75),rgb(204,204,75),rgb(75,204,75),rgb(75,204,204),rgb(75,75,204),rgb(204,75,204),rgb(204,75,75))`;
 }
-
 function hslControls(e) {
     const index = 
     e.target.getAttribute('data-bright') ||
@@ -166,6 +165,7 @@ function hslControls(e) {
     colorizeSliders(color, hue, brightness, saturation);
 }
 
+// It makes sure that the changes are updated
 function updateTextUI(index) {
     const activeDiv = colorDivs[index];
     const color = chroma(activeDiv.style.backgroundColor);
@@ -175,7 +175,6 @@ function updateTextUI(index) {
     // Check contrast
     checkTextContrast(color, textHex, controlIcons);
 }
-
 function resetInputs() {
     const sliders = document.querySelectorAll(".sliders input");
     sliders.forEach(slider => {
@@ -219,6 +218,21 @@ function openAdjustmentPanel(index) {
 }
 function closeAdjustmentPanel(index) {
     sliderContainers[index].classList.remove("active");
+}
+
+// Saving a color palette locally
+const saveBtn = document.querySelector(".save");
+const submitSave = document.querySelector(".submit-save");
+const closeSave = document.querySelector(".close-save");
+const saveContainer = document.querySelector(".save-container");
+const saveInput = document.querySelector(".save-container input");
+
+saveBtn.addEventListener("click", openPalette);
+
+function openPalette(e) {
+    const popup = saveContainer.children[0];
+    saveContainer.classList.add("active");
+    popup.classList.add("active");
 }
 
 randomColors();
