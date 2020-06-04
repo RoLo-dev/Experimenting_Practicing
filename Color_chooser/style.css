@@ -152,9 +152,12 @@ input[type="range"]{
 .copy-popup{
     padding: 0.75rem 2rem;
 }
-.save-popup,
-.library-popup{
+.save-popup{
     padding: 2rem 4.25rem;
+}
+.library-popup{
+    padding: 2rem;
+    min-width: 375px;
 }
 .copy-popup,
 .save-popup,
@@ -194,7 +197,7 @@ input[type="range"]{
 .save-popup button{
     outline: 0;
     border: 0;
-    padding: 10px 3rem;
+    padding: 7px 3rem;
     background: #000;
     color: #fff;
     border-radius: 30px;
@@ -203,7 +206,7 @@ input[type="range"]{
 .saved-palette{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     padding: 0.5rem;
 }
@@ -215,5 +218,18 @@ input[type="range"]{
     flex: 1;
 }
 .small-preview div{
-    height: 4.5rem;
+    height: 2.5rem;
+    flex: 1;
+}
+.pick-palette-btn{
+    /* height: 2.5rem; */
+    margin-left: 7px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 0.25rem 1.5rem;
+    font-size: 0.9rem;
+    background: rgb(41, 41, 41);
 }

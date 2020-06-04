@@ -68,11 +68,13 @@ function lockColor(index) {
 
 // This allows the spacebar key to generate new colors
 function spacebar(event){
-    if(event.keyCode === 32){
+    const inputField = document.querySelector(".save-popup input").focus();
+    if(event.keyCode === 32 && !inputField){
         event.preventDefault();
         randomColors();
     }
 }
+// Try adding a focus event on the body to run randomColors()
 
 // This takes care of generating colors
 function randomHex() {
