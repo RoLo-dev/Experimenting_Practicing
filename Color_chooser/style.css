@@ -11,6 +11,9 @@ html{
 h1{
     font-weight: 800;
 }
+h3{
+    font-weight: 600;
+}
 button{
     font-family: 'Inter', sans-serif;
     cursor: pointer;
@@ -19,7 +22,7 @@ path, i, svg{
     pointer-events: none;
 }
 .wrapper{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -43,7 +46,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.nav-links button{
+.panel-styles button{
     margin-left: 2rem;
     display: flex;
     align-items: center;
@@ -53,8 +56,13 @@ header{
     outline: 0;
     border: 0;
     cursor: pointer;
+    transition: all 0.4s ease-out;
 }
-.nav-links button span{
+.panel-styles button:hover{
+    color: rgb(90, 90, 90);
+    transition: color 0.2s ease-in;
+}
+.panel-styles button span{
     font-size: 1.75rem;
     margin-right: 7px;
 }
@@ -139,32 +147,32 @@ header{
 .saved-palette{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     padding: 0.5rem;
 }
+.pick-palette-btn{
+    flex: 0.5;
+    border: 0;
+    outline: 0;
+    color: #000;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+    background: none;
+    transition: all 0.4s ease-out;
+}
+.pick-palette-btn:hover{
+    color: rgb(90, 90, 90);
+    transition: color 0.2s ease-in;
+}
 .small-preview{
     display: flex;
-    flex: 1;
-}
-.saved-palette h4{
-    flex: 1;
 }
 .small-preview div{
     height: 2.5rem;
-    flex: 1;
-}
-.pick-palette-btn{
-    /* height: 2.5rem; */
-    margin-left: 7px;
-    border: 0;
-    outline: 0;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 25px;
-    padding: 0.25rem 1.5rem;
-    font-size: 0.9rem;
-    background: rgb(41, 41, 41);
+    width: 2.5rem;
 }
 
 /* The rest of the styles below take care of the main body */

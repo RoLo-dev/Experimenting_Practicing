@@ -267,6 +267,7 @@ function savePalette(e) {
     const palette = document.createElement("div");
     const title = document.createElement("h4");
     const preview = document.createElement("div");
+    const paletteBtn = document.createElement("button");
     palette.classList.add("saved-palette");
     title.innerText = paletteObj.name;
     preview.classList.add("small-preview");
@@ -275,15 +276,14 @@ function savePalette(e) {
         smallDiv.style.backgroundColor = smallColor;
         preview.appendChild(smallDiv);
     })
-    const paletteBtn = document.createElement("button");
     paletteBtn.classList.add("pick-palette-btn");
     paletteBtn.classList.add(paletteObj.number);
-    paletteBtn.innerText = "Select";
+    // paletteBtn.innerText = "Select";
 
     // Now we need to append it to Library
-    palette.appendChild(title);
-    palette.appendChild(preview);
+    paletteBtn.appendChild(title);
     palette.appendChild(paletteBtn);
+    palette.appendChild(preview);
     libraryContainer.children[0].appendChild(palette);
 }
 function saveToLocal(paletteObj) {
