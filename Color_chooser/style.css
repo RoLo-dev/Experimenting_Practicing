@@ -200,9 +200,20 @@ input[type="range"]{
     border-radius: 30px;
     font-size: 1rem;
 }
-.library-popup button{
-    outline: 0;
-    border: 0;
-    background: #000;
-    color: #fff;
+.saved-palette{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+}
+.small-preview{
+    display: flex;
+    flex: 1;
+}
+.saved-palette h4{
+    flex: 1;
+}
+.small-preview div{
+    height: 4.5rem;
 }

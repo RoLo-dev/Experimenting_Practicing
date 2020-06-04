@@ -256,7 +256,7 @@ function savePalette(e) {
     })
     // Generate object
     let paletteNumber = savedPalettes.length;
-    const paletteObj = { name:name, colors, number: paletteNumber };
+    const paletteObj = { name, colors, number: paletteNumber };
     savedPalettes.push(paletteObj);
     // Saving it to localStorage
     saveToLocal(paletteObj);
@@ -267,6 +267,7 @@ function savePalette(e) {
     const preview = document.createElement("div");
     palette.classList.add("saved-palette");
     title.innerText = paletteObj.name;
+    preview.classList.add("small-preview");
     paletteObj.colors.forEach(smallColor => {
         const smallDiv = document.createElement("div");
         smallDiv.style.backgroundColor = smallColor;
