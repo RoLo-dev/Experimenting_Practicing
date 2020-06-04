@@ -233,7 +233,8 @@ const closeLibraryBtn = document.querySelector(".close-library");
 saveBtn.addEventListener('click', openPalette);
 closeSave.addEventListener('click', closePalette);
 submitSave.addEventListener('click', savePalette);
-// libraryBtn.addEventListener('click', openLibrary);
+libraryBtn.addEventListener('click', openLibrary);
+closeLibraryBtn.addEventListener('click', closeLibrary);
 
 function openPalette(e) {
     const popup = saveContainer.children[0];
@@ -295,6 +296,13 @@ function saveToLocal(paletteObj) {
 
 function openLibrary() {
     const popup = libraryContainer.children[0];
+    libraryContainer.classList.add("active");
+    popup.classList.add("active");
+}
+function closeLibrary() {
+    const popup = libraryContainer.children[0];
+    libraryContainer.classList.remove("active");
+    popup.classList.remove("active");
 }
 
 randomColors();
