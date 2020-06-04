@@ -1,3 +1,4 @@
+/* Universal styles */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,9 @@ html{
     font-family: 'Inter', sans-serif;
     color: #000;
 }
+h1{
+    font-weight: 800;
+}
 button{
     font-family: 'Inter', sans-serif;
     cursor: pointer;
@@ -14,114 +18,43 @@ button{
 path, i, svg{
     pointer-events: none;
 }
-.colors{
-    min-height: 90vh;
-    display: flex;
-    color: rgb(212, 212, 212);
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
 }
-.color{
-    height: 90vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-.color:hover .show{
-    visibility: visible;
-}
-.color h2{
-    font-weight: 600;
-    font-size: 2rem;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.sliders{
-    display: flex;
-    flex-direction: column;
+
+/* Header portion */
+header{
+    width: 100%;
     position: absolute;
-    bottom: 2%;
-    background: rgb(255, 255, 255);
-    transform: translateY(100px);
-    opacity: 0;
-    border-radius: 10px;
-    padding: 2rem 1rem;
-    width: 80%;
-    transition: all 0.5s ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #fff;
 }
-.sliders.active{
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
-}
-.sliders button{
-    padding: 0.1rem 1rem;
-}
-.save-popup .close,
-.library-popup .close{
-    padding: 0 0.5rem;
-}
-.sliders button,
-.save-popup .close,
-.library-popup .close{
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    font-size: 1.65rem;
-    background: none;
-    color: #000;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-}
-.sliders button:active{
-    transform: scale(0.95);
-}
-.sliders span{
-    color: #000;
-    margin-bottom: 4px;
-}
-input[type="range"]{
-    -webkit-appearance: none;
-    margin-bottom: 0.5rem;
-    position: relative;
-    border-radius: 30px;
-    cursor: pointer;
-}
-.controls{
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-}
-.adjust{
-    margin-bottom: 1rem;
-}
-.controls button{
-    font-size: 1.5rem;
-    border: 0;
-    outline: 0;
-    background: none;
-}
-.panel{
+.main-header{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 10vh;
+    justify-content: space-between;
+    height: auto;
+    padding: 1rem 0;
 }
-.panel button{
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links button{
+    margin-left: 2rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
-    padding: 0.45rem 3rem;
-    background: #000;
-    color: #fff;
-    border-radius: 30px;
+    background: 0;
+    color: #000;
     outline: 0;
     border: 0;
+    cursor: pointer;
 }
-.panel button span{
+.nav-links button span{
     font-size: 1.75rem;
     margin-right: 7px;
 }
@@ -232,4 +165,96 @@ input[type="range"]{
     padding: 0.25rem 1.5rem;
     font-size: 0.9rem;
     background: rgb(41, 41, 41);
+}
+
+/* The rest of the styles below take care of the main body */
+.colors{
+    min-height: 90vh;
+    display: flex;
+    color: rgb(212, 212, 212);
+}
+.color{
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.color:hover .show{
+    visibility: visible;
+}
+.color h2{
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.sliders{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2%;
+    background: rgb(255, 255, 255);
+    transform: translateY(100px);
+    opacity: 0;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    width: 80%;
+    transition: all 0.5s ease-in-out;
+}
+.sliders.active{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+.sliders button{
+    padding: 0.1rem 1rem;
+}
+.save-popup .close,
+.library-popup .close{
+    padding: 0 0.5rem;
+}
+.sliders button,
+.save-popup .close,
+.library-popup .close{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 1.65rem;
+    background: none;
+    color: #000;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.sliders button:active{
+    transform: scale(0.95);
+}
+.sliders span{
+    color: #000;
+    margin-bottom: 4px;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    margin-bottom: 0.5rem;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.controls{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.adjust{
+    margin-bottom: 1rem;
+}
+.controls button{
+    font-size: 1.5rem;
+    border: 0;
+    outline: 0;
+    background: none;
 }

@@ -5,12 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Chooser</title>
 
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body id="body">
+
+    <header>
+        <div class="wrapper main-header">
+
+            <div class="site-title">
+                <h1>Palette Creator</h1>
+            </div>
+            <div class="nav-links">
+                <div class="panel-styles generate-panel">
+                    <button class="generate"><span class="material-icons">autorenew</span>Generate</button>
+                    <p></p>
+                </div>
+                <div class="panel-styles library-panel">
+                    <button class="library"><span class="material-icons">view_module</span>My Palettes</button>
+                    <p></p>
+                </div>
+                <div class="panel-styles save-panel">
+                    <button class="save"><span class="material-icons">bookmark_border</span>Save</button>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="copy-container">
+        <div class="copy-popup">
+            <h3>Copied to clipboard!</h3>
+            <span class="material-icons">done</span>
+        </div>
+    </div>
+
+    <div class="save-container">
+        <div class="save-popup">
+            <button class="close-save close">&times;</button>
+            <h3>Name your palette</h3>
+            <input type="text" maxlength="35" class="save-name">
+            <button type="submit" class="submit-save">Save</button>
+        </div>
+    </div>
+
+    <div class="library-container">
+        <div class="library-popup">
+            <button class="close-library close">&times;</button>
+            <h3>Pick your palette</h3>
+        </div>
+    </div>
+
     <div class="colors">
 
         <div class="color">
@@ -98,44 +146,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="panel">
-        <div class="panel-styles library-panel">
-            <button class="library"><span class="material-icons">view_module</span>My Palettes</button>
-            <p></p>
-        </div>
-        <div class="panel-styles generate-panel">
-            <button class="generate"><span class="material-icons">autorenew</span>Generate</button>
-            <p></p>
-        </div>
-        <div class="panel-styles save-panel">
-            <button class="save"><span class="material-icons">bookmark_border</span>Save</button>
-            <p></p>
-        </div>
-    </div>
-
-    <div class="copy-container">
-        <div class="copy-popup">
-            <h3>Copied to clipboard!</h3>
-            <span class="material-icons">done</span>
-        </div>
-    </div>
-
-    <div class="save-container">
-        <div class="save-popup">
-            <button class="close-save close">&times;</button>
-            <h3>Name your palette</h3>
-            <input type="text" maxlength="35" class="save-name">
-            <button type="submit" class="submit-save">Save</button>
-        </div>
-    </div>
-
-    <div class="library-container">
-        <div class="library-popup">
-            <button class="close-library close">&times;</button>
-            <h3>Pick your palette</h3>
-        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
