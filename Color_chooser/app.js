@@ -280,9 +280,16 @@ function savePalette(e) {
 
     // Adding an event to the button
     paletteBtn.addEventListener('click', e => {
+        closeLibrary();
+        console.log(color);
         const paletteIndex = e.target.classList[1];
         initialColors = [];
-        savedPalettes[paletteIndex].colors;
+        savedPalettes[paletteIndex].colors.forEach((color, index) => {
+            initialColors.push(color);
+            colorDivs[index].style.backgroundColor = color;
+            const text = colorDivs[index].children[0];
+        });
+        // console.log(savedPalettes);
     })
 
     // Now we need to append it to Library
