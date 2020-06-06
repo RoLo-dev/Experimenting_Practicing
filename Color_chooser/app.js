@@ -276,20 +276,22 @@ function savePalette(e) {
         preview.appendChild(smallDiv);
     })
     paletteBtn.classList.add("pick-palette-btn");
-    paletteBtn.classList.add(paletteObj.number);
+    preview.classList.add(paletteObj.number);
 
     // Adding an event to the button
-    paletteBtn.addEventListener('click', e => {
+    preview.addEventListener('click', e => {
         closeLibrary();
-        console.log(color);
         const paletteIndex = e.target.classList[1];
         initialColors = [];
+        console.log(savedPalettes);
         savedPalettes[paletteIndex].colors.forEach((color, index) => {
             initialColors.push(color);
             colorDivs[index].style.backgroundColor = color;
             const text = colorDivs[index].children[0];
+            checkTextContrast(color, text);
+            updateTextUI(index);
         });
-        // console.log(savedPalettes);
+        libraryUpdate();
     })
 
     // Now we need to append it to Library
