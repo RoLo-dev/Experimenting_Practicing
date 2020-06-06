@@ -67,14 +67,12 @@ function lockColor(index) {
 }
 
 // This allows the spacebar key to generate new colors
-function spacebar(event){
-    const inputField = document.querySelector(".save-popup input").focus();
-    if(event.keyCode === 32 && !inputField){
-        event.preventDefault();
+function spacebar(e){
+    if(e.keyCode === 32 && e.target === body){
+        e.preventDefault();
         randomColors();
     }
 }
-// Try adding a focus event on the body to run randomColors()
 
 // This takes care of generating colors
 function randomHex() {
@@ -230,6 +228,7 @@ const saveContainer = document.querySelector(".save-container");
 const saveInput = document.querySelector(".save-container input");
 const libraryBtn = document.querySelector(".library");
 const libraryContainer = document.querySelector(".library-container");
+const savedPalettesDiv = document.querySelector(".saved-palettes");
 const closeLibraryBtn = document.querySelector(".close-library");
 
 saveBtn.addEventListener('click', openPalette);
@@ -278,13 +277,19 @@ function savePalette(e) {
     })
     paletteBtn.classList.add("pick-palette-btn");
     paletteBtn.classList.add(paletteObj.number);
-    // paletteBtn.innerText = "Select";
+
+    // Adding an event to the button
+    paletteBtn.addEventListener('click', e => {
+        const paletteIndex = e.target.classList[1];
+        initialColors = [];
+        savedPalettes[paletteIndex].colors;
+    })
 
     // Now we need to append it to Library
     paletteBtn.appendChild(title);
     palette.appendChild(paletteBtn);
     palette.appendChild(preview);
-    libraryContainer.children[0].appendChild(palette);
+    savedPalettesDiv.appendChild(palette);
 }
 function saveToLocal(paletteObj) {
     let localPalettes;

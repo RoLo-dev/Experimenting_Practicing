@@ -98,7 +98,9 @@ header{
 }
 .library-popup{
     padding: 2rem;
-    min-width: 375px;
+    min-width: 425px;
+    overflow-y: scroll;
+    height: 250px;
 }
 .copy-popup,
 .save-popup,
@@ -144,15 +146,23 @@ header{
     border-radius: 30px;
     font-size: 1rem;
 }
+.saved-palettes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    width: 100%;
+}
 .saved-palette{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
 }
 .pick-palette-btn{
-    flex: 0.5;
+    width: auto;
     border: 0;
     outline: 0;
     color: #000;
