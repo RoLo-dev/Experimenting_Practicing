@@ -171,6 +171,7 @@ header{
     font-size: 1rem;
     text-decoration: underline;
     background: none;
+    pointer-events: none;
     transition: all 0.4s ease-out;
 }
 .pick-palette-btn:hover{
@@ -179,6 +180,7 @@ header{
 }
 .small-preview{
     display: flex;
+    pointer-events: none;
 }
 .small-preview div{
     height: 2.5rem;
