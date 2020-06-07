@@ -84,14 +84,14 @@ header{
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s ease-in;
+    transition: all 0.4s ease-out;
 }
 .copy-container.active,
 .save-container.active,
 .library-container.active{
     opacity: 1;
     pointer-events: all;
-    transition: opacity 0.2s ease-in;
+    transition: opacity 0.1s ease-in;
 }
 .copy-popup{
     padding: 0.75rem 2rem;
@@ -116,14 +116,14 @@ header{
     flex-direction: column;
     align-items: center;
     border-radius: 7px;
-    transform: translateY(-2rem);
-    transition: transform 0.2s ease-in;
+    transform: translateY(-4rem);
+    transition: transform 0.3s ease-in;
 }
 .copy-popup.active,
 .save-popup.active,
 .library-popup.active{
     transform: translateY(0rem);
-    transition: transform 0.2s ease-in;
+    transition: transform 0.1s ease-in;
 }
 .copy-popup span{
     margin-top: 10px;
@@ -234,14 +234,14 @@ header{
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 2%;
+    bottom: 7%;
     background: rgb(255, 255, 255);
     transform: translateY(150px);
     opacity: 0;
     border-radius: 10px;
     padding: 2rem 1rem;
     width: 80%;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 }
 .sliders.active{
     opacity: 1;
@@ -274,7 +274,7 @@ header{
 .library-popup .close:active{
     transform: scale(0.95);
 }
-.sliders span{
+.sliders label{
     color: #000;
     margin-bottom: 4px;
 }
@@ -298,4 +298,9 @@ input[type="range"]{
     border: 0;
     outline: 0;
     background: none;
+    transition: all 0.3s ease-out;
+}
+.controls button:hover{
+    opacity: 0.5;
+    transition: opacity 0.1s ease-in;
 }

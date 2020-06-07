@@ -86,7 +86,7 @@ function randomColors() {
         const hexText = div.children[0];
         const controlIcons = div.querySelectorAll(".controls button");
         const randomColor = randomHex();
-        // Add it to the Array so it can be stored when color is locked
+        // Add it to the array so it can be stored when color is locked
         if(div.classList.contains("locked")) {
             initialColors.push(hexText.innerText);
             return
@@ -231,18 +231,19 @@ const libraryContainer = document.querySelector(".library-container");
 const savedPalettesDiv = document.querySelector(".saved-palettes");
 const closeLibraryBtn = document.querySelector(".close-library");
 
-saveBtn.addEventListener('click', openPalette);
-closeSave.addEventListener('click', closePalette);
+saveBtn.addEventListener('click', openSavePopup);
+closeSave.addEventListener('click', closeSavePopup);
 submitSave.addEventListener('click', savePalette);
 libraryBtn.addEventListener('click', openLibrary);
 closeLibraryBtn.addEventListener('click', closeLibrary);
 
-function openPalette(e) {
+function openSavePopup(e) {
     const popup = saveContainer.children[0];
     saveContainer.classList.add("active");
     popup.classList.add("active");
+    saveInput.focus();
 }
-function closePalette(e) {
+function closeSavePopup(e) {
     const popup = saveContainer.children[0];
     saveContainer.classList.remove("active");
     popup.classList.remove("active");
@@ -255,7 +256,7 @@ function savePalette(e) {
     currentHexes.forEach(hex => {
         colors.push(hex.innerText);
     })
-    // Generate object
+    // Creating an object
     let paletteNumber;
     const paletteObjects = JSON.parse(localStorage.getItem("palettes"));
     if(paletteObjects) {
@@ -269,7 +270,7 @@ function savePalette(e) {
     // Saving it to localStorage
     saveToLocal(paletteObj);
     saveInput.value = "";
-    // Generate saved palette in library
+    // Creating a div to hold the saved palette in library
     const palette = document.createElement("div");
     const titlePreviewDiv = document.createElement("div");
     const title = document.createElement("p");
