@@ -161,23 +161,6 @@ header{
     margin-bottom: 1rem;
     padding-right: 0.5rem;
 }
-.pick-palette-btn{
-    width: auto;
-    border: 0;
-    outline: 0;
-    color: #000;
-    margin-right: 1.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: underline;
-    background: none;
-    pointer-events: none;
-    transition: all 0.4s ease-out;
-}
-.pick-palette-btn:hover{
-    color: rgb(90, 90, 90);
-    transition: color 0.2s ease-in;
-}
 .small-preview{
     display: flex;
     pointer-events: none;
@@ -185,6 +168,20 @@ header{
 .small-preview div{
     height: 2.5rem;
     width: 2.5rem;
+}
+.delete-btn{
+    width: auto;
+    border: 0;
+    outline: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 2.5rem;
+    background: none;
+    transition: all 0.4s ease-out;
+}
+.delete-btn:hover{
+    color: firebrick;
+    transition: color 0.2s ease-in;
 }
 
 /* The rest of the styles below take care of the main body */

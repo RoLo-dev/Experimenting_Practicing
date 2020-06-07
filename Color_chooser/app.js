@@ -271,9 +271,12 @@ function savePalette(e) {
     saveInput.value = "";
     // Generate saved palette in library
     const palette = document.createElement("div");
+    const titlePreviewDiv = document.createElement("div");
     const title = document.createElement("h4");
     const preview = document.createElement("div");
+    const deleteDiv = document.createElement("div");
     const paletteBtn = document.createElement("button");
+    titlePreviewDiv.classList.add("colors-container");
     palette.classList.add("saved-palette");
     title.innerText = paletteObj.name;
     preview.classList.add("small-preview");
@@ -282,13 +285,15 @@ function savePalette(e) {
         smallDiv.style.backgroundColor = smallColor;
         preview.appendChild(smallDiv);
     })
-    paletteBtn.classList.add("pick-palette-btn");
-    palette.classList.add(paletteObj.number);
+    deleteDiv.classList.add("delete-container");
+    paletteBtn.classList.add("delete-btn");
+    paletteBtn.innerHTML = "<span class='material-icons'>delete_forever</span>";
+    titlePreviewDiv.classList.add(paletteObj.number);
 
     // Adding an event to the button
-    palette.addEventListener('click', e => {
+    titlePreviewDiv.addEventListener('click', e => {
         closeLibrary();
-        const paletteIndex = e.target.classList[1];
+        const paletteIndex = e.target.classList[1].children[0];
         initialColors = [];
         // console.log(savedPalettes[paletteIndex]);
         savedPalettes[paletteIndex].colors.forEach((color, index) => {
@@ -303,9 +308,11 @@ function savePalette(e) {
     })
 
     // Now we need to append it to Library
-    paletteBtn.appendChild(title);
-    palette.appendChild(paletteBtn);
-    palette.appendChild(preview);
+    titlePreviewDiv.appendChild(title);
+    titlePreviewDiv.appendChild(preview);
+    deleteDiv.appendChild(paletteBtn);
+    palette.appendChild(titlePreviewDiv)
+    palette.appendChild(deleteDiv);
     savedPalettesDiv.appendChild(palette);
 }
 function saveToLocal(paletteObj) {
@@ -339,9 +346,12 @@ function getFromLocalStorage() {
         paletteObjects.forEach(paletteObj => {
             // Generate saved palette in library
             const palette = document.createElement("div");
+            const titlePreviewDiv = document.createElement("div");
             const title = document.createElement("h4");
             const preview = document.createElement("div");
+            const deleteDiv = document.createElement("div");
             const paletteBtn = document.createElement("button");
+            titlePreviewDiv.classList.add("colors-container");
             palette.classList.add("saved-palette");
             title.innerText = paletteObj.name;
             preview.classList.add("small-preview");
@@ -350,11 +360,13 @@ function getFromLocalStorage() {
                 smallDiv.style.backgroundColor = smallColor;
                 preview.appendChild(smallDiv);
             })
-            paletteBtn.classList.add("pick-palette-btn");
-            palette.classList.add(paletteObj.number);
+            deleteDiv.classList.add("delete-container");
+            paletteBtn.classList.add("delete-btn");
+            paletteBtn.innerHTML = "<span class='material-icons'>delete_forever</span>";
+            titlePreviewDiv.classList.add(paletteObj.number);
 
             // Adding an event to the button
-            palette.addEventListener('click', e => {
+            titlePreviewDiv.addEventListener('click', e => {
                 closeLibrary();
                 const paletteIndex = e.target.classList[1];
                 initialColors = [];
@@ -371,9 +383,11 @@ function getFromLocalStorage() {
             })
 
             // Now we need to append it to Library
-            paletteBtn.appendChild(title);
-            palette.appendChild(paletteBtn);
-            palette.appendChild(preview);
+            titlePreviewDiv.appendChild(title);
+            titlePreviewDiv.appendChild(preview);
+            deleteDiv.appendChild(paletteBtn);
+            palette.appendChild(titlePreviewDiv)
+            palette.appendChild(deleteDiv);
             savedPalettesDiv.appendChild(palette);
         })
     }
