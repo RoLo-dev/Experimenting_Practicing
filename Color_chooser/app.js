@@ -272,7 +272,7 @@ function savePalette(e) {
     // Generate saved palette in library
     const palette = document.createElement("div");
     const titlePreviewDiv = document.createElement("div");
-    const title = document.createElement("h4");
+    const title = document.createElement("p");
     const preview = document.createElement("div");
     const deleteDiv = document.createElement("div");
     const paletteBtn = document.createElement("button");
@@ -347,7 +347,7 @@ function getFromLocalStorage() {
             // Generate saved palette in library
             const palette = document.createElement("div");
             const titlePreviewDiv = document.createElement("div");
-            const title = document.createElement("h4");
+            const title = document.createElement("p");
             const preview = document.createElement("div");
             const deleteDiv = document.createElement("div");
             const paletteBtn = document.createElement("button");

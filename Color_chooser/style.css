@@ -146,6 +146,7 @@ header{
     border-radius: 30px;
     font-size: 1rem;
 }
+/* These are the styles for the content inside the save-popup */
 .saved-palettes{
     display: flex;
     flex-direction: column;
@@ -158,8 +159,14 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     padding-right: 0.5rem;
+}
+.colors-container{
+    width: 85%;
+}
+.colors-container p{
+    margin-bottom: 2px;
 }
 .small-preview{
     display: flex;
@@ -167,20 +174,26 @@ header{
 }
 .small-preview div{
     height: 2.5rem;
-    width: 2.5rem;
+    width: 100%;
+}
+.delete-container{
+    width: 7%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .delete-btn{
     width: auto;
     border: 0;
     outline: 0;
-    color: #000;
+    color: rgb(175, 175, 175);
     cursor: pointer;
     font-size: 2.5rem;
     background: none;
     transition: all 0.4s ease-out;
 }
 .delete-btn:hover{
-    color: firebrick;
+    color: #000;
     transition: color 0.2s ease-in;
 }
 
@@ -247,7 +260,9 @@ header{
     border: 0;
     cursor: pointer;
 }
-.sliders button:active{
+.sliders button:active,
+.save-popup .close:active,
+.library-popup .close:active{
     transform: scale(0.95);
 }
 .sliders span{
