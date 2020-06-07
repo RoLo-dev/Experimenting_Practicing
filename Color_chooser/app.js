@@ -287,13 +287,13 @@ function savePalette(e) {
     })
     deleteDiv.classList.add("delete-container");
     paletteBtn.classList.add("delete-btn");
-    paletteBtn.innerHTML = "<span class='material-icons'>delete_forever</span>";
+    paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
     titlePreviewDiv.classList.add(paletteObj.number);
 
     // Adding an event to the button
     titlePreviewDiv.addEventListener('click', e => {
         closeLibrary();
-        const paletteIndex = e.target.classList[1].children[0];
+        const paletteIndex = e.target.classList[1];
         initialColors = [];
         // console.log(savedPalettes[paletteIndex]);
         savedPalettes[paletteIndex].colors.forEach((color, index) => {
@@ -307,7 +307,7 @@ function savePalette(e) {
         resetInputs();
     })
 
-    // Now we need to append it to Library
+    // Now we append it to the Library
     titlePreviewDiv.appendChild(title);
     titlePreviewDiv.appendChild(preview);
     deleteDiv.appendChild(paletteBtn);
@@ -362,7 +362,7 @@ function getFromLocalStorage() {
             })
             deleteDiv.classList.add("delete-container");
             paletteBtn.classList.add("delete-btn");
-            paletteBtn.innerHTML = "<span class='material-icons'>delete_forever</span>";
+            paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
             titlePreviewDiv.classList.add(paletteObj.number);
 
             // Adding an event to the button
@@ -370,7 +370,6 @@ function getFromLocalStorage() {
                 closeLibrary();
                 const paletteIndex = e.target.classList[1];
                 initialColors = [];
-                // console.log(savedPalettes[paletteIndex]);
                 paletteObjects[paletteIndex].colors.forEach((color, index) => {
                     initialColors.push(color);
                     colorDivs[index].style.backgroundColor = color;
