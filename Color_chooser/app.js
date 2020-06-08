@@ -55,6 +55,12 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
+// Takes care of the hex input value to change the colorDivs backgroundColor
+function hexInputValue(index) {
+    // let sliders = e.target.parentElement.querySelectorAll('input[type="range"]');
+    let hexInput = colorDivs[index].querySelector("input[type='text]");
+    console.log(hexInput.value);
+}
 
 // This toggles the lock icon from locked to unlocked
 function lockColor(index) {
