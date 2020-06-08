@@ -239,12 +239,14 @@ closeLibraryBtn.addEventListener('click', closeLibrary);
 window.addEventListener('click', outsideClick);
 
 function outsideClick(e){
-    if(e.target === libraryContainer) {
-        libraryContainer.classList.remove("active");
-        popup.classList.remove("active");
-    }
+    const popup1 = saveContainer.children[0];
+    const popup2 = libraryContainer.children[0];
     if(e.target === saveContainer) {
         saveContainer.classList.remove("active");
+        popup1.classList.remove("active");
+    }
+    if(e.target === libraryContainer) {
+        libraryContainer.classList.remove("active");
         popup.classList.remove("active");
     }
 }
