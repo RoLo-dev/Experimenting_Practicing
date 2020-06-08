@@ -45,10 +45,19 @@ lockBtn.forEach((button, index) => {
     })
 })
 // Takes care of the hex input value to change the colorDivs backgroundColor
-function hexInputValue(index) {
-    // let sliders = e.target.parentElement.querySelectorAll('input[type="range"]');
-    let hexInput = colorDivs[index].querySelector("input[type='text]");
-    console.log(hexInput.value);
+const hexInput = document.querySelectorAll(".hex-input");
+// let inputValue = colorDivs[index].querySelector("input[type='text]");
+
+hexInput.forEach((input, index) => {
+    input.addEventListener('keydown', () => {
+        hexInputValue(index);
+    })
+})
+
+function hexInputValue(e, index) {
+    if(e.keyCode === 13 && e.target === inputValue) {
+        colorDivs[index].style.backgroundColor = inputValue.value;
+    }
 }
 // This toggles the lock icon from locked to unlocked
 function lockColor(index) {
@@ -235,7 +244,7 @@ function outsideClick(e){
     }
     if(e.target === libraryContainer) {
         libraryContainer.classList.remove("active");
-        popup.classList.remove("active");
+        popup2.classList.remove("active");
     }
 }
 function openSavePopup(e) {
