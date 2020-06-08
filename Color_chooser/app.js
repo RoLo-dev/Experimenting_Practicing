@@ -1,14 +1,3 @@
-// This is the function how you would generate random hex colors
-// function randomHex() {
-//     const letters = "0123456789ABCDEF";
-//     let hash = "#";
-//     for(let i = 0; i < 6; i++) {
-//         hash += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return hash;
-// }
-// console.log(randomHex());
-
 const body = document.getElementById("body");
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
@@ -61,7 +50,6 @@ function hexInputValue(index) {
     let hexInput = colorDivs[index].querySelector("input[type='text]");
     console.log(hexInput.value);
 }
-
 // This toggles the lock icon from locked to unlocked
 function lockColor(index) {
     colorDivs[index].classList.toggle("locked");
@@ -71,7 +59,6 @@ function lockColor(index) {
         lockBtn[index].children[0].innerText = "lock_open";
     }
 }
-
 // This allows the spacebar key to generate new colors
 function spacebar(e){
     if(e.keyCode === 32 && e.target === body){
@@ -79,7 +66,6 @@ function spacebar(e){
         randomColors();
     }
 }
-
 // This takes care of generating colors
 function randomHex() {
     const hexColor = chroma.random();
@@ -140,7 +126,6 @@ function colorizeSliders(color, hue, brightness, saturation) {
     // Scale brightness
     const midBright = color.set("hsl.l", 0.5);
     const scaleBright = chroma.scale(["black", midBright, "white"])
-
     // Update input colors
     saturation.style.backgroundImage = `linear-gradient(to right, ${scaleSaturation(0)}, ${scaleSaturation(1)})`;
 
@@ -170,7 +155,6 @@ function hslControls(e) {
     // Update sliders
     colorizeSliders(color, hue, brightness, saturation);
 }
-
 // It makes sure that the changes are updated
 function updateTextUI(index) {
     const activeDiv = colorDivs[index];
@@ -217,7 +201,6 @@ function copyToClipboard(hex) {
         popupBox.classList.remove("active");
     }, 1000)
 }
-
 // These functions take care of the slider container
 function openAdjustmentPanel(index) {
     sliderContainers[index].classList.toggle("active");
@@ -225,7 +208,6 @@ function openAdjustmentPanel(index) {
 function closeAdjustmentPanel(index) {
     sliderContainers[index].classList.remove("active");
 }
-
 // Saving a color palette locally
 const saveBtn = document.querySelector(".save");
 const submitSave = document.querySelector(".submit-save");
@@ -309,7 +291,6 @@ function savePalette(e) {
     paletteBtn.classList.add("delete-btn");
     paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
     titlePreviewDiv.classList.add(paletteObj.number);
-
     // Adding an event to the button
     titlePreviewDiv.addEventListener('click', e => {
         closeLibrary();
@@ -326,7 +307,6 @@ function savePalette(e) {
         });
         resetInputs();
     })
-
     // Now we append it to the Library
     titlePreviewDiv.appendChild(title);
     titlePreviewDiv.appendChild(preview);
@@ -384,7 +364,6 @@ function getFromLocalStorage() {
             paletteBtn.classList.add("delete-btn");
             paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
             titlePreviewDiv.classList.add(paletteObj.number);
-
             // Adding an event to the button
             titlePreviewDiv.addEventListener('click', e => {
                 closeLibrary();
@@ -400,7 +379,6 @@ function getFromLocalStorage() {
                 });
                 resetInputs();
             })
-
             // Now we need to append it to Library
             titlePreviewDiv.appendChild(title);
             titlePreviewDiv.appendChild(preview);
