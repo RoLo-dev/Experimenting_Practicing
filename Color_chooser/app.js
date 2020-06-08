@@ -236,7 +236,18 @@ closeSave.addEventListener('click', closeSavePopup);
 submitSave.addEventListener('click', savePalette);
 libraryBtn.addEventListener('click', openLibrary);
 closeLibraryBtn.addEventListener('click', closeLibrary);
+window.addEventListener('click', outsideClick);
 
+function outsideClick(e){
+    if(e.target === libraryContainer) {
+        libraryContainer.classList.remove("active");
+        popup.classList.remove("active");
+    }
+    if(e.target === saveContainer) {
+        saveContainer.classList.remove("active");
+        popup.classList.remove("active");
+    }
+}
 function openSavePopup(e) {
     const popup = saveContainer.children[0];
     saveContainer.classList.add("active");
