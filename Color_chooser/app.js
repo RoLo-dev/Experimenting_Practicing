@@ -1,5 +1,5 @@
 const body = document.getElementById("body");
-const bodyContainer = document.querySelector("color");
+const bodyContainer = document.querySelector(".colors");
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -46,9 +46,10 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
-dragBtn.forEach(element => {
+dragBtn.forEach((element, index) => {
     element.addEventListener('dragstart', () => {
-        element.classList.add("dragging");
+        colorDivs[index].classList.add("dragging");
+        console.log('clicked');
     })
 })
 
