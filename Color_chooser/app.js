@@ -46,9 +46,9 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
-dragBtn.forEach((element, index) => {
+dragBtn.forEach(element => {
     element.addEventListener('dragstart', () => {
-        colorDivs[index].classList.add("dragging");
+        // colorDivs[index].classList.add("dragging");
         console.log('clicked');
     })
 })
