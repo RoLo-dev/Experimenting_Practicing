@@ -1,5 +1,5 @@
 const body = document.getElementById("body");
-const bodyContainer = document.querySelector(".colors");
+const colorContainer = document.querySelector(".colors");
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -46,12 +46,30 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
-dragBtn.forEach(element => {
-    element.addEventListener('dragstart', () => {
-        // colorDivs[index].classList.add("dragging");
-        console.log('clicked');
+colorDivs.forEach((drag, index) => {
+    drag.addEventListener('dragstart', () => {
+        colorDivs[index].classList.add("dragging");
+    });
+    drag.addEventListener('dragend', () => {
+        colorDivs[index].classList.remove("dragging");
     })
 })
+colorContainer.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    // const afterElement = getDragAfterElement(e.clientY);
+    // console.log(afterElement);
+    const draggable = document.querySelector(".dragging");
+    this.appendChild(draggable);
+})
+
+function getDragAfterElement(container, i) {
+    const draggableElements = [...container.querySelectorAll(".color:not(.dragging)")]
+
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        
+    })
+}
 
 
 // Takes care of the hex input value to change the colorDivs backgroundColor

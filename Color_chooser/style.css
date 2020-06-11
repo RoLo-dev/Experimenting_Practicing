@@ -212,6 +212,7 @@ header{
     color: rgb(212, 212, 212);
 }
 .color{
+    /* cursor: move; */
     height: 100vh;
     display: flex;
     flex: 1;
@@ -302,8 +303,9 @@ input[type="range"]{
     transition: opacity 0.1s ease-in;
 }
 .draggable{
-    cursor: move;
+    cursor: move !important;
 }
 .color.dragging{
-    opacity: 0.5;
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in;
 }
