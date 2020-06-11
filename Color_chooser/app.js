@@ -1,4 +1,5 @@
 const body = document.getElementById("body");
+const bodyContainer = document.querySelector("color");
 const colorDivs = document.querySelectorAll(".color");
 const generateBtn = document.querySelector(".generate");
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -9,6 +10,7 @@ const adjustBtn = document.querySelectorAll(".adjust");
 const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
 const lockBtn = document.querySelectorAll(".lock");
+const dragBtn = document.querySelectorAll(".draggable");
 let initialColors;
 let savedPalettes = [];
 
@@ -44,6 +46,13 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
+dragBtn.forEach(element => {
+    element.addEventListener('dragstart', () => {
+        element.classList.add("dragging");
+    })
+})
+
+
 // Takes care of the hex input value to change the colorDivs backgroundColor
 const hexInput = document.querySelectorAll(".hex-input");
 // let inputValue = colorDivs[index].querySelector("input[type='text]");

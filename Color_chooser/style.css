@@ -290,17 +290,17 @@ input[type="range"]{
     display: flex;
     flex-direction: column;
 }
-.adjust{
-    margin-bottom: 1rem;
-}
 .controls button{
     font-size: 1.5rem;
+    margin-bottom: 1rem;
     border: 0;
     outline: 0;
     background: none;
-    transition: all 0.3s ease-out;
 }
 .controls button:hover{
     opacity: 0.5;
     transition: opacity 0.1s ease-in;
+}
+.controls .draggable{
+    cursor: grab;
 }
