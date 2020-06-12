@@ -305,7 +305,3 @@ input[type="range"]{
 .draggable{
     cursor: move !important;
 }
-.color.dragging{
-    opacity: 0.2;
-    transition: opacity 0.2s ease-in;
-}

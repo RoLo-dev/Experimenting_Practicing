@@ -48,8 +48,6 @@ lockBtn.forEach((button, index) => {
 
 // This enables the colors to be dragged around
 var sortable = Sortable.create(colorContainer);
-
-
 // Takes care of the hex input value to change the colorDivs backgroundColor
 const hexInput = document.querySelectorAll(".hex-input");
 // let inputValue = colorDivs[index].querySelector("input[type='text]");
