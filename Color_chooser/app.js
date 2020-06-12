@@ -10,7 +10,6 @@ const adjustBtn = document.querySelectorAll(".adjust");
 const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
 const lockBtn = document.querySelectorAll(".lock");
-const dragBtn = document.querySelectorAll(".draggable");
 let initialColors;
 let savedPalettes = [];
 
@@ -46,38 +45,9 @@ lockBtn.forEach((button, index) => {
         lockColor(index);
     })
 })
-colorDivs.forEach((drag, index) => {
-    drag.addEventListener('dragstart', () => {
-        colorDivs[index].classList.add("dragging");
-    });
-    drag.addEventListener('dragend', () => {
-        colorDivs[index].classList.remove("dragging");
-    })
-})
-colorContainer.addEventListener('dragover', function(e) {
-    e.preventDefault();
-    const afterElement = getDragAfterElement(e.clientY);
-    const draggable = document.querySelector(".dragging");
-    if(afterElement == null) {
-        this.appendChild(draggable);
-    } else{
-        this.insertBefore(draggable, afterElement);
-    }
-})
 
-function getDragAfterElement(container, i) {
-    const draggableElements = [...container.querySelectorAll(".color:not(.dragging)")]
-
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = i - box.top - box.height / 2;
-        if(offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child }
-        } else{
-            return closest;
-        }
-    }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
+// This enables the colors to be dragged around
+var sortable = Sortable.create(colorContainer);
 
 
 // Takes care of the hex input value to change the colorDivs backgroundColor
