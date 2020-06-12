@@ -1,0 +1,6 @@
+.Pokedex {
+    margin-bottom: 1rem;
+}
+.Pokedex-cards {
+    display: flex;
+}
