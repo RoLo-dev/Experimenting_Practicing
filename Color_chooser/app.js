@@ -56,10 +56,13 @@ colorDivs.forEach((drag, index) => {
 })
 colorContainer.addEventListener('dragover', function(e) {
     e.preventDefault();
-    // const afterElement = getDragAfterElement(e.clientY);
-    // console.log(afterElement);
+    const afterElement = getDragAfterElement(e.clientY);
     const draggable = document.querySelector(".dragging");
-    this.appendChild(draggable);
+    if(afterElement == null) {
+        this.appendChild(draggable);
+    } else{
+        this.insertBefore(draggable, afterElement);
+    }
 })
 
 function getDragAfterElement(container, i) {
@@ -67,8 +70,13 @@ function getDragAfterElement(container, i) {
 
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
-        
-    })
+        const offset = i - box.top - box.height / 2;
+        if(offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child }
+        } else{
+            return closest;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
 
 
