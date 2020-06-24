@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.scss';
+import MobileBanner from './MobileBanner';
 
 function App() {
     return(
-        <h1>Hello World</h1>
+        <div>
+            <MobileBanner />
+        </div>
     )
 }
 
