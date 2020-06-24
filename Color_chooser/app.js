@@ -405,3 +405,4 @@ function getFromLocalStorage() {
 
 getFromLocalStorage();
 randomColors();
+// window.localStorage.clear();
