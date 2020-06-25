@@ -9,3 +9,13 @@ html {
     scroll-behavior: smooth;
     font-weight: 400;
 }
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+.pic {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import './MediaQueries.scss';
+import './App.scss';
 
 class MobileBanner extends Component {
     render() {
         const logo = require('./img/RL_favicon-2018.png');
         return(
             <header className="mobile-header">
-                <div className="wrapper">
+                <div className="wrapper mobile-header-container">
                     <div className="title">
-                        <img src={logo} alt=""/>
+                        <img className="pic" src={logo} alt=""/>
                     </div>
                     <div id="hamburger-menu">
                         <span className="open-icon"></span>
