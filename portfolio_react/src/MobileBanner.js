@@ -9,7 +9,7 @@ class MobileBanner extends Component {
             <header className="mobile-header">
                 <div className="wrapper mobile-header-container">
                     <div className="title">
-                        <img className="pic" src={logo} alt=""/>
+                        <img className="pic" src={logo} alt="Rolando Lopantzi logo"/>
                     </div>
                     <div id="hamburger-menu">
                         <span className="open-icon"></span>
