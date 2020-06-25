@@ -19,4 +19,5 @@ class MobileBanner extends Component {
         )
     }
 }
+
 export default MobileBanner;

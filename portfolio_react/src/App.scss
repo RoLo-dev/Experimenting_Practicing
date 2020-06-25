@@ -9,6 +9,12 @@ html {
     scroll-behavior: smooth;
     font-weight: 400;
 }
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
 .wrapper {
     width: 90%;
     margin: 0 auto;

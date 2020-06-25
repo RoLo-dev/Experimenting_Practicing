@@ -7,8 +7,8 @@ class SideMenu extends Component {
         const logo = require('./img/RL_logo2018.svg');
         return(
             <div id="side-menu">
-                <div className="fullname-logo">
-                    <a href="#">
+                <div className="full-name-logo">
+                    <a href="index.html">
                         <img src={logo} alt="Rolando Lopantzi logo" className="pic"/>
                     </a>
                 </div>
@@ -18,10 +18,34 @@ class SideMenu extends Component {
                             <a href="#projects">Projects</a>
                         </li>
                         <li>
-                            <a href="about">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li>
                             <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="social-media-links">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/RoLo-dev" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/rolando-lopantzi-87326b74/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:rlopantzi@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
