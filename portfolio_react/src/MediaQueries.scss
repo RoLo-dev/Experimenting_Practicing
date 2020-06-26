@@ -71,8 +71,42 @@
         a{
             color: #fff;
         }
-        .full-name-logo{
+        .title-links {
             width: 70%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .site-links {
+                li {
+                    margin-top: 0.5rem;
+                }
+                li:first-child {
+                    margin-top: 0;
+                }
+                a {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        .social-media-links {
+            position: absolute;
+            bottom: 3%;
+            width: 100%;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin-right: 1.75rem;
+            }
+            li:last-child {
+                margin: 0;
+            }
+            a {
+                font-size: 1.5rem;
+            }
         }
     }
 
