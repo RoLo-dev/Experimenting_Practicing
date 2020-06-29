@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MediaQueries.scss';
 import './App.scss';
+import SideMenu from './SideMenu';
 
 class MobileBanner extends Component {
     render() {

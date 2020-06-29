@@ -71,13 +71,14 @@
         a{
             color: #fff;
         }
-        .title-links {
+        .title-link {
             width: 70%;
             height: 100%;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            padding-bottom: 2rem;
 
             .site-links {
                 li {
@@ -106,6 +107,9 @@
             }
             a {
                 font-size: 1.5rem;
+            }
+            a:active {
+                transform: scale(0.98);
             }
         }
     }

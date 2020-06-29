@@ -7,7 +7,7 @@ class SideMenu extends Component {
         const logo = require('./img/RL_logo2018.svg');
         return(
             <div id="side-menu">
-                <div className="title-links">
+                <div className="title-link">
                     <div className="full-name-logo">
                         <a href="index.html">
                             <img src={logo} alt="Rolando Lopantzi logo" className="pic"/>
