@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import React, { Component } from 'react'
 
 class Die extends Component {
