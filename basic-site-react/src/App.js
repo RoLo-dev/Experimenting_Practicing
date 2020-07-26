@@ -10,7 +10,12 @@ class App extends React.Component {
                 { title: 'Home', path: '/' },
                 { title: 'About', path: '/about' },
                 { title: 'Contact', path: '/contact' }
-            ]
+            ],
+            home: {
+                title: 'Be persistent',
+                subtitle: 'Practicing using React',
+                text: ''
+            }
         }
     }
 
