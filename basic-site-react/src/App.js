@@ -14,7 +14,12 @@ class App extends React.Component {
             home: {
                 title: 'Be persistent',
                 subtitle: 'Practicing using React',
-                text: ''
+            },
+            about: {
+                title: 'About Me'
+            },
+            contact: {
+                title: 'Contact'
             }
         }
     }
