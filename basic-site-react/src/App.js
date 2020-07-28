@@ -1,7 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.scss';
+
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage'
 
 class App extends React.Component {
     constructor(props) {
@@ -43,6 +45,8 @@ class App extends React.Component {
                             </nav>
                         </div>
                     </header>
+
+                    <Route path="/" exact render={() => <HomePage title={this.state.home.title} /> } />
 
                     <Footer />
 
