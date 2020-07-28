@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.scss';
+import Footer from './components/Footer';
 
 class App extends React.Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Router>
+
                     <header>
                         <div className="wrapper main-header">
                             <div className="logo">
@@ -41,6 +43,9 @@ class App extends React.Component {
                             </nav>
                         </div>
                     </header>
+
+                    <Footer />
+
                 </Router>
             </div>
         )
