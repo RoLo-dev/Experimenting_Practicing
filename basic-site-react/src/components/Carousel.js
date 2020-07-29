@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../components/Card'
 
 import Img1 from '../assets/img/img1.jpg';
 import Img2 from '../assets/img/img2.jpg';
@@ -42,8 +43,8 @@ class Carousel extends React.Component {
 
         items[id].selected = items[id].selected ? false : true;
         items.forEach(item => {
-            if(items.id !== id) {
-                items.selected = false;
+            if(item.id !== id) {
+                item.selected = false;
             }
         })
         this.setState({
@@ -52,13 +53,16 @@ class Carousel extends React.Component {
     }
     makeItems = (items) => {
         return items.map(item => {
-            return <div item={item} onclick={(e => this.cardClick(item.id, e))} key={item.id} ></div>
+            return <Card item={item} onClick={(e => this.cardClick(item.id, e))} key={item.id} />
         })
     }
 
     render() {
         return(
-            <p>Carousel works</p>
+            <div className="wrapper">
+                {this.makeItems(this.state.items)}
+                <Card />
+            </div>
         )
     }
 }
