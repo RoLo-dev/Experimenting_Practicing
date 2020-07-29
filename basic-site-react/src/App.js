@@ -38,7 +38,7 @@ class App extends React.Component {
                     <header>
                         <div className="wrapper main-header">
                             <div className="logo">
-                                <h1>Rolando</h1>
+                                <h1>ROLANDO</h1>
                             </div>
                             <nav>
                                 <Link className="nav-link" to="/">Home</Link>

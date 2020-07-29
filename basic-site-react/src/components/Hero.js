@@ -1,8 +1,14 @@
 import React from 'react'
 
-function Hero() {
+function Hero(props) {
     return(
-        <p>Hero works</p>
+        <div className="hero">
+            <div className="hero-text">
+                { props.title && <h1>{ props.title }</h1> }
+                { props.subtitle && <h3>{ props.subtitle }</h3> }
+            </div>
+            <p></p>
+        </div>
     )
 }
 
