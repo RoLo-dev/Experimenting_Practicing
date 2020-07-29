@@ -4,7 +4,18 @@ class Carousel extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            items: [
+                {
+                    id: 0,
+                    title: 'Project 1',
+                    subTitle: 'The first card',
+                    imgSrc: '',
+                    link: 'https://unsplash.com/',
+                    selected: false
+                }
+            ]
+        }
     }
 
     render() {
