@@ -20,6 +20,12 @@ ul {
     width: 90%;
     margin: 0 auto;
 }
+.pic {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 // Styling for the header
 .main-header {
