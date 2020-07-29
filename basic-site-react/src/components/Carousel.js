@@ -59,7 +59,7 @@ class Carousel extends React.Component {
 
     render() {
         return(
-            <div className="wrapper">
+            <div className="wrapper card-container">
                 {this.makeItems(this.state.items)}
             </div>
         )

@@ -44,7 +44,7 @@ ul {
 // Styling for the hero section
 .hero {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     background-color: #000;
     color: #fff;
 
@@ -65,4 +65,22 @@ ul {
             letter-spacing: 14.5px;
         }
     }
+}
+
+// Styling for cards
+.card-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .card {
+        width: 32%;
+    }
+}
+
+// Styling for the footer
+footer {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
 }
