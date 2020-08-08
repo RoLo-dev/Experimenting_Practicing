@@ -2,10 +2,10 @@
 // export class and export default
 import React from 'react'
 
-const UserItem = (props) => {
+const UserItem = ({ user: { avatar_url, login, html_url } }) => {
     // you can clean up your code by having all the state
     // properties as a variable and have it equal to this.state
-    const { avatar_url, login, html_url } = props.user;
+    // const { avatar_url, login, html_url } = props.user;
 
     return <div className="card text-center">
         <img src={avatar_url} alt="" className="round-img" style= {{ width: '60px' }}/>
