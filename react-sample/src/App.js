@@ -7,9 +7,20 @@ import Users from './components/users/Users';
 
 
 class App extends Component {
-    componentDidMount() {
-        axios.get('https://api.github.com/users')
-            .then(res => console.log(res.data));
+    // this is another way of writing it out
+    // componentDidMount() {
+    //     axios
+    //         .get('https://api.github.com/users')
+    //         .then(res => console.log(res.data));
+    // }
+    state = {
+        users: [],
+        loading: false
+    }
+    async componentDidMount() {
+        this.setState({ loading: true });
+        const res = await axios.get("https://api.github.com/users");
+        this.setState({ users: res.data, loading: false });
     }
 
     render() {
