@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import '../MediaQueries.scss';
 import '../App.scss';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-class SideMenu extends Component {
+class MobileNav extends Component {
     render() {
         const logo = require('../img/RL_logo2018.svg');
         return(
@@ -56,4 +57,4 @@ class SideMenu extends Component {
     }
 }
 
-export default SideMenu;
+export default MobileNav;
