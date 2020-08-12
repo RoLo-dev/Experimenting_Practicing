@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-import MobileBanner from './MobileBanner';
-import SideMenu from './SideMenu';
+import MobileBanner from './components/MobileBanner';
+import SideMenu from './components/SideMenu';
 
 function App() {
     return(
