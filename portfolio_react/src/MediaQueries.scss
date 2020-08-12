@@ -1,5 +1,8 @@
 @media only screen and (max-width: 850px) {
     .header-container {
+        .nav-links {
+            display: none;
+        }
         .title {
             width: 10%;
         }
@@ -7,6 +10,7 @@
             // background: coral;
             padding: 1rem 0.15rem;
             cursor: pointer;
+            display: block;
 
             .open-icon {
             display: block;

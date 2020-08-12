@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import Banner from './components/Banner.js';
-import MobileNav from './components/MobileNav'
+import SideMenu from './components/SideMenu.js'
 
 function App() {
     return(
         <Router>
             <div>
                 <Banner />
-                <MobileNav />
+                <SideMenu />
             </div>
         </Router>
     )

@@ -3,7 +3,7 @@ import '../MediaQueries.scss';
 import '../App.scss';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-class MobileNav extends Component {
+class SideMenu extends Component {
     render() {
         const logo = require('../img/RL_logo2018.svg');
         return(
@@ -51,4 +51,4 @@ class MobileNav extends Component {
     }
 }
 
-export default MobileNav;
+export default SideMenu;
