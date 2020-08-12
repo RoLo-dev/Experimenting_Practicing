@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './MediaQueries.scss';
-import './App.scss';
+import '../MediaQueries.scss';
+import '../App.scss';
 
 class SideMenu extends Component {
     render() {
-        const logo = require('./img/RL_logo2018.svg');
+        const logo = require('../img/RL_logo2018.svg');
         return(
             <div id="side-menu">
                 <div className="title-link">

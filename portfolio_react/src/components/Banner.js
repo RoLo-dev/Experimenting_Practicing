@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './MediaQueries.scss';
-import './App.scss';
+import '../MediaQueries.scss';
+import '../App.scss';
 // import SideMenu from './SideMenu';
 
-class MobileBanner extends Component {
+class Banner extends Component {
     render() {
-        const logo = require('./img/RL_favicon-2018.png');
+        const logo = require('../img/RL_favicon-2018.png');
         return(
             <header className="mobile-header">
                 <div className="wrapper mobile-header-container">
@@ -21,4 +21,4 @@ class MobileBanner extends Component {
     }
 }
 
-export default MobileBanner;
+export default Banner;
