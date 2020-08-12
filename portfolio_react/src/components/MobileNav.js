@@ -11,9 +11,9 @@ class MobileNav extends Component {
                 <div id="side-menu">
                     <div className="title-link">
                         <div className="full-name-logo">
-                            <a href="index.html">
+                            <Link to="/" exact>
                                 <img src={logo} alt="Rolando Lopantzi logo" className="pic"/>
-                            </a>
+                            </Link>
                         </div>
                         <div className="site-links">
                             <Link to="/projects" className="link">Projects</Link>

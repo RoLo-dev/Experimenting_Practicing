@@ -7,8 +7,8 @@ class Banner extends Component {
         const logo = require('../img/RL_favicon-2018.png');
         return(
             <div className="banner">
-                <header className="mobile-header">
-                    <div className="wrapper mobile-header-container">
+                <header className="main-header">
+                    <div className="wrapper header-container">
                         <div className="title">
                             <img className="pic" src={logo} alt="Rolando Lopantzi logo"/>
                         </div>
