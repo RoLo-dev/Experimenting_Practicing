@@ -10,7 +10,7 @@ function App() {
         <Router>
             <div>
                 <Banner />
-                <SideMenu />
+                {/* <SideMenu /> */}
             </div>
         </Router>
     )

@@ -12,21 +12,21 @@ class Banner extends Component {
                     <header className="main-header">
                         <div className="wrapper header-container">
 
-                            <div className="title">
+                            <Link className="title" to="/" exact>
                                 <img className="pic" src={logo} alt="Rolando Lopantzi logo"/>
-                            </div>
+                            </Link>
 
                             <div className="nav-links">
                                 <Link to="/projects">Projects</Link>
-                                <Link to="/about">About</Link>
-                                <Link to="/contact">Contact</Link>
+                                <Link to="/about" className="nav-link">About</Link>
+                                <Link to="/contact" className="nav-link">Contact</Link>
                             </div>
 
                             <div id="hamburger-menu">
                                 <span className="open-icon"></span>
                             </div>
-                        </div>
 
+                        </div>
                     </header>
                 </div>
             </Router>
