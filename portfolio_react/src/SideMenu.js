@@ -30,23 +30,23 @@ class SideMenu extends Component {
                 <div className="social-media-links">
                     <ul>
                         <li>
-                            <a href="https://github.com/RoLo-dev" target="_blank">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/RoLo-dev" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/rolando-lopantzi-87326b74/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/rolando-lopantzi-87326b74/" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
                             <a href="#instagram">
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:rlopantzi@gmail.com" target="_blank">
-                                <i class="fas fa-envelope"></i>
+                            <a href="mailto:rlopantzi@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <i className="fas fa-envelope"></i>
                             </a>
                         </li>
                     </ul>
