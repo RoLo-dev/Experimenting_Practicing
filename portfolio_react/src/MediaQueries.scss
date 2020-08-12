@@ -81,14 +81,12 @@
             padding-bottom: 2rem;
 
             .site-links {
-                li {
-                    margin-top: 0.5rem;
-                }
-                li:first-child {
-                    margin-top: 0;
-                }
-                a {
-                    font-size: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.25rem;
+
+                .link {
+                    margin-bottom: 0.65rem;
                 }
             }
         }

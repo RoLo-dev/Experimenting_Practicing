@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../MediaQueries.scss';
 import '../App.scss';
-// import SideMenu from './SideMenu';
 
 class Banner extends Component {
     render() {
