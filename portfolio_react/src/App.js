@@ -3,7 +3,7 @@ import './App.scss';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 import Banner from './components/Banner.js';
-import SideMenu from './components/SideMenu.js'
+// import SideMenu from './components/SideMenu.js'
 
 function App() {
     return(

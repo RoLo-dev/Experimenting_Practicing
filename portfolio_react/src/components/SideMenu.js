@@ -11,7 +11,7 @@ class SideMenu extends Component {
                 <div id="side-menu">
                     <div className="title-link">
                         <div className="full-name-logo">
-                            <Link to="/" exact>
+                            <Link to="/" exact="true">
                                 <img src={logo} alt="Rolando Lopantzi logo" className="pic"/>
                             </Link>
                         </div>

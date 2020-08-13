@@ -12,7 +12,7 @@ class Banner extends Component {
                     <header className="main-header">
                         <div className="wrapper header-container">
 
-                            <Link className="title" to="/" exact>
+                            <Link className="title" to="/" exact="true">
                                 <img className="pic" src={logo} alt="Rolando Lopantzi logo"/>
                             </Link>
 
