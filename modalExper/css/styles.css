@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+h3 {
+    margin-bottom: 0.25rem;
+}
+button {
+    padding: 0.35rem 1.5rem;
+    margin-top: 0.25rem;
+    border: 0;
+    background-color: orange;
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.8s;
+}
+button:hover {
+    background-color: #000;
+    transition: all 0.3s ease-in;
+}
+
+/* Modal */
+#modal {
+    position: fixed;
+    visibility: hidden;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0;
+    transition: visibility 0.5s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#modalContent {
+    background-color: black;
+    color: #fff;
+    position: relative;
+    top: 100%;
+    margin: auto;
+    width: 700px;
+    height: auto;
+    transition: 0.5s;
+}
+    .modal-header {
+        background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #closeBtn {
+        font-size: 30px;
+        margin-right: 10px;
+        transition: 0.8s;
+    }
+    #closeBtn:hover,
+    #modalContent .closeBtn:focus {
+        text-decoration: none;
+        cursor: pointer;
+        color: #000;
+        transition: all 0.3s ease-in; 
+    }
+    #modalContent h4 {
+        margin-left: 10px;
+        text-transform: capitalize;
+    }
+    #modalContent p {
+        padding: 1rem 10px;
+    }
