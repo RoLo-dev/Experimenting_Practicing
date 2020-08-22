@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: dimgrey;
+
+}
+.alert {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    background-color: crimson;
+}
+.addedTask {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 0.8px dotted #fff;
+}
+.collection {
+    display: block;
+}
+.icon {
+    transition: all 0.8s;
+}
+.icon:hover {
+    cursor: pointer;
+    color: firebrick;
+    transition: all 0.3s ease-in;
+}
+input {
+    padding: 3px 0;
+}
+input::placeholder {
+    font-family: 'Quicksand',sans-serif;
+    color: dimgray;
+}
+.container {
+    margin-top: 12rem;
+    padding: 1rem 2rem;
+    width: 70%;
+    height: auto;
+    background-color: #222;
+}
+h1 {
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-bottom: 1rem;
+}
+.inputForm {
+    margin-bottom: 3rem;
+}
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#taskForm input {
+    margin-bottom: 0.5rem;
+}
+#taskForm .btn {
+    width: 30%;
+    border: 0;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px 0;
+    color: #fff;
+    background-color: rgb(197, 101, 56);
+    transition: all 0.8s;
+}
+#taskForm .btn:hover {
+    background-color: dimgray; 
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-action {
+    display: flex;
+    flex-direction: column;
+}
+.card-action .inputField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.clearTasks {
+    text-decoration: none;
+    color: rgb(197, 101, 56);
+    margin-top: 2rem;
+    width: 30%;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(197, 101, 56);
+    transition: all 0.8s;
+}
+.clearTasks:hover {
+    color: #fff;
+    width: 40%;
+    border-bottom-color: #fff;
+    transition: all 0.3s;
+}
