@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+.pic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Header */
+#main-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url('../imgs/sanFran2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+#main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main-nav .logo {
+    width: 7%;
+}
+#main-nav .links {
+    list-style: none;
+    display: flex;
+}
+#main-nav .links a {
+    text-decoration: none;
+    margin-left: 3.25rem;
+    color: #fff;
+    transition: all 0.7s;
+}
+#main-nav .links .signup {
+    background-color: #0076ED;
+    padding: 0.8rem 1.75rem;
+    color: #fff;
+    transition: all 0.7s;
+}
+#main-nav .links a:hover {
+    color: #0076ED;
+    transition: 0.3s ease-in;
+}
+#main-nav .links .signup:hover {
+    background-color: #fff;
+    color: #0076ED;
+    transition: all 0.3s ease-in;
+}
+#bannerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+}
+.bannerText {
+    color: #fff;
+    width: 35%;
+}
+.bannerText h1 {
+    font-size: 5rem;
+    margin-bottom: 1.25rem;
+}
+#searchBox {
+    width: 800px;
+    height: 120px;
+    background-color: #0076ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+#searchBox form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fields .box {
+    position: relative;
+    background: none;
+    border: 0;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+}
+.fields .box select {
+    background: none;
+    color: rgba(250, 250, 250, 0.75);
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* width: 120px;
+    height: 40px; */
+    font-size: 0.75rem;
+    padding: 10px 10px 10px 0;
+    -webkit-appearance: none;
+}
+.fields .box select option {
+    color: #fff;
+}
+.fields .box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 40px;
+    background: none;
+    pointer-events: none;
+}
+.fields .box:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 5px 0;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%);
+}
+.fields #searchBtn {
+    background: none;
+    border: 1px solid rgba(250, 250, 250, 0.75);
+    padding: 10px 30px;
+    color: rgba(250, 250, 250, 0.75);
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: all 0.5s;
+}
+.fields #searchBtn:hover {
+    background: #fff;
+    color: #0076ED;
+    transition: all 0.3s ease-in;
+}
