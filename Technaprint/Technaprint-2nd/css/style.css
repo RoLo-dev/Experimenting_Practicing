@@ -1,0 +1,489 @@
+/*------------ 
+
+Repeated stuff
+
+- colors: blue - #061739, light blue #2d426a, orange - #fd9b3d
+
+
+------------*/
+
+/*------------ PAGE SETUP ------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+section {
+    padding: 70px 0;
+}
+
+.row {
+    max-width: 1140px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+h3 {
+    font-size: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 0.05em;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #fd9b3d;
+    content: "";
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 90%;
+    letter-spacing: 0.03em;
+}
+
+.long-copy {
+    color: #061739;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 145%;
+    font-size: 85%;
+}
+
+
+
+/*------------ HEADER & NAVIGATION ------------*/
+
+header {
+    background-color: #061739;
+    height: 225px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin-top: 76.5px;
+    float: left;
+}
+
+.logo h1,
+.logo h2 {
+    color: #fff;
+}
+
+.logo h1 {
+    letter-spacing: 0.305em;
+    line-height: 1.15em;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.logo h2 {
+    font-family: 'PT Serif', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    padding: 0;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 96px;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 90%;
+    letter-spacing: 0.04em;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: #bababa;
+    border-bottom: 2px solid #fd9b3d;
+}
+
+
+
+
+/*------------ SERVICES ------------*/
+
+.services h3 {
+    color: #061739;
+}
+
+.long-copy:first-child {
+}
+
+.long-copy:last-child {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.box {
+    padding: 1%;
+    color: #061739;
+}
+
+.box li {
+    list-style-type: circle;
+    font-size: 85%;
+    margin: 0;
+}
+
+.icon-big {
+    display: block;
+    font-size: 300%;
+    color: #fd9b3d;
+    margin: 0;
+    padding-left: 1.55em;
+}
+
+
+
+
+/*------------ IMAGES ------------*/
+
+.work-images {
+    padding: 0;
+}
+
+.work-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.work-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+}
+
+.work-photos {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.work-photos img {
+    opacity: 0.65;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    transform: scale(1.5);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.work-photos img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+
+
+/*------------ EQUIPMENT ------------*/
+
+.equipment {}
+
+.equipment h3 {
+    color: #061739;
+}
+
+/* In case if not responsive
+.columns {
+    float: left;
+    display: block;
+    width: 48%;
+    margin: 0 0 4% 1.6%;
+    padding: 0;
+}
+*/
+
+.equip-content {
+    color: #061739;
+    width: 45%;
+}
+
+.equip-content li {
+    list-style-type: circle;
+    font-size: 85%;
+}
+
+
+
+
+/*------------ ABOUT US ------------*/
+
+.about {
+    background-color: #061739;
+}
+
+.building {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.building-img {
+    height: 175px;
+    width: auto;
+}
+
+.about h3 {
+    color: #fff;
+}
+
+.about p {
+    color: #fff;
+}
+
+
+
+/*------------ CONTACT US ------------*/
+
+.contact h3 {
+    color: #061739;
+}
+
+.biz-details {
+    color: #061739;
+    margin: 3% 0;
+}
+
+.biz-details ul {
+    list-style: none;
+    display: block;
+}
+
+.biz-details li {
+    font-size: 85%;
+    line-height: 1.5em;
+}
+
+
+/**** FORM ****/
+
+label {
+    color: #061739;
+    font-size: 90%;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid #2d426a;
+    font-size: 90%;
+}
+
+input[type=submit] {
+    width: 35%;
+    padding: 2px;
+    font-size: 90%;
+    color: #061739;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #061739;
+    transition: border 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+    color: #fff;
+    border: 1px solid #2d426a;
+    background-color: #2d426a;
+}
+
+select {
+    color: #061739;
+}
+
+textarea {
+    height: 150px;
+}
+
+.text {
+    text-align: right;
+}
+
+*:focus {outline: none;}
+
+
+/************** Social Icons **************/
+
+.ion-social-instagram {
+    font-size: 350%;
+    display: block;
+    padding-left: 1.45em;
+    margin: 0;
+    transition: color 0.2s;
+}
+
+.ion-social-instagram:hover {
+    
+}
+
+.cont-icon {
+    color: #061739;
+}
+
+.cont-icon:hover {
+    color: #2d426a;
+}
+
+.ft-icon {
+    color: #fff;
+}
+
+.ft-icon:hover {
+    color: #fd9b3d;
+}
+
+
+/*------------ FOOTER ------------*/
+
+footer {
+    background-color: #061739;
+    height: 390px;
+    margin: 0;
+    padding: 0;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    width: 85%;
+    margin: 3% auto;
+    line-height: 145%;
+    font-size: 85%;
+}
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    text-transform: uppercase;
+    line-height: 2.25em;
+    letter-spacing: 0.05em;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #bababa;
+    border-bottom: 3px solid #fd9b3d;
+}
+
+.ft-biz-details {
+    color: #fff;
+}
+
+.ft-biz-details ul {
+    list-style: none;
+}
+
+
+.ft-biz-details li {
+    font-size: 85%;
+    line-height: 1.5em;
+}
+
+.ft-h4 {
+    color: #fff;
+}
+
+.copy p {
+    letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
