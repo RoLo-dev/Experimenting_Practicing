@@ -1,217 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technaprint is a pad printing company that specializes in product decoration.">
+    <meta name="keywords" content="pad printing, screen printing, printing, print, inks, silicone, bottles, electronics, orange county, southern california, headphones, computer, graphics, graphic design, medical, syringes, UV treatment, pad printing, screen printing, pad print, screen print, butyl, alcohol, fulfillment, dishware, govino, glass, utensils, tumblers, notebooks, speakers, earphones">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Technaprint is a pad printing company that specializes in product decoration.">
+    <title>Technaprint | Specialty printing & Product decorating</title>
 
-  <meta name="keywords" content="pad printing, screen printing, printing, print, inks, silicone, bottles, electronics, orange county, southern california, headphones, computer, graphics, graphic design, medical, syringes, UV treatment, padprinting, screenprinting, pad print, screen print, butyl, alcohol, fulfillment, dishware, govino, glass, utensils, tumblers, notebooks">
-
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/queries.css">
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-  <title>Technaprint | Specialty printing & Product decorating</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/queries.css">
 </head>
-<body>
-  <header id="top">
-    <div class="mainHead wrapper">
-      <div class="logo">
-        <a href="index.html">
-          <img src="imgs/Techna_logo.svg" alt="Technaprint logo">
-        </a>
-      </div>
-      <div class="desktop-nav">
+<body id="body">
+    <header>
+        <div class="wrapper main-head">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/Techna_logo.white.svg" class="pic" alt="Technaprint logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="index.html#equipment">Equipment</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contact.php">Contact Us</a>
+                    </li>
+                </ul>
+                <div id="hamburger-menu">
+                    <span id="menu-icon"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#equipment">Equipment</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#equipment">Equipment</a>
+            </li>
+            <li>
+                <a href="#about">About Us</a>
+            </li>
+            <li>
+                <a href="contact.php">Contact Us</a>
+            </li>
         </ul>
-      </div>
-      <span id="open" class="open mobile">&#9776</span>
-      <div id="nav" class="mobile-nav">
-        <a href="javascript:void(0)" id="close" class="close">&times;</a>
-        <a href="#services">Services</a>
-        <a href="#equipment">Equipment</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="banner">
-
-    <div class="bannerPics">
-      <img src="imgs/banner01.jpeg" class="pics">
-      <div class="one banTxt flexCol">
-        <h2>Specialized In Printing Medical Equipment</h2>
-        <p>We carry biocompatible inks to print on various medical devices to comply with FDA standards for products that may come in physical contact with the human body.</p>
-      </div>
-    </div>
-
-    <div class="bannerPics">
-      <img src="imgs/banner02.jpg" class="pics">
-      <div class="two banTxt flexCol">
-        <h2>Specialized In Product Decoration</h2>
-        <p>We don't fall short when it comes to little details during our decoration process. We make sure it goes out looking better than when it came in.</p>
-      </div>
-    </div>
-
-    <div class="bannerPics">
-      <img src="imgs/banner03.jpeg" class="pics">
-      <div class="three banTxt flexCol">
-        <h2>Specialized In Product Printing</h2>
-        <p>Experts in printing and decorating parts of nearly any shape, surface or material</p>
-      </div>
     </div>
 
-    <div class="bannerPics">
-      <img src="imgs/banner04.jpg" class="pics">
-    </div>
+    <div class="carousel">
 
-  </div>
-
-  <section id="services" class="secStyle wrapper">
-    <h2>Services</h2>
-    <p class="paragraph">Technaprint specializes in printing and decorating whether you are in the marketing, medical, business, sports, tools, bottles or electronics we are here for you to provide fast and affordable printing for all kinds of projects you may need, from single to full color printing.
-    <br>
-    <br>
-    We know that orders are often needed for events so we offer same-day services upon request as well as fulfillment services such as gift wrapping or special packaging so you can have peace of mind knowing that your project is just a phone call away.
-    </p>
-
-    <div class="flexStyle">
-
-      <div class="printBox">
-        <i class="fas fa-syringe syringe"></i>
-        <h4>Medical Device Printing</h4>
-        <ul>
-          <li>- Biocompatible inks</li>
-          <li>- Pretreatment</li>
-          <li>- Catheter tube marking</li>
-        </ul>
-      </div>
-      <div class="printBox">
-        <i class="fas fa-keyboard keyboard"></i>
-        <h4>Electronic Device Printing</h4>
-        <ul>
-          <li>- Print on different shapes</li>
-          <li>- Conductive inks</li>
-          <li>- USB connectors</li>
-          <li>- Keypads</li>
-        </ul>
-      </div>
-      <div class="printBox last">
-        <i class="fas fa-headphones headphones"></i>
-        <h4>Promotional Product Printing</h4>
-        <ul>
-          <li>- Bottles and mugs</li>
-          <li>- Flash drives and HDD's</li>
-          <li>- Speakers and headphones</li>
-          <li>- Powerbanks</li>
-        </ul>
-      </div>
+        <div class="img-container">
+            <img src="img/banner01.jpeg" class="pic">
+            <div class="text-container">
+                <h2>Specialized In Printing Medical Equipment</h2>
+                <p>We carry bio-compatible inks to print on various medical devices to comply with FDA standards for products that may come in physical contact with the human body.</p>
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="img/banner02.jpg" class="pic">
+            <div class="text-container">
+                <h2>Specialized In Product Decoration</h2>
+                <p>We don't fall short when it comes to little details during our decoration process. We make sure it goes out looking better than when it came in.</p>
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="img/banner03.jpeg" class="pic">
+            <div class="text-container">
+                <h2>Specialized In Product Printing</h2>
+                <p>Experts in printing and decorating parts of nearly any shape, surface or material</p>
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="img/banner04.jpg" class="pic">
+        </div>
 
     </div>
-  </section>
 
-  <section id="equipment" class="secStyle wrapper">
-    <h2>Equipment</h2>
-    <div class="flexStyle">
+    <div class="main-content wrapper">
 
-      <div class="lists">
-        <ul>
-          <li>- 10 pad print machines up to 4 color automatic</li>
-          <li>- 2 cylinder screen printing systems</li>
-          <li>- single color pad printing</li>
-          <li>- 4 color manual screen station press</li>
-        </ul>
-      </div>
-      <div class="lists">
-        <ul>
-          <li>- art accepted in either Ai or EPS format and high res PDF</li>
-          <li>- product assembly, packaging and order fulfillment capabilities</li>
-          <li>- plasma treater</li>
-          <li>- process color pad printing</li>
-        </ul>
-      </div>
+        <div id="services" class="section">
+            <h3>Services</h3>
+            <p>Technaprint specializes in printing and decorating whether you are in the marketing, medical, business, sports, tools, bottles or electronics we are here for you to provide fast and affordable printing for all kinds of projects you may need, from single to full color printing.
+            We know that orders are often needed for events so we offer same-day services upon request as well as fulfillment services such as gift wrapping or special packaging so you can have peace of mind knowing that your project is just a phone call away.</p>
+            <div class="card-container split">
+                <ul>
+                    <li>
+                        <i class="fas fa-syringe"></i>
+                    </li>
+                    <li>
+                        <h4>Medical Device Printing</h4>
+                    </li>
+                    <li>
+                        <p>- Bio-compatible inks</p>
+                    </li>
+                    <li>
+                        <p>- Pretreatment</p>
+                    </li>
+                    <li>
+                        <p>- Catheter tube marking</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="far fa-keyboard"></i>
+                    </li>
+                    <li>
+                        <h4>Electronic Device Printing</h4>
+                    </li>
+                    <li>
+                        <p>- Print on different shapers</p>
+                    </li>
+                    <li>
+                        <p>- Conductive inks</p>
+                    </li>
+                    <li>
+                        <p>- USB connectors</p>
+                    </li>
+                    <li>
+                        <p>- Keypads</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fas fa-glass-cheers"></i>
+                    </li>
+                    <li>
+                        <h4>Promotional Product Printing</h4>
+                    </li>
+                    <li>
+                        <p>- Bottles and mugs</p>
+                    </li>
+                    <li>
+                        <p>- Flash drives and HDD</p>
+                    </li>
+                    <li>
+                        <p>- Speakers and headphones</p>
+                    </li>
+                    <li>
+                        <p>- Powerbanks</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="equipment" class="section">
+            <h3>Equipment</h3>
+            <div class="list-container split">
+                <ul class="fixed-width-lists">
+                    <li>
+                        <p>- 10 pad print machines up to 4 color automatic</p>
+                    </li>
+                    <li>
+                        <p>- 2 cylinder screen printing systems</p>
+                    </li>
+                    <li>
+                        <p>- single color pad printing</p>
+                    </li>
+                    <li>
+                        <p>- 4 color manual screen station press</p>
+                    </li>
+                </ul>
+                <ul class="fixed-width-lists">
+                    <li>
+                        <p>- process color pad printing</p>
+                    </li>
+                    <li>
+                        <p>- product assembly, packaging and order fulfillment capabilities</p>
+                    </li>
+                    <li>
+                        <p>- plasma treater</p>
+                    </li>
+                    <li>
+                        <p>- art accepted in either Ai, EPS or PDF format</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="about" class="section">
+            <h3>About Us</h3>
+            <figure>
+                <img src="img/techna_shop.svg" class="pic" alt="Technaprint shop">
+            </figure>
+            <p>Technaprint is the story of two great friends coming together 30 years ago to create something much bigger than themselves. It’s a story of courage, compromise, hard work, positivism and loyalty. Technaprint strives in creating and innovating the way printing works and providing quality customer service throughout the years, from the high end products or quality promotional giveaways to the simplest but significant wedding favors that people will cherish forever. Putting a smile in someones face is not easy but when you find a reliable company you can trust with your most important clients we are here for you.</p>
+        </div>
+        <!-- <div id="contact" class="section">
+            <h3>Contact Us</h3>
+            <p>Please feel free to give us a call or leave us a message for any inquiries. For quotes please make sure to give us detailed information of the product that you want printed, number of colors of the logo and quantity. We will make sure to get back to you within 24 hours.</p>
+            <div class="business-info-container split">
+                <ul class="fixed-width-lists">
+                    <li>
+                        <h4>Technaprint</h4>
+                    </li>
+                    <li>
+                        <p>1135 Las Brisas Place, Placentia, Ca, 92870</p>
+                    </li>
+                    <li>
+                        <a href="tel:7148709752">P: 714.870.9752</a>
+                    </li>
+                    <li>
+                        <a href="mailto:artwork@techna-print.com">E: artwork@techna-print.com</a>
+                    </li>
+                </ul>
+                <ul class="fixed-width-lists">
+                    <li><h4>Business hours</h4></li>
+                    <li>
+                        <span>Mon - Fri: 7am - 4pm</span>
+                    </li>
+                    <li>
+                        <span>Sat & Sun: Closed</span>
+                    </li>
+                    <li>
+                        <span>Please give us a call for holiday hours</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-map-container split">
+                <div class="form">
+                    <form action="https://formspree.io/f/xaylboan" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" placeholder="Enter your name">
+                        <label for="email">Email:</label>
+                        <input type="email" name="_replyto" placeholder="Enter your email">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" placeholder="Enter your phone number">
+                        <label for="message">Message:</label>
+                        <textarea name="message" placeholder="Leave your message"></textarea>
+                        <input type="submit" id="submitBtn" value="Submit">
+                    </form>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.0951187249625!2d-117.83024368421458!3d33.861439435207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd60856c34409%3A0x517cdfc9c958e473!2sTechnaprint!5e0!3m2!1sen!2sus!4v1601852628173!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div> -->
 
     </div>
-  </section>
 
-  <section id="about" class="secStyle wrapper">
-    <h2>About Us</h2>
-    <figure>
-      <img src="imgs/techna_shop.svg" alt="Technaprint shop">
-    </figure>
-    <p class="paragraph">Technaprint is the story of two great friends coming together 30 years ago to create something much bigger than themselves. It’s a story of courage, compromise, hard work, positivism and loyalty. Technaprint strives in creating and innovating the way printing works and providing quality customer service throughout the years, from the high end products or quality promotional giveaways to the simplest but significant wedding favors that people will cherish forever. Putting a smile in someones face is not easy but when you find a reliable company you can trust with your most important clients we are here for you.
-    </p>
-  </section>
+    <footer>
+        <div class="wrapper">
+            <p id="footer-p">Serving customers in the Orange County area, Los Angeles, San Francisco Bay Area, greater East Coast and many more for over 30 years</p>
 
-  <section id="contact" class="secStyle wrapper">
-    <h2>Contact Us</h2>
-    <p class="paragraph">Please feel free to give us a call or leave us a message for any inquiries. For quotes please make sure to give us detailed information of the product that you want printed, number of colors of the logo and quantity. We will make sure to get back to you within 24 hours.</p>
+            <div class="logo-info-container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/Techna_logo.white.svg" class="pic" alt="Technaprint logo">
+                    </a>
+                    <span>&copy; Copyright 2020 Techna-print.com</span>
+                </div>
+                <ul>
+                    <li>
+                        <h4>Technaprint</h4>
+                    </li>
+                    <li>
+                        <p>1135 Las Brisas Place, Placentia, Ca, 92870</p>
+                    </li>
+                    <li>
+                        <a href="tel:7148709752">P: 714.870.9752</a>
+                    </li>
+                    <li>
+                        <a href="mailto:artwork@techna-print.com">E: artwork@techna-print.com</a>
+                    </li>
+                </ul>
+            </div>
 
-    <div class="flexStyle">
+        </div>
+    </footer>
 
-      <div class="techna contactBox">
-        <h4>Technaprint</h4>
-        <ul>
-          <li>1135 Las Brisas Pl,<br>Placentia, Ca, 92870</li>
-          <li>P: 714.870.9752</li>
-          <li>F: 714.854.9641</li>
-          <li>E: artwork@techna-print.com</li>
-        </ul>
-      </div>
-      <div class="contactBox">
-        <h4>Business hours</h4>
-        <ul>
-          <li>Mon - Fri: 7am - 4pm</li>
-          <li>Sat & Sun: Closed</li>
-          <li>Please give us a call for holiday hours</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="js/actions.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
-<footer>
-  <div id="mainFoot" class="wrapper">
-
-    <p class="paragraph">Serving customers in the Orange County area, Los Angeles, San Francisco Bay Area, greater East Coast and many more for over 30 years</p>
-
-    <div id="bsnsInfo" class="flexStyle">
-      <div class="logo">
-        <a href="#top">
-            <img src="imgs/Techna_logo.white.svg" alt="Technaprint logo">
-          </a>
-      </div>
-      
-      <div class="bsnsContact">
-        <h4>Technaprint</h4>
-          <ul>
-            <li>1135 Las Brisas Pl,<br>Placentia, Ca, 92870</li>
-            <li>P: 714.870.9752</li>
-            <li>F: 714.854.9641</li>
-            <li>E: artwork@techna-print.com</li>
-          </ul>
-      </div>
-    </div>
-
-    <div id="copyright" class="flexStyle">
-      <div class="copy">&copy; 2018 Technaprint Co. All rights reserved</div>
-      <div class="address">1135 Las Brisas Pl, Placentia, Ca, 92870</div>
-      <div class="phone">714.870.9752</div>
-    </div>
-    
-  </div>
-</footer>
-
 </html>
