@@ -1,1 +1,5 @@
-console.log("hello, vue");
+const app = Vue.createApp({
+    template
+});
+
+app.mount("#app");
