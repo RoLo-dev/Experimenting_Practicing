@@ -1,5 +1,10 @@
 const app = Vue.createApp({
-    template
+    data() {
+        return {
+            title: "Hello Beautiful World!",
+            author: "Rolando Lopantzi"
+        }
+    }
 });
 
 app.mount("#app");
