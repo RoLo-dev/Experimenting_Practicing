@@ -8,7 +8,10 @@
 <body>
     <div id="app">
         <h1>{{ title }}</h1>
-        <p>{{ author }}</p>
+        <p>{{ author }} is <span>{{ age }}</span></p>
+        <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Decrease age</button>
+        <div @click="title = 'Something else'">Change the title</div>
     </div>
 
     <script src="app.js"></script>
