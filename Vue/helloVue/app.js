@@ -5,6 +5,16 @@ const app = Vue.createApp({
             author: "Rolando Lopantzi",
             age: 28
         }
+    },
+    // This method changes the properties from the component
+    methods: {
+        // changeTitle() {
+        //     console.log("clicked me");
+        //     this.title = "Hello World";
+        // }
+        changeTitle(title) {
+            this.title = title;
+        }
     }
 });
 

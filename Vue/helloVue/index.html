@@ -11,7 +11,12 @@
         <p>{{ author }} is <span>{{ age }}</span></p>
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
-        <div @click="title = 'Something else'">Change the title</div>
+        <!-- Two ways to change something in the frontend -->
+        <!-- <div @click="title = 'Something else'">Change the title</div> -->
+        <!-- A shortcut for 'v-on' which can be written with an '@' symbol -->
+        <div @click="changeTitle">Change the title</div>
+        <!-- Or you can call the method and pass in the value as a parameter -->
+        <!-- <div @click="changeTitle('Lord of the Rings')">Change the title</div> -->
     </div>
 
     <script src="app.js"></script>
