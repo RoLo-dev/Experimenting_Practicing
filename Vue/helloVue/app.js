@@ -8,13 +8,14 @@ const app = Vue.createApp({
     },
     // This method changes the properties from the component
     methods: {
-        // changeTitle() {
-        //     console.log("clicked me");
-        //     this.title = "Hello World";
-        // }
-        changeTitle(title) {
-            this.title = title;
+        changeTitle() {
+            console.log("clicked me");
+            this.title = "Hello World";
         }
+        // In this example you use a parameter to pass in a value to change the current one
+        // changeTitle(title) {
+        //     this.title = title;
+        // }
     }
 });
 
