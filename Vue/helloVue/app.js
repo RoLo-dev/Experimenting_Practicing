@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            showBooks: false,
+            showBooks: true,
             title: "Hello Beautiful World!",
             author: "Rolando Lopantzi",
             age: 28
@@ -12,11 +12,14 @@ const app = Vue.createApp({
         changeTitle() {
             console.log("clicked me");
             this.title = "Hello World";
-        }
+        },
         // In this example you use a parameter to pass in a value to change the current one
         // changeTitle(title) {
         //     this.title = title;
         // }
+        toggleBooks() {
+            this.showBooks = !this.showBooks;
+        }
     }
 });
 
