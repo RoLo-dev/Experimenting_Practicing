@@ -11,6 +11,15 @@
             <p>{{ title }} - {{ author }} - {{ age }}</p>
         </div>
 
+        <p v-show="showBooks">Currently displaying books</p>
+
+        <!-- The difference between using 'v-if' and using 'v-show' is
+        that 'v-if' injects the code and can also remove the code
+        from the DOM while 'v-show' only uses CSS by giving the code
+        a display of block or none. Removing code completely can
+        cause slow speeds or time consuming making the experience 
+        less ideal when using applying it to apps -->
+
         <button @click="toggleBooks">
             <span v-if="showBooks">Hide Books</span>
             <span v-if="!showBooks">Show Books</span>
