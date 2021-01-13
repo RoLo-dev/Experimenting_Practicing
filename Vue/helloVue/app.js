@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            showBooks: true,
+            showBooks: false,
             title: "Hello Beautiful World!",
             author: "Rolando Lopantzi",
             age: 28
