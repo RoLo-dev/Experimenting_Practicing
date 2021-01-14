@@ -4,7 +4,12 @@ const app = Vue.createApp({
             showBooks: true,
             title: "Hello Beautiful World!",
             author: "Rolando Lopantzi",
-            age: 28
+            age: 28,
+            books: [
+                { title: "Harry Potter", author: "JK Rowling" },
+                { title: "Mathias", author: "Brian Jacques" },
+                { title: "The Outsider", author: "Stephen King"}
+            ]
         }
     },
     // This method changes the properties from the component

@@ -20,8 +20,15 @@
 </head>
 <body>
     <div id="app">
+        <h1>Vue</h1>
         <div v-if="showBooks">
-            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
+            <ul>
+                <li v-for="book in books">
+                    <h4>{{ book.title }}</h4>
+                    <p>{{ book.author }}</p>
+                </li>
+            </ul>
         </div>
 
         <p v-show="showBooks">Currently displaying books</p>
