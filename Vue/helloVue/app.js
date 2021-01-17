@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            url: 'http://www.rolandolopantzi.com',
             showBooks: true,
             title: "Hello Beautiful World!",
             author: "Rolando Lopantzi",

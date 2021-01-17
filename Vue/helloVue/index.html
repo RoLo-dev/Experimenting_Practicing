@@ -21,6 +21,10 @@
 <body>
     <div id="app">
         <h1>Vue</h1>
+        <br>
+        <a v-bind:href="url" target="_blank">My Portfolio site</a>
+        <!-- This is the short way of writing it, you avoid typing v-bind -->
+        <!-- <a :href="url" target="_blank">My Portfolio site</a> -->
         <div v-if="showBooks">
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
