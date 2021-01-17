@@ -28,6 +28,9 @@ const app = Vue.createApp({
         },
         handleEvent() {
             console.log("event");
+        },
+        toggleFav(book) {
+            book.isFav = !book.isFav;
         }
     }
 });

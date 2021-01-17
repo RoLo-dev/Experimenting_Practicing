@@ -50,7 +50,7 @@
         <div v-if="showBooks">
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
-                <li v-for="book in books" :class="{ fav: book.isFav }">
+                <li v-for="book in books" @click="toggleFav(book)" :class="{ fav: book.isFav }">
                     <img :src="book.img" alt="book.title">
                     <h4>{{ book.title }}</h4>
                     <p>{{ book.author }}</p>
@@ -94,6 +94,8 @@
         <!-- Or you can call a method and pass in the value as a parameter -->
         <!-- <div @click="changeTitle('Lord of the Rings')">Change the title</div> -->
     </div>
+
+    <!-- Computed properties - it's a way to define data properties which depend on other data -->
 
     <script src="app.js"></script>
 </body>
