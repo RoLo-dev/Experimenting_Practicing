@@ -7,9 +7,9 @@ const app = Vue.createApp({
             author: "Rolando Lopantzi",
             age: 28,
             books: [
-                { title: "Harry Potter", author: "JK Rowling", img: "assets/1.jpg"},
-                { title: "Mathias", author: "Brian Jacques", img: "assets/2.jpg" },
-                { title: "The Outsider", author: "Stephen King", img: "assets/3.jpg"}
+                { title: "Harry Potter", author: "JK Rowling", img: "assets/1.jpg", isFav: true },
+                { title: "Mathias", author: "Brian Jacques", img: "assets/2.jpg", isFav: false },
+                { title: "The Outsider", author: "Stephen King", img: "assets/3.jpg", isFav: true }
             ]
         }
     },

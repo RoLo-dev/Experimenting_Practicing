@@ -5,16 +5,16 @@
     <title>First Vue Project</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-        .box {
-            padding: 100px;
-            width: 400px;
-            text-align: center;
-            background: #dddddd;
-            margin: 20px;
-            display: inline-block;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         #apps {
             display: none;
+        }
+        li {
+            list-style: none;
         }
     </style>
 </head>
@@ -28,7 +28,7 @@
         <div v-if="showBooks">
             <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
             <ul>
-                <li v-for="book in books">
+                <li v-for="book in books" :class="{ fav: book.isFav }">
                     <img :src="book.img" alt="book.title">
                     <h4>{{ book.title }}</h4>
                     <p>{{ book.author }}</p>
