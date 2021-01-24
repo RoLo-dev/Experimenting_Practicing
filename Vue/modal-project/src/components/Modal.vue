@@ -1,15 +1,22 @@
 <template>
     <div class="backdrop">
         <div class="modal">
-            <p>modal content</p>
+            <h1>{{ header }}</h1>
+            <p>{{ text }}</p>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    props: [ "header", "text" ]
+}
+</script>
+
 <style>
     .modal {
-        width: 400px;
-        padding: 20px;
+        width: 500px;
+        padding: 30px;
         margin: 100px auto;
         background: #fff;
         border-radius: 12px;
