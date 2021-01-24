@@ -29,4 +29,8 @@ export default {
         width: 100%;
         height: 100%;
     }
+    .modal h1 {
+        margin-bottom: 2rem;
+        color: firebrick;
+    }
 </style>
