@@ -1,8 +1,6 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
         <div class="modal">
-            <!-- <h1>{{ header }}</h1>
-            <p>{{ text }}</p> -->
             <slot>
                 <h3>Hello World</h3>
             </slot>

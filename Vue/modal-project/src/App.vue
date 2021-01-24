@@ -1,6 +1,7 @@
 <template>
   <h1>{{ title }}</h1>
-  <div v-if="showModal">
+
+  <teleport to=".modals" v-if="showModal">
     <Modal @close="toggleModal">
       <template v-slot:links>
         <a href="#">sign up now</a>
@@ -9,20 +10,26 @@
       <h1>Sign up Giveaway</h1>
       <p>Grab our swag that will only be available for a limited time only</p>
     </Modal>
-  </div>
+  </teleport>
+
+  <teleport to=".modals" v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>Sign up to newsletter</h1>
+      <p>For updates and promo codes</p>
+    </Modal>
+  </teleport>
+
   <button @click="toggleModal">open modal</button>
   <button @click="toggleModalTwo">modal two</button>
 </template>
 
 <script>
 import Modal from './components/Modal.vue'
-import ModalTwo from './components/ModalTwo.vue'
 
 export default {
   name: 'App',
   components: {
-    Modal,
-    ModalTwo
+    Modal
   },
   data() {
     return {
