@@ -1,7 +1,10 @@
 <template>
   <h1>{{ title }}</h1>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" @close="toggleModal"/>
+    <Modal @close="toggleModal">
+      <h1>Sign up Giveaway</h1>
+      <p>Grab our swag that will only be available for a limited time only</p>
+    </Modal>
   </div>
   <button @click="toggleModal">open modal</button>
 </template>
