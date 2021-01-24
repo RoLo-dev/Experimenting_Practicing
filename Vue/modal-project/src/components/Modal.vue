@@ -4,6 +4,7 @@
             <!-- <h1>{{ header }}</h1>
             <p>{{ text }}</p> -->
             <slot></slot>
+            <div class="actions"></div>
         </div>
     </div>
 </template>
