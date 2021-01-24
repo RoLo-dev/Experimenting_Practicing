@@ -13,6 +13,7 @@
         margin: 100px auto;
         background: #fff;
         border-radius: 12px;
+        text-align: center;
     }
     .backdrop {
         top: 0;
