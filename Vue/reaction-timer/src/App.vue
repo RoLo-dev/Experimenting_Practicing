@@ -1,9 +1,11 @@
 <template>
-  <h1>Ninja Reaction Timer</h1>
-  <button @click="start" :disabled="isPlaying">play</button>
-  <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
-  <!-- <p v-if="showResults">Reaction time: {{ score }}ms</p> -->
-  <Results v-if="showResults" :score="score"/>
+  <div>
+    <h1>Ninja Reaction Timer</h1>
+    <button @click="start" :disabled="isPlaying">play</button>
+    <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
+    <!-- <p v-if="showResults">Reaction time: {{ score }}ms</p> -->
+    <Results v-if="showResults" :score="score"/>
+  </div>
 </template>
 
 <script>
@@ -20,7 +22,7 @@ export default {
       delay: null,
       score: null,
       showResults: false
-    }
+    }/*  */
   },
   methods: {
     start() {

@@ -1,6 +1,8 @@
 <template>
-    <p>Reaction time: {{ score }}ms</p>
-    <p class="rank">{{ rank }}</p>
+    <div>
+        <p>Reaction time: {{ score }}ms</p>
+        <p class="rank">{{ rank }}</p>
+    </div>
 </template>
 
 <script>
