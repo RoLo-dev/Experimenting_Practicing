@@ -22,7 +22,7 @@ export default {
       delay: null,
       score: null,
       showResults: false
-    }/*  */
+    }
   },
   methods: {
     start() {
