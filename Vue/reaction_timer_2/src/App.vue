@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>Click Reaction Timer</h1>
-    <button id="play-btn" :disabled="isPlaying">PLAY</button>
-    <GreenBlock />
+    <button @click="start" id="play-btn" :disabled="isPlaying">PLAY</button>
+    <GreenBlock v-if="isPlaying" :delay="delay" @end="endGame" />
+    <SpeedResults v-if="showResults" :score="score" />
   </div>
 </template>
 
@@ -16,6 +17,21 @@ export default {
   data() {
     return {
       isPlaying: false,
+      delay: null,
+      score: null,
+      showResults: false,
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000;
+      this.isPlaying = true;
+      this.showResults = false;
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime;
+      this.isPlaying = false;
+      this.showResults = true;
     }
   }
 }
