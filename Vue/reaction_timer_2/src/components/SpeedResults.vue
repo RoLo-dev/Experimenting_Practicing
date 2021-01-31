@@ -2,12 +2,16 @@
   <div>
       <p>Reaction time: {{ score }}ms</p>
       <p>{{ rank }}</p>
+      <PopUp :score="score" />
   </div>
 </template>
 
 <script>
+import PopUp from './PopUp.vue'
+
 export default {
     props: ["score"],
+    components: { PopUp },
     data() {
         return {
             rank: null,
@@ -21,7 +25,7 @@ export default {
         } else {
             this.rank = "Snail pace ..."
         }
-    }
+    },
 }
 </script>
 
