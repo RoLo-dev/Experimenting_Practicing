@@ -2,7 +2,7 @@
   <div>
       <p>Reaction time: {{ score }}ms</p>
       <p>{{ rank }}</p>
-      <PopUp v-if="showResults" :score="score" />
+      <PopUp :score="score" />
   </div>
 </template>
 

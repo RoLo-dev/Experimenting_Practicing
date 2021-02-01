@@ -13,8 +13,10 @@ export default {
         }
     },
     mounted() {
-        if(this.score >= 700) {
+        if(this.score < 700) {
             this.message = "Dang! you're slow"
+        } else {
+            this.message = "Better luck next time"
         }
     }
 }
