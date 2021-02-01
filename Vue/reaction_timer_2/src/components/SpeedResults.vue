@@ -15,7 +15,7 @@ export default {
     data() {
         return {
             rank: null,
-            showResults: false
+            showResults: false,
         }
     },
     mounted() {

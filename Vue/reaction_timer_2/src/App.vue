@@ -64,6 +64,7 @@ html {
   margin-bottom: 1rem;
   border-radius: 5px;
   background-color: #ddd;
+  cursor: pointer;
 }
 #resultText {
   margin-top: 2rem;
