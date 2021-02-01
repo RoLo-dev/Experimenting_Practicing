@@ -3,7 +3,7 @@
     <h1>Click Reaction Timer</h1>
     <button @click="start" id="play-btn" :disabled="isPlaying">PLAY</button>
     <GreenBlock v-if="isPlaying" :delay="delay" @end="endGame" />
-    <SpeedResults id="resultText" v-if="showResults" :score="score" />
+    <SpeedResults v-if="showResults" :score="score" />
   </div>
 </template>
 
@@ -61,6 +61,7 @@ html {
   letter-spacing: 2px;
   padding: 10px 1.75rem;
   margin-top: 10px;
+  margin-bottom: 1rem;
   border-radius: 5px;
   background-color: #ddd;
 }

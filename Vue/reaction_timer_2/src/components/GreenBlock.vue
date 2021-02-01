@@ -42,6 +42,6 @@
         color: #fff;
         text-align: center;
         padding: 100px 0;
-        margin: 40px auto;
+        margin: 0 auto;
     }
 </style>

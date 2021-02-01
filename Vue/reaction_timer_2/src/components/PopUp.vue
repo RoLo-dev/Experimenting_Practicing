@@ -1,6 +1,6 @@
 <template>
   <div>
-      <p>{{ rank }}</p>
+      <p>{{ message }}</p>
   </div>
 </template>
 
@@ -9,14 +9,12 @@ export default {
     props: ["score"],
     data() {
         return {
-            rank: null,
+            message: null,
         }
     },
     mounted() {
         if(this.score >= 700) {
-            this.rank = "Dang! you're slow"
-        } else {
-            this.rank = "Better luck next time"
+            this.message = "Dang! you're slow"
         }
     }
 }
