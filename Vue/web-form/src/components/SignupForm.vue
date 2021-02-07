@@ -18,7 +18,7 @@
                 <label>Accept terms and conditions</label>
             </div>
 
-            <div>
+            <!-- <div>
                 <input type="checkbox" value="shaun" v-model="names">
                 <label>Shaun</label>
             </div>
@@ -29,14 +29,14 @@
             <div>
                 <input type="checkbox" value="mario" v-model="names">
                 <label>Mario</label>
-            </div>
+            </div> -->
         </form>
 
         <p>Email: {{ email }}</p>
         <p>Password: {{ password }}</p>
         <p>Role: {{ role }}</p>
         <p>Terms accepted: {{ terms }}</p>
-        <p>{{ names }}</p>
+        <!-- <p>Names: {{ names }}</p> -->
     </div>
 </template>
 
@@ -48,7 +48,7 @@
                 password: "",
                 role: "",
                 terms: false,
-                names: [],
+                // names: [],
             }
         }
     }
