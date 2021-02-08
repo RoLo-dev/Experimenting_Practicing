@@ -14,9 +14,9 @@
             </select>
 
             <label>Skills:</label>
-            <input type="text" v-model="tempSkill" @keyup.alt="addSkill">
+            <input type="text" v-model="tempSkill" @keyup.ctrl="addSkill">
             <div v-for="skill in skills" :key="skill" class="pill">
-                {{ skill }}
+                <span @click="deleteSkill(skill)">{{ skill }}</span>
             </div>
 
             <div class="terms">
@@ -36,6 +36,9 @@
                 <input type="checkbox" value="mario" v-model="names">
                 <label>Mario</label>
             </div> -->
+            <div class="submit">
+                <button>Create an Account</button>
+            </div>
         </form>
 
         <p>Email: {{ email }}</p>
@@ -54,7 +57,7 @@
                 password: "",
                 role: "",
                 terms: false,
-                tempSkill: [],
+                tempSkill: "",
                 skills: [],
                 // names: [],
             }
@@ -67,6 +70,12 @@
                     }
                     this.tempSkill = ""
                 }
+            },
+            deleteSkill(skill) {
+                console.log("clicked")
+                this.skills = this.skills.filter((item) => {
+                    return skill !== item;
+                })
             }
         }
     }
@@ -104,5 +113,18 @@
         margin: 0 10px 0 0;
         position: relative;
         top: 2px;
+    }
+    button {}
+    .pill {
+        display: inline-block;
+        margin: 20px 10px 0 0;
+        padding: 6px 12px;
+        background: #eee;
+        border-radius: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: #777;
+        cursor: pointer;
     }
 </style>
