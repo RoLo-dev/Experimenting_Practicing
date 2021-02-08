@@ -114,7 +114,18 @@
         position: relative;
         top: 2px;
     }
-    button {}
+    button {
+        background: #0b6dff;
+        border: 0;
+        padding: 10px 20px;
+        margin-top: 20px;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .submit {
+        text-align: center;
+    }
     .pill {
         display: inline-block;
         margin: 20px 10px 0 0;
