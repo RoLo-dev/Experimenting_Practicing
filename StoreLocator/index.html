@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/queries.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
     <div id="main">
@@ -19,12 +20,23 @@
             <div class="wrapper">
 
                 <div class="menu-header">
-                    <h4>FIND STORES</h4>
+                    <h4 class="menu-title">FIND STORES</h4>
                     <div class="header-form">
                         <form>
                             <input type="text" placeholder="Anaheim Ca 92805">
                         </form>
-                        <button>FILTER BY +</button>
+                        <button id="desktop-filter" class="not-for-mobile">FILTER BY +</button>
+                    </div>
+                    <div id="mobile-icons">
+                        <button>
+                            <i class="fas fa-list-ul"></i> LIST
+                        </button>
+                        <button>
+                            <i class="fas fa-map-marker-alt"></i> MAP
+                        </button>
+                        <button>
+                            <i class="fas fa-filter"></i> FILTER
+                        </button>
                     </div>
                     <div id="filter-items">
                         <hr>
@@ -64,8 +76,8 @@
                             <ul>
                                 <li>100 East Washington Ave</li>
                                 <li>City, ST 12345</li>
-                                <li>222-222-2222</li>
-                                <li class="desktop-share-links">
+                                <li class="not-for-mobile">222-222-2222</li>
+                                <li class="not-for-mobile">
                                     <a href="#" class="share-link">Send to Phone</a> |
                                     <a href="#" class="share-link">Send to Email</a>
                                 </li>
@@ -74,7 +86,8 @@
                                 <button>GET DIRECTIONS</button>
                                 <button>CALL STORE</button>
                             </div>
-                            <button class="view-btn">VIEW STORE PAGE</button>
+                            <button class="view-btn not-for-mobile">VIEW STORE PAGE</button>
+                            <button class="more-info-btn">MORE INFO</button>
                         </div>
                     </div>
 
@@ -91,8 +104,8 @@
                             <ul>
                                 <li>202 West Coral Ave</li>
                                 <li>City, ST 12345</li>
-                                <li>222-222-2222</li>
-                                <li class="desktop-share-links">
+                                <li class="not-for-mobile">222-222-2222</li>
+                                <li class="not-for-mobile">
                                     <a href="#" class="share-link">Send to Phone</a> |
                                     <a href="#" class="share-link">Send to Email</a>
                                 </li>
@@ -101,6 +114,7 @@
                                 <button>GET DIRECTIONS</button>
                                 <button>CALL STORE</button>
                             </div>
+                            <button class="more-info-btn">MORE INFO</button>
                         </div>
                     </div>
 
@@ -117,8 +131,8 @@
                             <ul>
                                 <li>300 North Walsh Blvd</li>
                                 <li>City, ST 12345</li>
-                                <li>222-222-2222</li>
-                                <li class="desktop-share-links">
+                                <li class="not-for-mobile">222-222-2222</li>
+                                <li class="not-for-mobile">
                                     <a href="#" class="share-link">Send to Phone</a> |
                                     <a href="#" class="share-link">Send to Email</a>
                                 </li>
@@ -127,6 +141,7 @@
                                 <button>GET DIRECTIONS</button>
                                 <button>CALL STORE</button>
                             </div>
+                            <button class="more-info-btn">MORE INFO</button>
                         </div>
                     </div>
 
@@ -143,8 +158,8 @@
                             <ul>
                                 <li>440 East Franklin Ave</li>
                                 <li>City, ST 12345</li>
-                                <li>222-222-2222</li>
-                                <li class="desktop-share-links">
+                                <li class="not-for-mobile">222-222-2222</li>
+                                <li class="not-for-mobile">
                                     <a href="#" class="share-link">Send to Phone</a> |
                                     <a href="#" class="share-link">Send to Email</a>
                                 </li>
@@ -153,6 +168,7 @@
                                 <button>GET DIRECTIONS</button>
                                 <button>CALL STORE</button>
                             </div>
+                            <button class="more-info-btn">MORE INFO</button>
                         </div>
                     </div>
 
@@ -169,8 +185,8 @@
                             <ul>
                                 <li>550 South Washington Ave</li>
                                 <li>City, ST 12345</li>
-                                <li>222-222-2222</li>
-                                <li class="desktop-share-links">
+                                <li class="not-for-mobile">222-222-2222</li>
+                                <li class="not-for-mobile">
                                     <a href="#" class="share-link">Send to Phone</a> |
                                     <a href="#" class="share-link">Send to Email</a>
                                 </li>
@@ -179,6 +195,7 @@
                                 <button>GET DIRECTIONS</button>
                                 <button>CALL STORE</button>
                             </div>
+                            <button class="more-info-btn">MORE INFO</button>
                         </div>
                     </div>
 
@@ -187,5 +204,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

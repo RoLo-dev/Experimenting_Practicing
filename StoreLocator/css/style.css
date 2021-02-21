@@ -92,6 +92,28 @@ hr {
     color: #000;
     transition: color 0.2s ease;
 }
+#mobile-icons {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+#mobile-icons button {
+    border: 0;
+    background: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#mobile-icons button:focus,
+#mobile-icons button:active {
+    color: orange;
+}
+#filter-items {
+    display: none;
+}
+#filter-items.show{
+    display: block;
+}
 #filter-items hr {
     margin-top: 1.5rem;
 }
@@ -101,10 +123,6 @@ hr {
 }
 
 
-.cards {
-    /* height: 90vh;
-    overflow-y: scroll; */
-}
 .card {
     margin-top: 1rem;
 }
@@ -189,4 +207,13 @@ hr {
     background: transparent;
     border-color: orange;
     transition: all 0.2s ease-in;
+}
+.address .more-info-btn {
+    display: none;
+    border: 0;
+    background: #000;
+    height: 2rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    color: #fff;
 }
