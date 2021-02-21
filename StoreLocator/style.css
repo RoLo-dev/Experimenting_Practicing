@@ -67,5 +67,33 @@ li {
     padding: 0;
 }
 .card hr {
-    border: 1px solid rgb(204, 203, 203);
+    color: rgb(204, 203, 203);
+    height: 1px;
+    margin-bottom: 10px;
+}
+.card .distance {
+    display: flex;
+    align-items: center;
+}
+.distance .arrow-down {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-image: url("/img/pin.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+.arrow-down .number {
+    color: #fff;
+    font-size: 0.85rem;
+    /* padding-top: 2px; */
+}
+.distance .distance-text {
+    color: rgb(175, 174, 174);
+    font-size: 0.75rem;
+    font-weight: 700;
 }
