@@ -15,10 +15,13 @@
     }
     .menu {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .menu-header {
-        height: 12vh;
         z-index: 7;
+        /* margin-bottom: 1rem; */
     }
     .menu-title {
         text-align: center;
@@ -39,21 +42,23 @@
     }
 
     #main-content {
-        height: 87vh;
+        height: 85vh;
         position: relative;
     }
     .mobile-map {
         height: 100%;
-        padding-top: 1rem;
+        /* padding-top: 1rem; */
         z-index: -2;
     }
     .mobile-map iframe {
         height: 100%;
         width: 100%;
+        padding-bottom: 10px;
     }
 
     .cards {
         position: absolute;
+        padding-bottom: 10px;
         top: 1%;
         opacity: 0;
         background: #fff;

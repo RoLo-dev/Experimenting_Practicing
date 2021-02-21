@@ -96,7 +96,7 @@ hr {
     display: none;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 #mobile-icons button {
     border: 0;
@@ -111,7 +111,7 @@ hr {
 }
 #filter-items {
     display: none;
-    padding-top: 1rem;
+    padding-top: 1.45rem;
 }
 #filter-items.show{
     display: block;
@@ -127,6 +127,7 @@ hr {
 
 .mobile-map {
     display: none;
+    padding-top: 1rem;
 }
 .card {
     margin-top: 1rem;
