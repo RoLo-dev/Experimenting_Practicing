@@ -101,9 +101,10 @@ hr {
 #mobile-icons button {
     border: 0;
     background: none;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 700;
 }
+#mobile-icons button.active,
 #mobile-icons button:focus,
 #mobile-icons button:active {
     color: orange;
