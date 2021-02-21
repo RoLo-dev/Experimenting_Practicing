@@ -1,3 +1,8 @@
+:root {
+    --light-gray: rgb(204, 203, 203);
+    --dark-gray: rgb(157, 155, 155);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +18,11 @@ a {
 }
 li {
     list-style: none;
+}
+hr {
+    color: var(--light-gray);
+    height: 1px;
+    margin-bottom: 10px;
 }
 .wrapper {
     width: 92%;
@@ -55,7 +65,7 @@ li {
 }
 .header-form form input {
     width: 100%;
-    border: 2px solid rgb(204, 203, 203);
+    border: 2px solid var(--light-gray);
     padding: 5px 10px;
     height: 2rem;
     transition: border 0.5s ease-in;
@@ -67,11 +77,11 @@ li {
     transition: border-color 0.2s ease-in;
 }
 .header-form form input::placeholder {
-    color: rgb(204, 203, 203);
+    color: var(--light-gray);
 }
 .header-form button {
     border: 0;
-    color: rgb(175, 174, 174);
+    color: var(--dark-gray);
     font-weight: 700;
     background: none;
     padding: 0;
@@ -80,19 +90,23 @@ li {
 }
 .header-form button:hover {
     color: #000;
-    transition: color 0.2s ease-in;
+    transition: color 0.2s ease;
 }
+#filter-items hr {
+    margin-top: 1.5rem;
+}
+.checkboxes label {
+    color: var(--dark-gray);
+    font-size: 0.85rem;
+}
+
+
 .cards {
     /* height: 90vh;
     overflow-y: scroll; */
 }
 .card {
     margin-top: 1rem;
-}
-.card hr {
-    color: rgb(204, 203, 203);
-    height: 1px;
-    margin-bottom: 10px;
 }
 .card .distance {
     display: flex;
@@ -115,7 +129,7 @@ li {
     font-size: 0.85rem;
 }
 .distance .distance-text {
-    color: rgb(175, 174, 174);
+    color: var(--dark-gray);
     font-size: 0.75rem;
     font-weight: 700;
 }

@@ -1,0 +1,11 @@
+@media only screen and (max-width: 800px) {
+    .map {
+        width: 50%;
+    }
+    .menu {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 680px) {
+    
+}

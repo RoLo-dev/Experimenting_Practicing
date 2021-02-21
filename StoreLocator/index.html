@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store Locator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
@@ -25,6 +26,27 @@
                         </form>
                         <button>FILTER BY +</button>
                     </div>
+                    <div id="filter-items">
+                        <hr>
+                        <form class="checkboxes">
+                            <div>
+                                <input type="checkbox" name="takeout" value="takeout">
+                                <label for="takeout">Takeout</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cold-drinks" value="cold-drinks">
+                                <label for="cold-drinks">Cold drinks</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="small-meals" value="small-meals">
+                                <label for="small-meals">Small meals</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="delivery" value="delivery">
+                                <label for="delivery">Delivery</label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="cards">
@@ -38,19 +60,19 @@
                             <span class="distance-text">1.15 miles away</span>
                         </div>
                         <div class="address">
-                            <h4>LOCATION A</h4>
+                            <h4>The Lost Bean</h4>
                             <ul>
                                 <li>100 East Washington Ave</li>
                                 <li>City, ST 12345</li>
                                 <li>222-222-2222</li>
-                                <li>
-                                    <a href="" class="share-link">Send to Phone</a> |
-                                    <a href="" class="share-link">Send to Email</a>
+                                <li class="desktop-share-links">
+                                    <a href="#" class="share-link">Send to Phone</a> |
+                                    <a href="#" class="share-link">Send to Email</a>
                                 </li>
                             </ul>
                             <div class="black-btns">
                                 <button>GET DIRECTIONS</button>
-                                <button>MORE INFO</button>
+                                <button>CALL STORE</button>
                             </div>
                             <button class="view-btn">VIEW STORE PAGE</button>
                         </div>
@@ -65,19 +87,19 @@
                             <span class="distance-text">2.45 miles away</span>
                         </div>
                         <div class="address">
-                            <h4>LOCATION B</h4>
+                            <h4>Starbucks</h4>
                             <ul>
                                 <li>202 West Coral Ave</li>
                                 <li>City, ST 12345</li>
                                 <li>222-222-2222</li>
-                                <li>
-                                    <a href="" class="share-link">Send to Phone</a> |
-                                    <a href="" class="share-link">Send to Email</a>
+                                <li class="desktop-share-links">
+                                    <a href="#" class="share-link">Send to Phone</a> |
+                                    <a href="#" class="share-link">Send to Email</a>
                                 </li>
                             </ul>
                             <div class="black-btns">
                                 <button>GET DIRECTIONS</button>
-                                <button>MORE INFO</button>
+                                <button>CALL STORE</button>
                             </div>
                         </div>
                     </div>
@@ -91,19 +113,19 @@
                             <span class="distance-text">5 miles away</span>
                         </div>
                         <div class="address">
-                            <h4>LOCATION C</h4>
+                            <h4>Tea Arias</h4>
                             <ul>
                                 <li>300 North Walsh Blvd</li>
                                 <li>City, ST 12345</li>
                                 <li>222-222-2222</li>
-                                <li>
-                                    <a href="" class="share-link">Send to Phone</a> |
-                                    <a href="" class="share-link">Send to Email</a>
+                                <li class="desktop-share-links">
+                                    <a href="#" class="share-link">Send to Phone</a> |
+                                    <a href="#" class="share-link">Send to Email</a>
                                 </li>
                             </ul>
                             <div class="black-btns">
                                 <button>GET DIRECTIONS</button>
-                                <button>MORE INFO</button>
+                                <button>CALL STORE</button>
                             </div>
                         </div>
                     </div>
@@ -117,19 +139,19 @@
                             <span class="distance-text">8.15 miles away</span>
                         </div>
                         <div class="address">
-                            <h4>LOCATION D</h4>
+                            <h4>Roasting Water</h4>
                             <ul>
                                 <li>440 East Franklin Ave</li>
                                 <li>City, ST 12345</li>
                                 <li>222-222-2222</li>
-                                <li>
-                                    <a href="" class="share-link">Send to Phone</a> |
-                                    <a href="" class="share-link">Send to Email</a>
+                                <li class="desktop-share-links">
+                                    <a href="#" class="share-link">Send to Phone</a> |
+                                    <a href="#" class="share-link">Send to Email</a>
                                 </li>
                             </ul>
                             <div class="black-btns">
                                 <button>GET DIRECTIONS</button>
-                                <button>MORE INFO</button>
+                                <button>CALL STORE</button>
                             </div>
                         </div>
                     </div>
@@ -143,19 +165,19 @@
                             <span class="distance-text">12.5 miles away</span>
                         </div>
                         <div class="address">
-                            <h4>LOCATION E</h4>
+                            <h4>Portola</h4>
                             <ul>
                                 <li>550 South Washington Ave</li>
                                 <li>City, ST 12345</li>
                                 <li>222-222-2222</li>
-                                <li>
-                                    <a href="" class="share-link">Send to Phone</a> |
-                                    <a href="" class="share-link">Send to Email</a>
+                                <li class="desktop-share-links">
+                                    <a href="#" class="share-link">Send to Phone</a> |
+                                    <a href="#" class="share-link">Send to Email</a>
                                 </li>
                             </ul>
                             <div class="black-btns">
                                 <button>GET DIRECTIONS</button>
-                                <button>MORE INFO</button>
+                                <button>CALL STORE</button>
                             </div>
                         </div>
                     </div>
