@@ -15,7 +15,7 @@ li {
     list-style: none;
 }
 .wrapper {
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
 }
 
@@ -36,10 +36,13 @@ li {
 
 .menu {
     width: 40%;
+    overflow-y: scroll;
+    height: 100%;
 }
 .menu .menu-header {
+    width: 100%;
+    background: #fff;
     padding-top: 10px;
-    margin-bottom: 1.5rem;
 }
 .menu-header .header-form {
     display: flex;
@@ -53,8 +56,15 @@ li {
 .header-form form input {
     width: 100%;
     border: 2px solid rgb(204, 203, 203);
-    padding: 5px;
+    padding: 5px 10px;
     height: 2rem;
+    transition: border 0.5s ease-in;
+}
+.header-form form input:hover,
+.header-form form input:active,
+.header-form form input:focus {
+    border-color: #000;
+    transition: border-color 0.2s ease-in;
 }
 .header-form form input::placeholder {
     color: rgb(204, 203, 203);
@@ -65,6 +75,19 @@ li {
     font-weight: 700;
     background: none;
     padding: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.header-form button:hover {
+    color: #000;
+    transition: color 0.2s ease-in;
+}
+.cards {
+    /* height: 90vh;
+    overflow-y: scroll; */
+}
+.card {
+    margin-top: 1rem;
 }
 .card hr {
     color: rgb(204, 203, 203);
@@ -90,10 +113,66 @@ li {
 .arrow-down .number {
     color: #fff;
     font-size: 0.85rem;
-    /* padding-top: 2px; */
 }
 .distance .distance-text {
     color: rgb(175, 174, 174);
     font-size: 0.75rem;
     font-weight: 700;
+}
+.card .address {
+    margin-top: 0.5rem;
+}
+.address ul li {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+}
+.address ul li:last-child {
+    color: orange;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.address .share-link {
+    color: orange;
+    transition: color 0.5s ease-in;
+}
+.address .share-link:hover {
+    color: #000;
+    transition: color 0.2s ease-in;
+}
+.address .black-btns {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.address button {
+    cursor: pointer;
+}
+.black-btns button {
+    border: 2px solid transparent;
+    background: #000;
+    height: 2rem;
+    color: #fff;
+    width: 48%;
+    transition: all 0.5s ease-in;
+}
+.black-btns button:hover {
+    color: #000;
+    background: transparent;
+    border-color: #000;
+    transition: all 0.2s ease-in;
+}
+.address .view-btn {
+    border: 2px solid transparent;
+    background: orange;
+    color: #fff;
+    height: 2rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: all 0.5s ease-in;
+}
+.address .view-btn:hover {
+    color: #000;
+    background: transparent;
+    border-color: orange;
+    transition: all 0.2s ease-in;
 }
