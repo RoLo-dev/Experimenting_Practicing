@@ -15,6 +15,57 @@ li {
     list-style: none;
 }
 .wrapper {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
+}
+
+/* Main content */
+#main {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.map {
+    width: 60%;
+}
+.map iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+.menu {
+    width: 40%;
+}
+.menu .menu-header {
+    padding-top: 10px;
+    margin-bottom: 1.5rem;
+}
+.menu-header .header-form {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.header-form form {
+    width: 60%;
+    margin-right: 2rem;
+}
+.header-form form input {
+    width: 100%;
+    border: 2px solid rgb(204, 203, 203);
+    padding: 5px;
+    height: 2rem;
+}
+.header-form form input::placeholder {
+    color: rgb(204, 203, 203);
+}
+.header-form button {
+    border: 0;
+    color: rgb(175, 174, 174);
+    font-weight: 700;
+    background: none;
+    padding: 0;
+}
+.card hr {
+    border: 1px solid rgb(204, 203, 203);
 }
