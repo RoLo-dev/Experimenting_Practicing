@@ -13,14 +13,12 @@
     html {
         font-size: 14px;
     }
-    .map {
-        display: none;
-        /* position: absolute;
-        bottom: 0;
-        left: 0; */
-    }
     .menu {
         width: 100%;
+    }
+    .menu-header {
+        height: 12vh;
+        z-index: 7;
     }
     .menu-title {
         text-align: center;
@@ -35,7 +33,38 @@
     #mobile-icons {
         display: flex;
     }
+    .mobile-map,
     .address .more-info-btn {
         display: block;
+    }
+
+    #main-content {
+        height: 87vh;
+        position: relative;
+    }
+    .mobile-map {
+        height: 100%;
+        padding-top: 1rem;
+        z-index: -2;
+    }
+    .mobile-map iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+    .cards {
+        position: absolute;
+        top: 1%;
+        opacity: 0;
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        transition: all 0.5s ease-out;
+        z-index: 5;
+    }
+    .cards.show{
+        opacity: 1;
+        transition: all 0.2s ease-in;
     }
 }

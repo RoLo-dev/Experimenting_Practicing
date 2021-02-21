@@ -9,6 +9,20 @@ function showFilter() {
     filterItems.classList.toggle("show");
 }
 
+const listBtn = document.getElementById("list-btn");
+const cardContainer = document.getElementById("card-container");
+const mapBtn = document.getElementById("map-btn");
+
+listBtn.addEventListener("click", showList);
+mapBtn.addEventListener("click", showMap);
+
+function showMap() {
+    cardContainer.classList.remove("show");
+}
+function showList() {
+    cardContainer.classList.toggle("show");
+}
+
 let mobileMenuBtns = document.getElementsByClassName("mobile-menu-btns");
 
 mobileMenuBtns.forEach(btn => {
@@ -16,3 +30,5 @@ mobileMenuBtns.forEach(btn => {
         btn.classList.toggle("active");
     })
 });
+
+

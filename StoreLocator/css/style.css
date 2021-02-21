@@ -111,12 +111,13 @@ hr {
 }
 #filter-items {
     display: none;
+    padding-top: 1rem;
 }
 #filter-items.show{
     display: block;
 }
 #filter-items hr {
-    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 .checkboxes label {
     color: var(--dark-gray);
@@ -124,6 +125,9 @@ hr {
 }
 
 
+.mobile-map {
+    display: none;
+}
 .card {
     margin-top: 1rem;
 }
@@ -215,6 +219,6 @@ hr {
     background: #000;
     height: 2rem;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.85rem;
     color: #fff;
 }

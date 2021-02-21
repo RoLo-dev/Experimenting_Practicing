@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="main">
-        <div class="map">
+        <div class="map not-for-mobile">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212106.42062015057!2d-117.98557395115895!3d33.83391140071595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd6f98055e867%3A0x1ab89ab9a2bb160!2sAnaheim%2C%20CA!5e0!3m2!1sen!2sus!4v1613868993547!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="menu">
@@ -28,10 +28,10 @@
                         <button id="desktop-filter" class="not-for-mobile">FILTER BY +</button>
                     </div>
                     <div id="mobile-icons">
-                        <button class="mobile-menu-btns">
+                        <button id="list-btn" class="mobile-menu-btns">
                             <i class="fas fa-list-ul"></i> LIST
                         </button>
-                        <button class="mobile-menu-btns">
+                        <button id="map-btn" class="mobile-menu-btns">
                             <i class="fas fa-map-marker-alt"></i> MAP
                         </button>
                         <button id="mobile-filter" class="mobile-menu-btns">
@@ -61,144 +61,149 @@
                     </div>
                 </div>
 
-                <div class="cards">
-
-                    <div class="card">
-                        <hr>
-                        <div class="distance">
-                            <div class="arrow-down">
-                                <p class="number">1</p>
-                            </div>
-                            <span class="distance-text">1.15 miles away</span>
-                        </div>
-                        <div class="address">
-                            <h4>The Lost Bean</h4>
-                            <ul>
-                                <li>100 East Washington Ave</li>
-                                <li>City, ST 12345</li>
-                                <li class="not-for-mobile">222-222-2222</li>
-                                <li class="not-for-mobile">
-                                    <a href="#" class="share-link">Send to Phone</a> |
-                                    <a href="#" class="share-link">Send to Email</a>
-                                </li>
-                            </ul>
-                            <div class="black-btns">
-                                <button>GET DIRECTIONS</button>
-                                <button>CALL STORE</button>
-                            </div>
-                            <button class="view-btn not-for-mobile">VIEW STORE PAGE</button>
-                            <button class="more-info-btn">MORE INFO</button>
-                        </div>
+                <div id="main-content">
+                    <div class="mobile-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212106.42062015057!2d-117.98557395115895!3d33.83391140071595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd6f98055e867%3A0x1ab89ab9a2bb160!2sAnaheim%2C%20CA!5e0!3m2!1sen!2sus!4v1613868993547!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
+                    <div id="card-container" class="cards">
 
-                    <div class="card">
-                        <hr>
-                        <div class="distance">
-                            <div class="arrow-down">
-                                <p class="number">2</p>
+                        <div class="card">
+                            <hr>
+                            <div class="distance">
+                                <div class="arrow-down">
+                                    <p class="number">1</p>
+                                </div>
+                                <span class="distance-text">1.15 miles away</span>
                             </div>
-                            <span class="distance-text">2.45 miles away</span>
-                        </div>
-                        <div class="address">
-                            <h4>Starbucks</h4>
-                            <ul>
-                                <li>202 West Coral Ave</li>
-                                <li>City, ST 12345</li>
-                                <li class="not-for-mobile">222-222-2222</li>
-                                <li class="not-for-mobile">
-                                    <a href="#" class="share-link">Send to Phone</a> |
-                                    <a href="#" class="share-link">Send to Email</a>
-                                </li>
-                            </ul>
-                            <div class="black-btns">
-                                <button>GET DIRECTIONS</button>
-                                <button>CALL STORE</button>
+                            <div class="address">
+                                <h4>The Lost Bean</h4>
+                                <ul>
+                                    <li>100 East Washington Ave</li>
+                                    <li>City, ST 12345</li>
+                                    <li class="not-for-mobile">222-222-2222</li>
+                                    <li class="not-for-mobile">
+                                        <a href="#" class="share-link">Send to Phone</a> |
+                                        <a href="#" class="share-link">Send to Email</a>
+                                    </li>
+                                </ul>
+                                <div class="black-btns">
+                                    <button>GET DIRECTIONS</button>
+                                    <button>CALL STORE</button>
+                                </div>
+                                <button class="view-btn not-for-mobile">VIEW STORE PAGE</button>
+                                <button class="more-info-btn">MORE INFO</button>
                             </div>
-                            <button class="more-info-btn">MORE INFO</button>
                         </div>
+
+                        <div class="card">
+                            <hr>
+                            <div class="distance">
+                                <div class="arrow-down">
+                                    <p class="number">2</p>
+                                </div>
+                                <span class="distance-text">2.45 miles away</span>
+                            </div>
+                            <div class="address">
+                                <h4>Starbucks</h4>
+                                <ul>
+                                    <li>202 West Coral Ave</li>
+                                    <li>City, ST 12345</li>
+                                    <li class="not-for-mobile">222-222-2222</li>
+                                    <li class="not-for-mobile">
+                                        <a href="#" class="share-link">Send to Phone</a> |
+                                        <a href="#" class="share-link">Send to Email</a>
+                                    </li>
+                                </ul>
+                                <div class="black-btns">
+                                    <button>GET DIRECTIONS</button>
+                                    <button>CALL STORE</button>
+                                </div>
+                                <button class="more-info-btn">MORE INFO</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <hr>
+                            <div class="distance">
+                                <div class="arrow-down">
+                                    <p class="number">3</p>
+                                </div>
+                                <span class="distance-text">5 miles away</span>
+                            </div>
+                            <div class="address">
+                                <h4>Tea Arias</h4>
+                                <ul>
+                                    <li>300 North Walsh Blvd</li>
+                                    <li>City, ST 12345</li>
+                                    <li class="not-for-mobile">222-222-2222</li>
+                                    <li class="not-for-mobile">
+                                        <a href="#" class="share-link">Send to Phone</a> |
+                                        <a href="#" class="share-link">Send to Email</a>
+                                    </li>
+                                </ul>
+                                <div class="black-btns">
+                                    <button>GET DIRECTIONS</button>
+                                    <button>CALL STORE</button>
+                                </div>
+                                <button class="more-info-btn">MORE INFO</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <hr>
+                            <div class="distance">
+                                <div class="arrow-down">
+                                    <p class="number">4</p>
+                                </div>
+                                <span class="distance-text">8.15 miles away</span>
+                            </div>
+                            <div class="address">
+                                <h4>Roasting Water</h4>
+                                <ul>
+                                    <li>440 East Franklin Ave</li>
+                                    <li>City, ST 12345</li>
+                                    <li class="not-for-mobile">222-222-2222</li>
+                                    <li class="not-for-mobile">
+                                        <a href="#" class="share-link">Send to Phone</a> |
+                                        <a href="#" class="share-link">Send to Email</a>
+                                    </li>
+                                </ul>
+                                <div class="black-btns">
+                                    <button>GET DIRECTIONS</button>
+                                    <button>CALL STORE</button>
+                                </div>
+                                <button class="more-info-btn">MORE INFO</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <hr>
+                            <div class="distance">
+                                <div class="arrow-down">
+                                    <p class="number">5</p>
+                                </div>
+                                <span class="distance-text">12.5 miles away</span>
+                            </div>
+                            <div class="address">
+                                <h4>Portola</h4>
+                                <ul>
+                                    <li>550 South Washington Ave</li>
+                                    <li>City, ST 12345</li>
+                                    <li class="not-for-mobile">222-222-2222</li>
+                                    <li class="not-for-mobile">
+                                        <a href="#" class="share-link">Send to Phone</a> |
+                                        <a href="#" class="share-link">Send to Email</a>
+                                    </li>
+                                </ul>
+                                <div class="black-btns">
+                                    <button>GET DIRECTIONS</button>
+                                    <button>CALL STORE</button>
+                                </div>
+                                <button class="more-info-btn">MORE INFO</button>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div class="card">
-                        <hr>
-                        <div class="distance">
-                            <div class="arrow-down">
-                                <p class="number">3</p>
-                            </div>
-                            <span class="distance-text">5 miles away</span>
-                        </div>
-                        <div class="address">
-                            <h4>Tea Arias</h4>
-                            <ul>
-                                <li>300 North Walsh Blvd</li>
-                                <li>City, ST 12345</li>
-                                <li class="not-for-mobile">222-222-2222</li>
-                                <li class="not-for-mobile">
-                                    <a href="#" class="share-link">Send to Phone</a> |
-                                    <a href="#" class="share-link">Send to Email</a>
-                                </li>
-                            </ul>
-                            <div class="black-btns">
-                                <button>GET DIRECTIONS</button>
-                                <button>CALL STORE</button>
-                            </div>
-                            <button class="more-info-btn">MORE INFO</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <hr>
-                        <div class="distance">
-                            <div class="arrow-down">
-                                <p class="number">4</p>
-                            </div>
-                            <span class="distance-text">8.15 miles away</span>
-                        </div>
-                        <div class="address">
-                            <h4>Roasting Water</h4>
-                            <ul>
-                                <li>440 East Franklin Ave</li>
-                                <li>City, ST 12345</li>
-                                <li class="not-for-mobile">222-222-2222</li>
-                                <li class="not-for-mobile">
-                                    <a href="#" class="share-link">Send to Phone</a> |
-                                    <a href="#" class="share-link">Send to Email</a>
-                                </li>
-                            </ul>
-                            <div class="black-btns">
-                                <button>GET DIRECTIONS</button>
-                                <button>CALL STORE</button>
-                            </div>
-                            <button class="more-info-btn">MORE INFO</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <hr>
-                        <div class="distance">
-                            <div class="arrow-down">
-                                <p class="number">5</p>
-                            </div>
-                            <span class="distance-text">12.5 miles away</span>
-                        </div>
-                        <div class="address">
-                            <h4>Portola</h4>
-                            <ul>
-                                <li>550 South Washington Ave</li>
-                                <li>City, ST 12345</li>
-                                <li class="not-for-mobile">222-222-2222</li>
-                                <li class="not-for-mobile">
-                                    <a href="#" class="share-link">Send to Phone</a> |
-                                    <a href="#" class="share-link">Send to Email</a>
-                                </li>
-                            </ul>
-                            <div class="black-btns">
-                                <button>GET DIRECTIONS</button>
-                                <button>CALL STORE</button>
-                            </div>
-                            <button class="more-info-btn">MORE INFO</button>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
