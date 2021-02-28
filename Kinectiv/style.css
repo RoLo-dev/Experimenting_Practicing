@@ -210,7 +210,7 @@ nav a {
 
 /* Gallery */
 .grid-container {
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
     min-height: 75vh;
     max-height: 85vh;
     display: grid;
@@ -240,7 +240,8 @@ nav a {
 
 /* Promise */
 #promise {
-    margin-bottom: 6rem;
+    padding: 8rem 0;
+    background: #ddd;
 }
 #promise p {
     margin-top: 2rem;
@@ -253,4 +254,31 @@ nav a {
 #promise a:hover {
     opacity: 0.65;
     transition: opacity 0.2s ease;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-content ul li {
+    display: inline-block;
+}
+.footer-content ul li a {
+    color: var(--orange-color);
+    transition: all 0.5s ease;
+}
+.footer-content ul li a:hover {
+    color: #ddd;
+    transition: all 0.2s ease;
+}
+.footer-content ul li a:first-child {
+    margin-right: 10px;
+}
+.footer-content ul li a i {
+    font-size: 1.25rem;
 }
