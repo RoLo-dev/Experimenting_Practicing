@@ -55,7 +55,6 @@ nav {
     align-items: center;
 }
 .logo {
-    width: 5rem;
     margin-right: 2.5rem;
 }
 nav ul li {
@@ -90,10 +89,6 @@ nav a {
 .phone:hover {
     border-color: var(--orange-color);
     transition: border-color 0.2s ease-in;
-}
-.phone-icon {
-    width: 1rem;
-    margin-right: 12px;
 }
 
 /* Hero */
@@ -204,6 +199,8 @@ nav a {
 
 /* Gallery */
 .grid-container {
+    margin-bottom: 1rem;
+    height: 45vh;
     display: grid;
     grid-template-columns: repeat (4, 1fr);
     grid-template-rows: repeat (3, 1fr);
@@ -215,4 +212,17 @@ nav a {
 }
 .A {
     grid-area: A;
+    object-fit: top;
+}
+.B {
+    grid-area: B;
+}
+.C {
+    grid-area: C;
+}
+.D {
+    grid-area: D;
+}
+.E {
+    grid-area: E;
 }
