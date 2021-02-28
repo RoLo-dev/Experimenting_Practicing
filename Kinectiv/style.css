@@ -165,17 +165,23 @@ nav a {
     background: var(--orange-color);
     color: #fff;
 }
-#yearly-btn {
+#yearly-btn,
+#monthly-btn.inactive-month {
     background: none;
     color: var(--orange-color);
     cursor: pointer;
-    transition: all 0.5s ease-in;
+    transition: all 0.2s ease-in;
 }
-#yearly-btn:hover {
+#yearly-btn.active-year {
+    background: var(--orange-color);
+    color: #fff;
+    cursor: default;
+}
+/* #yearly-btn:hover {
     background: #FFE4D6;
     color: #000;
     transition: all 0.2s ease-in;
-}
+} */
 .cards {
     display: flex;
     justify-content: space-between;
