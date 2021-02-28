@@ -143,7 +143,7 @@ nav a {
 
 /* Pricing */
 #pricing {
-    margin: 6rem 0 35rem 0;
+    margin: 6rem 0;
 }
 .pricing-header {
     display: flex;
@@ -209,8 +209,15 @@ nav a {
 }
 
 .container {
+    position: relative;
+}
+.background-block {
+    position: absolute;
     background: #ddd;
-    /* position: relative; */
+    height: 85vh;
+    width: 100%;
+    bottom: 0;
+    z-index: -5;
 }
 
 /* Gallery */
@@ -219,14 +226,9 @@ nav a {
     min-height: 75vh;
     max-height: 85vh;
     display: grid;
-    width: 90%;
-    position: absolute;
-    top: 170%;
-    right: 5%;
     grid-template-columns: repeat (4, 1fr);
     grid-template-rows: repeat (3, 1fr);
     grid-gap: 1rem;
-    z-index: 5;
     grid-template-areas: 
     "A A A B"
     "A A A C"
@@ -250,7 +252,7 @@ nav a {
 
 /* Promise */
 #promise {
-    padding: 28rem 0 8rem 0;
+    padding: 8rem 0;
 }
 #promise p {
     margin-top: 2rem;
