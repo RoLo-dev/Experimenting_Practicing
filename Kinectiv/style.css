@@ -161,6 +161,10 @@ nav a {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 900;
 }
+.pricing-header button:focus{
+    border: 0;
+    outline: none;
+}
 #monthly-btn {
     background: var(--orange-color);
     color: #fff;
