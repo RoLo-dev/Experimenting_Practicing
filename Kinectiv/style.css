@@ -115,24 +115,45 @@ nav a {
     font-size: 2rem;
 }
 .hero-btn {
+    z-index: 2;
+    outline: none;
+    position: relative;
     font-size: 1rem;
     font-weight: 900;
-    background: var(--orange-color);
-    color: #fff;
-    border: 2px solid transparent;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--orange-color);
     margin-top: 2rem;
     padding: 10px 2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
     transition: all 0.5s ease-in;
 }
-.hero-btn:hover {
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--orange-color);
+
+    transition: all 0.2s ease-in;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.hero-btn:hover::before {
+    transform: scaleX(1);
+}
+/* .hero-btn:hover {
     border-color: var(--orange-color);
     background: none;
     color: #000;
     transition: all 0.2s ease-in;
-}
+} */
 .hero-img {
     position: absolute;
     right: 0;
