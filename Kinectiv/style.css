@@ -120,7 +120,7 @@ nav a {
     position: relative;
     font-size: 1rem;
     font-weight: 900;
-    background-color: #fff;
+    background: transparent;
     color: #000;
     border: 2px solid var(--orange-color);
     margin-top: 2rem;
@@ -129,7 +129,11 @@ nav a {
     text-transform: uppercase;
     cursor: pointer;
     font-family: "Noto Sans TC", sans-serif;
-    transition: all 0.5s ease-in;
+    transition: all 0.4s ease-in;
+}
+.hero-btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-in;
 }
 .hero-btn::before {
     content: '';
@@ -139,11 +143,15 @@ nav a {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-color: var(--orange-color);
+    background: var(--orange-color);
 
     transition: all 0.2s ease-in;
     transform: scaleX(0);
     transform-origin: left;
+}
+.hero-btn:hover {
+    color: #fff;
+    transition: color 0.1s ease-in;
 }
 .hero-btn:hover::before {
     transform: scaleX(1);
