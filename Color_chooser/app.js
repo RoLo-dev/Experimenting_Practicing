@@ -278,6 +278,8 @@ function savePalette(e) {
     } else {
         paletteNumber = savedPalettes.length;
     }
+    console.log(paletteObjects)
+    console.log(localStorage.getItem("palettes"))
 
     const paletteObj = { name, colors, number: paletteNumber };
     savedPalettes.push(paletteObj);
@@ -289,7 +291,7 @@ function savePalette(e) {
     const titlePreviewDiv = document.createElement("div");
     const title = document.createElement("p");
     const preview = document.createElement("div");
-    const deleteDiv = document.createElement("div");
+    // const deleteDiv = document.createElement("div");
     const paletteBtn = document.createElement("button");
     titlePreviewDiv.classList.add("colors-container");
     palette.classList.add("saved-palette");
@@ -300,7 +302,7 @@ function savePalette(e) {
         smallDiv.style.backgroundColor = smallColor;
         preview.appendChild(smallDiv);
     })
-    deleteDiv.classList.add("delete-container");
+    // deleteDiv.classList.add("delete-container");
     paletteBtn.classList.add("delete-btn");
     paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
     titlePreviewDiv.classList.add(paletteObj.number);
@@ -323,9 +325,9 @@ function savePalette(e) {
     // Now we append it to the Library
     titlePreviewDiv.appendChild(title);
     titlePreviewDiv.appendChild(preview);
-    deleteDiv.appendChild(paletteBtn);
+    // deleteDiv.appendChild(paletteBtn);
     palette.appendChild(titlePreviewDiv)
-    palette.appendChild(deleteDiv);
+    // palette.appendChild(deleteDiv);
     savedPalettesDiv.appendChild(palette);
 }
 function saveToLocal(paletteObj) {
@@ -362,7 +364,7 @@ function getFromLocalStorage() {
             const titlePreviewDiv = document.createElement("div");
             const title = document.createElement("p");
             const preview = document.createElement("div");
-            const deleteDiv = document.createElement("div");
+            // const deleteDiv = document.createElement("div");
             const paletteBtn = document.createElement("button");
             titlePreviewDiv.classList.add("colors-container");
             palette.classList.add("saved-palette");
@@ -373,7 +375,7 @@ function getFromLocalStorage() {
                 smallDiv.style.backgroundColor = smallColor;
                 preview.appendChild(smallDiv);
             })
-            deleteDiv.classList.add("delete-container");
+            // deleteDiv.classList.add("delete-container");
             paletteBtn.classList.add("delete-btn");
             paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
             titlePreviewDiv.classList.add(paletteObj.number);
@@ -395,9 +397,9 @@ function getFromLocalStorage() {
             // Now we need to append it to Library
             titlePreviewDiv.appendChild(title);
             titlePreviewDiv.appendChild(preview);
-            deleteDiv.appendChild(paletteBtn);
+            // deleteDiv.appendChild(paletteBtn);
             palette.appendChild(titlePreviewDiv)
-            palette.appendChild(deleteDiv);
+            // palette.appendChild(deleteDiv);
             savedPalettesDiv.appendChild(palette);
         })
     }
