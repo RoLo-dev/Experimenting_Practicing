@@ -1,177 +1,162 @@
-/* CSS VARIABLES */
-
 :root {
   --color-very-lt-gray: #F1F1F1;
-  --color-lt-gray: #B3B3B5;
+  --color-lt-gray: #dbdbdb;
   --color-md-gray: #838384;
   --color-dk-gray: #313132;
 }
+/* --color-lt-gray: #B3B3B5; */
 
 /* --- Universal Styles --- */
-* {
+*{
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-html {
+html{
   font-size: 18px;
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
 }
-.wrapper {
-  width: 97%;
-  margin: 0 auto;
-}
-body {
+.wrapper{width: 85%;margin: 0 auto;}
+body{
   line-height: 1.35;
   margin: 0;
   padding: 0;
+  font-weight: 400;
 }
-header,
-section,
-footer {
-  width: 100%;
-  height: auto;
-  padding: 0;
-}
-section,
-figure {
-  margin: 0;
-}
-.pic {
+header, section, footer{width: 100%;}
+section, figure{margin: 0;}
+.pic{
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-h2 {
+h2{
   text-align: center;
   font-size: 2.25em;
   font-weight: 800;
   margin: 0;
   padding: 32px 0;
+  color: var(--color-dk-gray);
 }
 
 
 /* --- Header --- */
-.mobile-header {
-  display: none;
-  visibility: hidden;
-}
-.mainHeader {
+header{padding: 0.75rem 0;}
+.mobile-header{display: none;}
+.mainHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
-  display: block;
-  width: 50%;
-}
-.logo p {
+.logo{display: flex;align-items: center;}
+.logo img{display: block;width: 50%;}
+.logo p{
   text-transform: uppercase;
   letter-spacing: 0.85px;
   color: var(--color-dk-gray);
 }
-.logo p .academy {
-  color: var(--color-md-gray);
-}
-nav ul li {
+.logo p .academy{color: var(--color-md-gray);}
+nav ul li{
   display: inline-block;
   list-style: none;
-  padding-left: 10px;
+  margin-right: 3rem;
 }
+nav ul li:last-child{margin-right: 0;}
 nav ul li a {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
   text-decoration: none;
   color: var(--color-dk-gray);
+  transition: color 0.2s ease-in-out;
 }
-nav ul li a:hover {
-  color: var(--color-lt-gray);
-  transition: color .3s ease-in-out;
-}
+nav ul li a:hover{color: var(--color-lt-gray);}
 
 
 /* --- Intro --- */
-#intro {
-  background-color: var(--color-lt-gray);
-}
-.introBanner {
+#intro{background-color: var(--color-lt-gray);}
+.introBanner{
   display: flex;
-  padding: 36px 0;
   align-items: center;
-  color: var(--color-very-lt-gray);
+  color: var(--color-dk-gray);
 }
-.banner {
+.banner{
   width: 60%;
+  height: 800px;
+  background-image: url('../images/banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.introContent {
+.introContent{
   width: 40%;
   display: flex;
   flex-direction: column;
   padding: 0 48px;
 }
-.introContent h1 {
-  font-size: 2.25em;
+.introContent h1{
+  font-size: 2.5rem;
   font-weight: 800;
+  margin-bottom: 2.25rem;
 }
-.introContent h1,
-.introContent h4,
-.introContent button {
-  margin: 0;
-}
-.introContent h1,
-.introContent h4 {
-  padding-bottom: 35px;
-}
-.introContent button {
-  background-color: var(--color-md-gray);
+.introContent p{font-size: 1.25rem;margin-bottom: 1.5rem;}
+.introContent button{
+  background-color: var(--color-dk-gray);
   font-size: 1.1em;
   padding: 1em 0;
   border: 0;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 3px;
+  width: 50%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-very-lt-gray);
+  transition: all 0.3s ease;
 }
-.introContent button:hover {
+.introContent button:hover{
   background-color: var(--color-very-lt-gray);
   color: var(--color-md-gray);
-  transition: background-color .3s ease-in-out,
-  color .3s ease-in-out;
 }
 
 
 /* --- Practicing --- */
-#practicing {
+#practicing{
   background-color: var(--color-very-lt-gray);
 }
-.keepPracticing {
+.keepPracticing{
   color: var(--color-md-gray);
   display: flex;
   align-items: flex-start;
-  padding: 36px 0;
+  justify-content: space-between;
+  padding: 4rem 0;
 }
-.keepPracticing .imgTxt {
-  width: 60%;
-}
-.keepPracticing .imgTxt figure {
+.keepPracticing .imgTxt{width: 52%;}
+.keepPracticing .imgTxt figure{
   padding-bottom: 36px;
   margin: 0;
 }
 .keepPracticing .imgTxt h3,
-.keepPracticing .imgTxt p {
+.keepPracticing .imgTxt p{
   margin: 0;
   padding-bottom: 20px;
 }
-.keepPracticing .imgTxt h3 {
+.keepPracticing .imgTxt h3{
   font-size: 1.65em;
   font-weight: 800;
 }
-.keepPracticing .imgTxt p {
+.keepPracticing .imgTxt p{
   font-weight: 400;
+  line-height: 1.5;
 }
-.keepPracticing .imgTxt .author {
+.keepPracticing .imgTxt .author{
   padding-bottom: 0;
-  font-weight: 600;
+  font-style: italic;
 }
-.keepPracticing .infoLinks {
+.keepPracticing .infoLinks{
   padding-left: 24px;
   width: 40%;
   display: grid;
@@ -180,113 +165,96 @@ nav ul li a:hover {
 }
 .keepPracticing .infoLinks .orientation,
 .keepPracticing .infoLinks .campus,
-.keepPracticing .infoLinks .guest {
+.keepPracticing .infoLinks .guest{
   border: 1px solid var(--color-lt-gray);
-  border-right: 0;
   padding: 15px 0 15px 24px;
   display: flex;
   align-items: center;
+  transition: all 0.2s ease-in;
 }
 .keepPracticing .infoLinks .orientation:hover,
 .keepPracticing .infoLinks .campus:hover,
-.keepPracticing .infoLinks .guest:hover {
+.keepPracticing .infoLinks .guest:hover{
   background-color: var(--color-md-gray);
   color: var(--color-very-lt-gray);
-  transition: background-color .3s ease-in-out,
-  color .3s ease-in-out;
 }
-.infoLinks .mobile-linkImg img {
+.infoLinks .mobile-linkImg img{
   display: none;
   visibility: hidden;
 }
-.infoLinks .linkImg {
-  width: 35%;
-}
+.infoLinks .linkImg{width: 35%;}
 .infoLinks .linkTxt {
   padding-left: 36px;
   width: 65%;
 }
-.infoLinks .linkTxt h4 {
-  font-size: 1.1em;
-}
+.infoLinks .linkTxt h4{font-size: 1.1em;}
 .infoLinks .linkTxt h4,
-.infoLinks .linkTxt p {
+.infoLinks .linkTxt p{
   margin: 0;
   padding-bottom: 15px;
 }
-.infoLinks .linkTxt .read {
-  padding: 0;
-}
-.infoLinks .linkTxt .read a {
+.infoLinks .linkTxt .read{padding: 0;}
+.infoLinks .linkTxt .read a{
   color: #1CBDFF;
   text-decoration: none;
 }
 
 
 /* --- Start Learning --- */
-#learning {
-  background-color: var(--color-lt-gray);
-}
-.startLearning h2 {
-  color: var(--color-very-lt-gray);
-}
-.startLearning .courses {
+#learning{background-color: var(--color-lt-gray);}
+.startLearning .courses{
   width: 75%;
-  padding-bottom: 36px;
+  padding-bottom: 5rem;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(2, 465px) / repeat(3, 1fr);
   grid-gap: 36px;
 }
-.startLearning .courses .box {
+.startLearning .courses .box{
   background-color: var(--color-very-lt-gray);
   color: var(--color-md-gray);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 28px, rgba(0, 0, 0, 0.15) 0px 10px 10px;
+  border-radius: 3px;
 }
-.startLearning .courses .box figure {
-  padding-bottom: 32px;
-}
-.startLearning .courses .box .boxTxt {
+.startLearning .courses .box figure{padding-bottom: 32px;}
+.startLearning .courses .box .boxTxt{
   width: 85%;
   margin: 0 auto;
 }
-.startLearning .courses .box .boxTxt h4 {
-  font-size: 1.1em;
-}
+.startLearning .courses .box .boxTxt h4{font-size: 1.1em;}
 .startLearning .courses .box .boxTxt h4,
-.startLearning .courses .box .boxTxt p {
+.startLearning .courses .box .boxTxt p{
   margin: 0;
   padding-bottom: 12px;
 }
 
 
 /* --- Thesis Exhibit --- */
-#thesis {
+#thesis{
   color: var(--color-md-gray);
   background-color: var(--color-very-lt-gray);
 }
-.exhibit {
+.exhibit{
   display: flex;
   align-items: flex-start;
   padding-bottom: 36px;
 }
-.exhibit .clipTxt {
-  width: 60%;
-}
-.exhibit .clipTxt video {
+.exhibit .clipTxt{width: 60%;}
+.exhibit .clipTxt video{
   padding-bottom: 36px;
   margin: 0;
 }
-.clipTxt .exhibitTxt h3 {
+.clipTxt .exhibitTxt h3{
   margin: 0;
   padding-bottom: 20px;
   font-size: 1.65em;
   font-weight: 800;
 }
-.clipTxt .exhibitTxt p {
+.clipTxt .exhibitTxt p{
   margin: 0;
   font-weight: 400;
 }
-.exhibit .thesisLinks {
+.exhibit .thesisLinks{
   padding-left: 24px;
   width: 40%;
   display: grid;
@@ -294,62 +262,56 @@ nav ul li a:hover {
   grid-gap: 20px;
 }
 .exhibit .thesisLinks .fisma,
-.exhibit .thesisLinks .nowAndthen {
+.exhibit .thesisLinks .nowAndthen{
   border: 1px solid var(--color-lt-gray);
-  border-right: 0;
   padding: 15px 0 15px 24px;
   display: flex;
   align-items: center;
 }
 .exhibit .thesisLinks .fisma:hover,
-.exhibit .thesisLinks .nowAndthen:hover {
+.exhibit .thesisLinks .nowAndthen:hover{
   background-color: var(--color-md-gray);
   color: var(--color-very-lt-gray);
   transition: background-color .3s ease-in-out,
   color .3s ease-in-out;
 }
-.exhibit .thesisLinks .linkImg {
+.exhibit .thesisLinks .linkImg{
   width: 35%;
 }
-.exhibit .thesisLinks .linkTxt {
+.exhibit .thesisLinks .linkTxt{
   padding-left: 36px;
   width: 65%;
 }
-.exhibit .thesisLinks .linkTxt h4 {
+.exhibit .thesisLinks .linkTxt h4{
   font-size: 1.1em;
 }
 .exhibit .thesisLinks .linkTxt h4,
-.exhibit .thesisLinks .linkTxt p {
+.exhibit .thesisLinks .linkTxt p{
   margin: 0;
   padding-bottom: 15px;
 }
 
 
 /* --- Footer --- */
-footer {
+footer{
   width: 100%;
   background-color: var(--color-dk-gray);
 }
-.mainFoot {
+.mainFoot{
   padding: 20px 0;
   color: var(--color-very-lt-gray);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.mainFoot .copy p {
-  margin: 0;
-}
-.mainFoot .terms ul {
-  list-style: none;
-  margin: 0;
-}
-.mainFoot .terms ul li {
+.mainFoot .copy p{margin: 0;}
+.mainFoot .terms ul{list-style: none;margin: 0;}
+.mainFoot .terms ul li{
   display: inline-block;
   margin: 0;
   padding-left: 10px;
 }
-.mainFoot .terms ul li a {
+.mainFoot .terms ul li a{
   text-decoration: none;
   color: var(--color-very-lt-gray);
   margin: 0;

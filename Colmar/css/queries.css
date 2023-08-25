@@ -1,11 +1,9 @@
-/* CSS VARIABLES */
-
-:root {
+/* :root {
   --color-very-lt-gray: #F1F1F1;
   --color-lt-gray: #B3B3B5;
   --color-md-gray: #838384;
   --color-dk-gray: #313132;
-}
+} */
 
 
 @media only screen and (max-width: 1350px) {
