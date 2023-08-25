@@ -326,6 +326,7 @@ function savePalette(e) {
     titlePreviewDiv.appendChild(title);
     titlePreviewDiv.appendChild(preview);
     // deleteDiv.appendChild(paletteBtn);
+    palette.appendChild(paletteBtn);
     palette.appendChild(titlePreviewDiv)
     // palette.appendChild(deleteDiv);
     savedPalettesDiv.appendChild(palette);
@@ -399,6 +400,7 @@ function getFromLocalStorage() {
             titlePreviewDiv.appendChild(preview);
             // deleteDiv.appendChild(paletteBtn);
             palette.appendChild(titlePreviewDiv)
+            palette.appendChild(paletteBtn);
             // palette.appendChild(deleteDiv);
             savedPalettesDiv.appendChild(palette);
         })
