@@ -17,6 +17,7 @@ html{
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
 }
+a{transition: all 0.3s ease-in;}
 .wrapper{width: 85%;margin: 0 auto;}
 body{
   line-height: 1.35;
@@ -175,17 +176,16 @@ nav ul li a:hover{color: var(--color-lt-gray);}
 .keepPracticing .infoLinks .orientation:hover,
 .keepPracticing .infoLinks .campus:hover,
 .keepPracticing .infoLinks .guest:hover{
-  background-color: var(--color-md-gray);
-  color: var(--color-very-lt-gray);
+  color: var(--color-dk-gray);
 }
 .infoLinks .mobile-linkImg img{
   display: none;
   visibility: hidden;
 }
 .infoLinks .linkImg{width: 35%;}
-.infoLinks .linkTxt {
+.infoLinks .linkTxt{
   padding-left: 36px;
-  width: 65%;
+  width: 60%;
 }
 .infoLinks .linkTxt h4{font-size: 1.1em;}
 .infoLinks .linkTxt h4,
@@ -198,6 +198,7 @@ nav ul li a:hover{color: var(--color-lt-gray);}
   color: #1CBDFF;
   text-decoration: none;
 }
+.infoLinks .linkTxt .read a:hover{text-decoration: underline;}
 
 
 /* --- Start Learning --- */
@@ -207,7 +208,7 @@ nav ul li a:hover{color: var(--color-lt-gray);}
   padding-bottom: 5rem;
   margin: 0 auto;
   display: grid;
-  grid-template: repeat(2, 465px) / repeat(3, 1fr);
+  grid-template: repeat(2, 450px) / repeat(3, 1fr);
   grid-gap: 36px;
 }
 .startLearning .courses .box{
