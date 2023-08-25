@@ -383,6 +383,7 @@ function getFromLocalStorage() {
             // Adding an event to the button
             titlePreviewDiv.addEventListener('click', e => {
                 closeLibrary();
+                console.log(e.target)
                 const paletteIndex = e.target.classList[1];
                 initialColors = [];
                 paletteObjects[paletteIndex].colors.forEach((color, index) => {
@@ -390,10 +391,18 @@ function getFromLocalStorage() {
                     colorDivs[index].style.backgroundColor = color;
                     const text = colorDivs[index].children[0];
                     const controlIcons = colorDivs[index].querySelectorAll(".controls button");
+                    console.log(initialColors)
                     checkTextContrast(color, text, controlIcons);
                     updateTextUI(index);
                 });
                 resetInputs();
+            })
+            paletteBtn.addEventListener('click', e => {
+                console.log('clicked ' + e.target)
+                const paletteIndex = e.target.classList[1];
+                paletteObjects[paletteIndex].colors.forEach((color, index) => {
+                    initialColors.splice(index, color)
+                })
             })
             // Now we need to append it to Library
             titlePreviewDiv.appendChild(title);
