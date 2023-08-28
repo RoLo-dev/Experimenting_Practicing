@@ -208,8 +208,9 @@ nav ul li a:hover{color: var(--color-lt-gray);}
   padding-bottom: 5rem;
   margin: 0 auto;
   display: grid;
-  grid-template: repeat(2, 450px) / repeat(3, 1fr);
   grid-gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template: repeat(2, 450px) / repeat(3, 1fr); */
 }
 .startLearning .courses .box{
   background-color: var(--color-very-lt-gray);
@@ -221,10 +222,11 @@ nav ul li a:hover{color: var(--color-lt-gray);}
 .startLearning .courses .box .boxTxt{
   width: 85%;
   margin: 0 auto;
+  padding-bottom: 1.25rem;
 }
 .startLearning .courses .box .boxTxt h4{font-size: 1.1em;}
 .startLearning .courses .box .boxTxt h4,
-.startLearning .courses .box .boxTxt p{
+.startLearning .courses .box .boxTxt p:first-of-type{
   margin: 0;
   padding-bottom: 12px;
 }
@@ -238,9 +240,10 @@ nav ul li a:hover{color: var(--color-lt-gray);}
 .exhibit{
   display: flex;
   align-items: flex-start;
-  padding-bottom: 36px;
+  justify-content: space-between;
+  padding-bottom: 4rem;
 }
-.exhibit .clipTxt{width: 60%;}
+.exhibit .clipTxt{width: 52%;}
 .exhibit .clipTxt video{
   padding-bottom: 36px;
   margin: 0;
@@ -268,13 +271,11 @@ nav ul li a:hover{color: var(--color-lt-gray);}
   padding: 15px 0 15px 24px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in;
 }
 .exhibit .thesisLinks .fisma:hover,
 .exhibit .thesisLinks .nowAndthen:hover{
-  background-color: var(--color-md-gray);
-  color: var(--color-very-lt-gray);
-  transition: background-color .3s ease-in-out,
-  color .3s ease-in-out;
+  color: var(--color-dk-gray);
 }
 .exhibit .thesisLinks .linkImg{
   width: 35%;
@@ -305,15 +306,16 @@ footer{
   align-items: center;
   justify-content: space-between;
 }
-.mainFoot .copy p{margin: 0;}
-.mainFoot .terms ul{list-style: none;margin: 0;}
-.mainFoot .terms ul li{
+.mainFoot .copy p{margin: 0;font-size: 0.85rem;}
+.mainFoot .terms{list-style: none;}
+.mainFoot .terms li{
   display: inline-block;
-  margin: 0;
+  margin-right: 2.5rem;
   padding-left: 10px;
 }
-.mainFoot .terms ul li a{
+.mainFoot .terms li:last-child{margin-right: 0;}
+.mainFoot .terms li a{
   text-decoration: none;
   color: var(--color-very-lt-gray);
-  margin: 0;
+  font-size: 0.85rem;
 }
