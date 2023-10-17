@@ -291,7 +291,7 @@ function savePalette(e) {
     const titlePreviewDiv = document.createElement("div");
     const title = document.createElement("p");
     const preview = document.createElement("div");
-    // const deleteDiv = document.createElement("div");
+    const deleteDiv = document.createElement("div");
     const paletteBtn = document.createElement("button");
     titlePreviewDiv.classList.add("colors-container");
     palette.classList.add("saved-palette");
@@ -302,7 +302,7 @@ function savePalette(e) {
         smallDiv.style.backgroundColor = smallColor;
         preview.appendChild(smallDiv);
     })
-    // deleteDiv.classList.add("delete-container");
+    deleteDiv.classList.add("delete-container");
     paletteBtn.classList.add("delete-btn");
     paletteBtn.innerHTML = "<span class='material-icons'>delete</span>";
     titlePreviewDiv.classList.add(paletteObj.number);
@@ -325,10 +325,10 @@ function savePalette(e) {
     // Now we append it to the Library
     titlePreviewDiv.appendChild(title);
     titlePreviewDiv.appendChild(preview);
-    // deleteDiv.appendChild(paletteBtn);
     palette.appendChild(paletteBtn);
     palette.appendChild(titlePreviewDiv)
-    // palette.appendChild(deleteDiv);
+    palette.appendChild(deleteDiv);
+    deleteDiv.appendChild(paletteBtn);
     savedPalettesDiv.appendChild(palette);
 }
 function saveToLocal(paletteObj) {
