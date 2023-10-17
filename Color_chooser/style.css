@@ -49,6 +49,7 @@ header{
     cursor: pointer;
     transition: all 0.4s ease-out;
 }
+.generate-panel button{margin-left: 0;}
 .panel-styles button:hover,
 .panel-styles button:focus{
     color: rgb(175, 175, 175);
