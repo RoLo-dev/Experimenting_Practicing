@@ -288,6 +288,27 @@
 <Footer />
 
 <style>
+	/* Holidays or Special events */
+	#special{margin: 2rem 0;color: #814d3b; }
+	.special-topRow{display: flex;justify-content: space-between;}
+	.store-info{width: 45%;}
+	.store-info h3{margin-bottom: 1.15rem;font-size: 1.25rem;font-weight: 800;}
+	.specialTxt h2{ font-size:1.5rem;margin-bottom: 1rem; }
+	.specialTxt ul{ margin-bottom: 1rem;}
+	.specialTxt ul li{
+		margin-bottom: 5px;
+		display: flex;
+		justify-content: space-between;
+		width:350px;
+	}
+	.specialTxt ul li:last-child{ margin-bottom: 0; }
+	.special-topRow p{margin-bottom: 10px;}
+	.special-topRow p:last-of-type{margin-bottom: 0;}
+	.special-topRow a{color: #814d3b;}
+	.directions-link{display: block;margin-bottom: 1rem;}
+	.map-one{width: 50%;height: 500px;}
+	.map-one iframe{height: 100%;width: 100%;}
+
 	/* BANNER */
 	.banner{
 		width: 100%;
@@ -424,4 +445,63 @@
 	.steps h2{ margin-bottom: 1.25rem; }
 	.steps h5{ margin-bottom: 7px;font-size: 1.2rem; }
 	.steps p{ line-height: 1.35; }
+	/* CAKE & FILLINGS */
+	.listTitle-btn, #flavorFill-mobile{ display: none; }
+	#flavorFill{
+		width: 100%;
+		height: auto;
+		color: #fff;
+		background-color: #f7f0eb;
+		/* background-color: #E1C5AC; */
+	}
+	.list-container{
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 3rem 0;
+	}
+	.list-container .list{
+		width: 40%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.list .listTitle{ margin-bottom: 1rem;text-transform: uppercase; }
+	.list ul li{ margin-bottom: 7px;color: #814d3b; }
+	.list-container .secTitle{ color: #814d3b;width: 100%;margin-bottom: 1rem; }
+	.secTitle h2{text-align: center;}
+	.list-container .warning{
+		width: 100%;
+		color: #814d3b;
+		text-align: center;
+		margin-top: 5rem;
+		font-size: 1.15rem;
+		font-weight: 500;
+	}
+	.warning p{ margin-bottom: 5px; }
+	.warning p:last-child{ margin-bottom: 0; }
+	/* ABOUT */
+	#about{
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 0;
+	}
+	#about .baniImg{ width: 45%; }
+	#about .aboutTxt{ width: 48%; }
+	#about .baniImg{ padding: 2rem 0; }
+	/* #about .baniImg img{ object-position: top; } */
+	#about .baniImg img{ object-fit: contain; }
+	#about .aboutTxt{
+		color: #814d3b;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+	#about .aboutTxt h2{ color: #814d3b;margin-bottom: 1.25rem; }
+	#about .aboutTxt p{ line-height: 1.5; }
 </style>
