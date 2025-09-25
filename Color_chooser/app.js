@@ -71,6 +71,9 @@ function lockColor(index) {
     } else {
         lockBtn[index].children[0].innerText = "lock_open";
     }
+    if(!lockBtn[index].children[2]){
+        lockBtn[index].children[2].classList.contains('active')
+    }
 }
 // This allows the spacebar key to generate new colors
 function spacebar(e){
